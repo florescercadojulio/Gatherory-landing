@@ -1,16 +1,23 @@
 ---
+import "@/styles/global.css";
+import LandingPage from "@/lib/components/landing/landing-page.svelte";
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="description" content="Gatherory brings events, ideas, decisions, and people into one shared planning space." />
+		<link rel="icon" type="image/png" href="/gatherory-icon.png" />
+		<link rel="apple-touch-icon" href="/gatherory-icon.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta property="og:title" content="Gatherory · Bring every part of the gathering together" />
+		<meta property="og:description" content="Plan the event, shape the moments around it, and invite people into exactly the context they need." />
+		<meta property="og:image" content="/gatherory-icon.png" />
+		<title>Gatherory · Plan every part together</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<LandingPage client:load />
 	</body>
 </html>

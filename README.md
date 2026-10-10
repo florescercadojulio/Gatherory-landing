@@ -1,43 +1,30 @@
-# Astro Starter Kit: Minimal
+# Gatherory Landing
+
+The public marketing site for Gatherory, built with Astro and Svelte. This project is intentionally presentation-only.
+
+## Local setup
+
+Install dependencies and start Astro in background mode:
 
 ```sh
-pnpm create astro@latest -- --template minimal
+pnpm install
+pnpm astro dev --background
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The future authenticated product will live in a separate TanStack application on the `app` subdomain. Authentication, APIs, database models, and persistence belong there rather than in this landing repository.
 
-## 🚀 Project Structure
+## Commands
 
-Inside of your Astro project, you'll see the following folders and files:
+| Command | Action |
+| :-- | :-- |
+| `pnpm astro dev --background` | Start the development server |
+| `pnpm astro dev status` | Inspect the background server |
+| `pnpm astro dev stop` | Stop the background server |
+| `pnpm build` | Build the static landing site |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Structure
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `src/pages/index.astro` — public landing page
+- `src/lib/components/landing` — Gatherory product storytelling components
+- `src/styles/global.css` — Raycast-inspired visual tokens and shared styles
+- `DESIGN.md` — Raycast-inspired visual language used by the web experience
