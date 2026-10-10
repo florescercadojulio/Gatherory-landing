@@ -6,9 +6,9 @@
 		IconMenu2,
 		IconRoute,
 		IconUsers,
-		IconX,
 	} from "@tabler/icons-svelte";
-	import { onDestroy, tick } from "svelte";
+	import { onMount } from "svelte";
+	import * as Sheet from "@/lib/components/ui/sheet";
 	import { APP_SIGN_IN_URL, APP_SIGN_UP_URL } from "@/lib/site-links";
 
 	const links = [
@@ -38,149 +38,103 @@
 		},
 	];
 
-	let open = false;
-	let triggerButton: HTMLButtonElement;
-	let closeButton: HTMLButtonElement;
-	let dialog: HTMLDialogElement;
-	let previousOverflow = "";
+	let mobileMenuOpen = $state(false);
+	let mobileSheetKey = $state(0);
 
-	async function openMenu() {
-		previousOverflow = document.body.style.overflow;
-		document.body.style.overflow = "hidden";
-		open = true;
-		await tick();
-		dialog.showModal();
-		closeButton?.focus();
+	function closeMobileMenu() {
+		mobileMenuOpen = false;
 	}
 
-	async function closeMenu(restoreFocus = true) {
-		if (dialog.open) dialog.close();
-		open = false;
-		document.body.style.overflow = previousOverflow;
-		if (restoreFocus) {
-			await tick();
-			triggerButton?.focus();
-		}
+	function resetMobileMenu() {
+		mobileMenuOpen = false;
+		mobileSheetKey += 1;
+		document.body.style.removeProperty("overflow");
+		document.body.style.removeProperty("pointer-events");
 	}
 
-	function handleCancel(event: Event) {
-		event.preventDefault();
-		void closeMenu();
-	}
+	onMount(() => {
+		const desktopBreakpoint = window.matchMedia("(min-width: 64rem)");
+		const closeAtDesktopBreakpoint = (event: MediaQueryListEvent) => {
+			if (event.matches) resetMobileMenu();
+		};
 
-	onDestroy(() => {
-		if (open) document.body.style.overflow = previousOverflow;
+		document.addEventListener("astro:before-preparation", resetMobileMenu);
+		document.addEventListener("astro:page-load", resetMobileMenu);
+		desktopBreakpoint.addEventListener("change", closeAtDesktopBreakpoint);
+
+		return () => {
+			document.removeEventListener("astro:before-preparation", resetMobileMenu);
+			document.removeEventListener("astro:page-load", resetMobileMenu);
+			desktopBreakpoint.removeEventListener("change", closeAtDesktopBreakpoint);
+		};
 	});
 </script>
 
-<button
-	bind:this={triggerButton}
-	type="button"
-	class="inline-flex size-11 items-center justify-center rounded-full border border-black bg-white text-black transition-colors hover:bg-black hover:text-white lg:hidden"
-	aria-label="Open navigation menu"
-	aria-controls="mobile-navigation"
-	aria-expanded={open}
-	onclick={openMenu}
->
-	<IconMenu2 class="size-5" stroke={1.8} />
-</button>
+{#key mobileSheetKey}
+	<Sheet.Root bind:open={mobileMenuOpen}>
+		<Sheet.Trigger
+			class="inline-flex size-11 items-center justify-center rounded-full border border-black bg-white text-black transition-colors hover:bg-black hover:text-white lg:hidden"
+			aria-label="Open navigation menu"
+		>
+			<IconMenu2 class="size-5" stroke={1.8} aria-hidden="true" />
+		</Sheet.Trigger>
 
+		<Sheet.Content
+			side="right"
+			showCloseButton={true}
+			class="w-[min(82vw,23rem)] border-l border-black/15 bg-white p-0 text-black shadow-[-12px_0_32px_rgba(0,0,0,0.08)] lg:hidden"
+		>
+			<Sheet.Title class="sr-only">Navigation menu</Sheet.Title>
+			<Sheet.Description class="sr-only">Main navigation links for Gatherory.</Sheet.Description>
 
-<dialog
-	bind:this={dialog}
-	id="mobile-navigation"
-	class="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none border-0 bg-transparent p-0 text-black backdrop:bg-black/20 backdrop:backdrop-blur-[2px] lg:hidden"
-	aria-labelledby="mobile-navigation-title"
-	oncancel={handleCancel}
->
-	<button
-		type="button"
-		class="absolute inset-0 h-full w-full cursor-default"
-		aria-label="Close navigation menu"
-		onclick={() => closeMenu()}
-	></button>
-
-	<aside class="mobile-drawer absolute inset-y-0 right-0 flex h-dvh w-[min(82vw,23rem)] flex-col border-l border-black/15 bg-white shadow-[-12px_0_32px_rgba(0,0,0,0.08)]">
-			<div class="flex min-h-0 flex-1 flex-col overflow-y-auto">
-				<div class="flex items-center justify-between px-4 py-3">
-					<a href="/" class="inline-flex items-center gap-2.5" onclick={() => closeMenu(false)}>
+			<div class="flex h-dvh min-h-0 flex-col bg-white text-black">
+				<div class="shrink-0 border-b border-black/15 px-4 pb-5 pt-3">
+					<a href="/" class="inline-flex items-center gap-2.5 pr-12" onclick={closeMobileMenu}>
 						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
-						<span id="mobile-navigation-title" class="font-[540] tracking-[-0.02em]">Gatherory</span>
+						<span class="font-[540] tracking-[-0.02em]">Gatherory</span>
 					</a>
-					<button
-						bind:this={closeButton}
-						type="button"
-						class="inline-flex size-10 items-center justify-center rounded-full bg-black text-white transition-transform hover:scale-95"
-						aria-label="Close navigation menu"
-						onclick={() => closeMenu()}
-					>
-						<IconX class="size-5" stroke={1.8} />
-					</button>
+					<p class="mt-4 text-sm leading-5 text-black/70">
+						Plan the event, shape the moments around it, and bring the right people in.
+					</p>
 				</div>
 
-				<p class="border-b border-black/15 px-4 pb-5 pt-1 text-sm leading-5 text-black/70">
-					Plan the event, shape the moments around it, and bring the right people in.
-				</p>
-
-				<nav class="grid gap-2 p-3" aria-label="Mobile navigation">
+				<nav
+					class="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto overscroll-contain p-3"
+					aria-label="Mobile navigation"
+				>
 					{#each links as link}
 						<a
 							href={link.href}
 							class="grid grid-cols-[1.25rem_1fr] gap-3 rounded-xl border border-black/85 p-3.5 transition-colors hover:bg-brand-blue-light"
-							onclick={() => closeMenu(false)}
+							onclick={closeMobileMenu}
 						>
-							<link.icon class="mt-0.5 size-4.5" stroke={1.7} />
+							<link.icon class="mt-0.5 size-4.5" stroke={1.7} aria-hidden="true" />
 							<span>
 								<strong class="block font-[540] leading-5">{link.label}</strong>
 								<span class="mt-1 block text-sm leading-5 text-black/68">{link.description}</span>
 							</span>
 						</a>
 					{/each}
+
+					<div class="mt-auto flex flex-wrap gap-x-5 gap-y-2 px-1 pb-1 pt-3 text-sm">
+						<a class="nav-link" href="/privacy" onclick={closeMobileMenu}>Privacy</a>
+						<a class="nav-link" href="/terms" onclick={closeMobileMenu}>Terms</a>
+					</div>
 				</nav>
 
-				<div class="mt-auto flex flex-wrap gap-x-5 gap-y-2 border-t border-black/15 px-4 py-4 text-sm">
-					<a class="nav-link" href="/privacy" onclick={() => closeMenu(false)}>Privacy</a>
-					<a class="nav-link" href="/terms" onclick={() => closeMenu(false)}>Terms</a>
+				<div class="grid shrink-0 gap-2 border-t border-black/15 bg-white p-3">
+					<a href={APP_SIGN_UP_URL} class="pill-button h-12 w-full px-5" onclick={closeMobileMenu}>
+						Start planning <IconArrowRight class="size-4" />
+					</a>
+					<a
+						href={APP_SIGN_IN_URL}
+						class="inline-flex h-11 items-center justify-center rounded-full border border-black font-[480] transition-colors hover:bg-black hover:text-white"
+						onclick={closeMobileMenu}
+					>
+						Sign in
+					</a>
 				</div>
 			</div>
-
-			<div class="grid gap-2 border-t border-black/15 bg-white p-3">
-				<a href={APP_SIGN_UP_URL} class="pill-button h-12 w-full px-5" onclick={() => closeMenu(false)}>
-					Start planning <IconArrowRight class="size-4" />
-				</a>
-				<a href={APP_SIGN_IN_URL} class="inline-flex h-11 items-center justify-center rounded-full border border-black font-[480] transition-colors hover:bg-black hover:text-white" onclick={() => closeMenu(false)}>
-					Sign in
-				</a>
-			</div>
-	</aside>
-</dialog>
-
-<style>
-	dialog[open]::backdrop {
-		animation: mobile-nav-backdrop-in 160ms ease-out both;
-	}
-
-	dialog[open] .mobile-drawer {
-		animation: mobile-nav-drawer-in 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
-	}
-
-	@keyframes mobile-nav-backdrop-in {
-		from {
-			opacity: 0;
-		}
-	}
-
-	@keyframes mobile-nav-drawer-in {
-		from {
-			transform: translateX(3.5rem);
-			opacity: 0.72;
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		dialog[open]::backdrop,
-		dialog[open] .mobile-drawer {
-			animation-duration: 0.01ms;
-		}
-	}
-</style>
+		</Sheet.Content>
+	</Sheet.Root>
+{/key}
