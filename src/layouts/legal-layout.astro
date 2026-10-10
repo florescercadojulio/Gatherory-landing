@@ -1,0 +1,94 @@
+---
+import "@/styles/global.css";
+
+interface Props {
+	title: string;
+	accent: string;
+	description: string;
+	updated: string;
+	activePage: "privacy" | "legal";
+}
+
+const { title, accent, description, updated, activePage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/png" href="/gatherory-icon.png" />
+		<link rel="apple-touch-icon" href="/gatherory-icon.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta property="og:title" content={`${title} ${accent} · Gatherory`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/gatherory-icon.png" />
+		<title>{title} {accent} · Gatherory</title>
+	</head>
+	<body>
+		<div class="min-h-screen overflow-x-clip bg-background text-foreground">
+			<header class="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
+				<div class="site-shell relative flex h-16 items-center justify-between">
+					<a href="/" class="inline-flex items-center gap-2.5" aria-label="Gatherory home">
+						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
+						<span class="text-base font-[540] tracking-[-0.02em]">Gatherory</span>
+					</a>
+
+					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label="Legal navigation">
+						<a class="nav-link" href="/">Home</a>
+						<a class:list={["nav-link", { "text-brand-blue": activePage === "privacy" }]} href="/privacy" aria-current={activePage === "privacy" ? "page" : undefined}>Privacy</a>
+						<a class:list={["nav-link", { "text-brand-blue": activePage === "legal" }]} href="/legal" aria-current={activePage === "legal" ? "page" : undefined}>Terms</a>
+					</nav>
+
+					<a href="/#product" class="pill-button h-11 px-5 text-[0.95rem]">
+						<span class="sm:hidden">Explore</span>
+						<span class="hidden sm:inline">Explore Gatherory</span>
+					</a>
+				</div>
+			</header>
+
+			<main>
+				<section class="site-shell py-16 sm:py-24 lg:py-28">
+					<div class="grid gap-10 border-b border-black/15 pb-14 sm:pb-20 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.72fr)] lg:items-end lg:gap-20">
+						<h1 class="legal-title max-w-[10ch]">{title} <span class="text-brand-blue">{accent}</span></h1>
+						<div>
+							<p class="text-xl leading-8 sm:text-2xl sm:leading-9">{description}</p>
+							<p class="mt-6 text-sm text-black/60">Last updated {updated}</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="site-shell pb-24 sm:pb-32">
+					<div class="legal-document-grid">
+						<aside class="legal-toc" aria-label="Page contents">
+							<p class="font-[540]">On this page</p>
+							<slot name="toc" />
+						</aside>
+
+						<article class="legal-copy">
+							<slot />
+						</article>
+					</div>
+				</section>
+			</main>
+
+			<footer class="border-t border-black/10">
+				<div class="site-shell grid gap-10 py-12 sm:grid-cols-[1fr_auto] sm:items-end">
+					<div>
+						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]" aria-label="Gatherory home">
+							<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
+							Gatherory
+						</a>
+						<p class="mt-5 max-w-sm text-sm">Events, decisions, and people—gathered with purpose.</p>
+					</div>
+					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
+						<a class="nav-link" href="/">Home</a>
+						<a class="nav-link" href="/privacy">Privacy</a>
+						<a class="nav-link" href="/legal">Terms</a>
+					</nav>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

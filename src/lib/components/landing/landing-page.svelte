@@ -168,7 +168,13 @@
 				<div class="flex items-center gap-2.5 text-lg font-[540]"><img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" /> Gatherory</div>
 				<p class="mt-5 max-w-sm text-sm">Events, decisions, and people—gathered with purpose.</p>
 			</div>
-			<div class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]"><a class="nav-link" href="#product">Product</a><a class="nav-link" href="#how-it-works">How it works</a><a class="nav-link" href="#top">Back to top</a></div>
+			<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
+				<a class="nav-link" href="#product">Product</a>
+				<a class="nav-link" href="#how-it-works">How it works</a>
+				<a class="nav-link" href="/privacy">Privacy</a>
+				<a class="nav-link" href="/legal">Terms</a>
+				<a class="nav-link" href="#top">Back to top</a>
+			</nav>
 		</div>
 	</footer>
 </div>

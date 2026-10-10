@@ -151,6 +151,13 @@
 		letter-spacing: -0.045em;
 	}
 
+	.legal-title {
+		font-size: clamp(3.4rem, 7vw, 5.5rem);
+		font-weight: 340;
+		line-height: 0.98;
+		letter-spacing: -0.052em;
+	}
+
 	.body-lead {
 		font-size: clamp(1.125rem, 1.7vw, 1.3rem);
 		font-weight: 340;
@@ -189,6 +196,63 @@
 
 	.marquee-track {
 		animation: marquee 26s linear infinite;
+	}
+
+	.legal-document-grid {
+		@apply grid gap-12 lg:grid-cols-[14rem_minmax(0,46rem)] lg:justify-between lg:gap-20;
+	}
+
+	.legal-toc {
+		@apply hidden border-t border-black/15 pt-5 text-sm lg:sticky lg:top-24 lg:block lg:self-start;
+	}
+
+	.legal-toc ol {
+		@apply mt-4 space-y-2.5 text-black/65;
+	}
+
+	.legal-toc a {
+		@apply transition-colors hover:text-brand-blue;
+	}
+
+	.legal-callout {
+		@apply rounded-[2rem] bg-brand-blue-light p-7 sm:p-10;
+	}
+
+	.legal-callout h2 {
+		@apply mt-0 text-3xl leading-tight sm:text-4xl;
+	}
+
+	.legal-callout p {
+		@apply mt-5 text-lg leading-8;
+	}
+
+	.legal-copy > section {
+		@apply scroll-mt-24 border-t border-black/15 py-10 sm:py-12;
+	}
+
+	.legal-copy h2 {
+		@apply text-3xl font-[540] leading-tight tracking-[-0.03em];
+	}
+
+	.legal-copy p,
+	.legal-copy li {
+		@apply text-[1.0625rem] leading-8 text-black/78;
+	}
+
+	.legal-copy p {
+		@apply mt-5;
+	}
+
+	.legal-copy ul {
+		@apply mt-5 list-disc space-y-3 pl-6;
+	}
+
+	.legal-copy strong {
+		@apply font-[560] text-black;
+	}
+
+	.legal-copy a {
+		@apply font-[500] text-brand-blue underline decoration-brand-blue/35 underline-offset-4 transition-colors hover:text-brand-blue-deep;
 	}
 }
 
