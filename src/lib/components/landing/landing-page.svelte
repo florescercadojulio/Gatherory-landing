@@ -171,8 +171,9 @@
 			<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
 				<a class="nav-link" href="#product">Product</a>
 				<a class="nav-link" href="#how-it-works">How it works</a>
+				<a class="nav-link" href="/resources">Guides</a>
 				<a class="nav-link" href="/privacy">Privacy</a>
-				<a class="nav-link" href="/legal">Terms</a>
+				<a class="nav-link" href="/terms">Terms</a>
 				<a class="nav-link" href="#top">Back to top</a>
 			</nav>
 		</div>

@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import "@/styles/global.css";
+
+const pages = (await getCollection("seo")).sort((a, b) => a.data.order - b.data.order);
+const canonical = new URL("/resources", Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Practical event planning guides, app comparisons, checklists, and Gatherory tutorials." />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/png" href="/gatherory-icon.png" />
+		<link rel="apple-touch-icon" href="/gatherory-icon.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta property="og:title" content="Event planning guides · Gatherory" />
+		<meta property="og:description" content="Practical event planning guides, app comparisons, checklists, and Gatherory tutorials." />
+		<meta property="og:url" content={canonical} />
+		<title>Event planning guides · Gatherory</title>
+	</head>
+	<body>
+		<div class="min-h-screen overflow-x-clip bg-background text-foreground">
+			<header class="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
+				<div class="site-shell relative flex h-16 items-center justify-between">
+					<a href="/" class="inline-flex items-center gap-2.5" aria-label="Gatherory home">
+						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
+						<span class="text-base font-[540] tracking-[-0.02em]">Gatherory</span>
+					</a>
+					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label="Main navigation">
+						<a class="nav-link" href="/">Home</a>
+						<a class="nav-link text-brand-blue" href="/resources" aria-current="page">Guides</a>
+						<a class="nav-link" href="/#product">Product</a>
+					</nav>
+					<a href="/#product" class="pill-button h-11 px-5 text-[0.95rem]"><span class="sm:hidden">Explore</span><span class="hidden sm:inline">Explore Gatherory</span></a>
+				</div>
+			</header>
+
+			<main>
+				<section class="site-shell py-20 sm:py-28 lg:py-32">
+					<h1 class="display-title max-w-[11ch]">Plan with more <span class="text-brand-blue">clarity.</span></h1>
+					<p class="mt-8 max-w-2xl text-xl leading-8 sm:text-2xl sm:leading-9">Practical comparisons, checklists, and step-by-step guides for bringing an event together.</p>
+				</section>
+
+				<section class="site-shell pb-24 sm:pb-32">
+					<div class="resource-grid">
+						{pages.map((page, index) => (
+							<a href={`/${page.data.slug}`} class:list={["resource-card", index === 0 && "resource-card-featured"]}>
+								<h2>{page.data.title} <span class="text-brand-blue">{page.data.accent}</span></h2>
+								<p>{page.data.description}</p>
+								<span>Read the guide →</span>
+							</a>
+						))}
+					</div>
+				</section>
+			</main>
+
+			<footer class="border-t border-black/10">
+				<div class="site-shell grid gap-10 py-12 sm:grid-cols-[1fr_auto] sm:items-end">
+					<div>
+						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]"><img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" /> Gatherory</a>
+						<p class="mt-5 max-w-sm text-sm">Events, decisions, and people—gathered with purpose.</p>
+					</div>
+					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
+						<a class="nav-link" href="/">Home</a><a class="nav-link" href="/privacy">Privacy</a><a class="nav-link" href="/terms">Terms</a>
+					</nav>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

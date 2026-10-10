@@ -1,0 +1,191 @@
+---
+import "@/styles/global.css";
+
+interface Heading {
+	depth: number;
+	slug: string;
+	text: string;
+}
+
+interface RelatedPage {
+	slug: string;
+	title: string;
+	description: string;
+}
+
+interface Props {
+	slug: string;
+	title: string;
+	accent: string;
+	seoTitle: string;
+	description: string;
+	intro: string;
+	updated: Date;
+	kind: "comparison" | "guide" | "product";
+	summaryHeading: string;
+	takeaways: string[];
+	headings: Heading[];
+	relatedPages: RelatedPage[];
+}
+
+const {
+	slug,
+	title,
+	accent,
+	seoTitle,
+	description,
+	intro,
+	updated,
+	kind,
+	summaryHeading,
+	takeaways,
+	headings,
+	relatedPages,
+} = Astro.props;
+
+const updatedLabel = new Intl.DateTimeFormat("en-US", {
+	month: "long",
+	day: "numeric",
+	year: "numeric",
+	timeZone: "UTC",
+}).format(updated);
+const canonical = new URL(`/${slug}`, Astro.site);
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": kind === "product" ? "TechArticle" : "Article",
+	headline: `${title} ${accent}`,
+	description,
+	dateModified: updated.toISOString(),
+	mainEntityOfPage: canonical.toString(),
+	author: { "@type": "Organization", name: "Gatherory", url: Astro.site?.toString() },
+	publisher: {
+		"@type": "Organization",
+		name: "Gatherory",
+		url: Astro.site?.toString(),
+		logo: { "@type": "ImageObject", url: new URL("/gatherory-icon.png", Astro.site).toString() },
+	},
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/png" href="/gatherory-icon.png" />
+		<link rel="apple-touch-icon" href="/gatherory-icon.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content={seoTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={new URL("/gatherory-icon.png", Astro.site)} />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={seoTitle} />
+		<meta name="twitter:description" content={description} />
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+		<title>{seoTitle}</title>
+	</head>
+	<body>
+		<div class="min-h-screen overflow-x-clip bg-background text-foreground">
+			<header class="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
+				<div class="site-shell relative flex h-16 items-center justify-between">
+					<a href="/" class="inline-flex items-center gap-2.5" aria-label="Gatherory home">
+						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
+						<span class="text-base font-[540] tracking-[-0.02em]">Gatherory</span>
+					</a>
+
+					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label="Main navigation">
+						<a class="nav-link" href="/">Home</a>
+						<a class="nav-link text-brand-blue" href="/resources">Guides</a>
+						<a class="nav-link" href="/#product">Product</a>
+					</nav>
+
+					<a href="/#product" class="pill-button h-11 px-5 text-[0.95rem]">
+						<span class="sm:hidden">Explore</span>
+						<span class="hidden sm:inline">Explore Gatherory</span>
+					</a>
+				</div>
+			</header>
+
+			<main>
+				<section class="site-shell py-16 sm:py-24 lg:py-28">
+					<div class="max-w-[70rem]">
+						<h1 class="seo-title max-w-[14ch]">{title} <span class="text-brand-blue">{accent}</span></h1>
+						<p class="mt-8 max-w-3xl text-xl leading-8 sm:text-2xl sm:leading-9">{intro}</p>
+						<p class="mt-6 text-sm text-black/60">Updated {updatedLabel} · By Gatherory</p>
+					</div>
+				</section>
+
+				<section class="site-shell pb-14 sm:pb-20">
+					<div class="seo-summary">
+						<h2>{summaryHeading}</h2>
+						<ul>
+							{takeaways.map((takeaway) => <li>{takeaway}</li>)}
+						</ul>
+					</div>
+				</section>
+
+				<section class="site-shell pb-24 sm:pb-32">
+					<div class="seo-document-grid">
+						<aside class="seo-toc" aria-label="Page contents">
+							<p class="font-[540]">On this page</p>
+							<ol>
+								{headings.filter((heading) => heading.depth === 2).map((heading) => (
+									<li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+								))}
+							</ol>
+						</aside>
+
+						<article class="seo-copy">
+							<slot />
+						</article>
+					</div>
+				</section>
+
+				<section class="border-y border-black/10 bg-surface-soft">
+					<div class="site-shell py-20 sm:py-24">
+						<div class="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
+							<h2 class="section-title max-w-[8ch]">Keep planning.</h2>
+							<div class="grid gap-4 sm:grid-cols-2">
+								{relatedPages.map((page) => (
+									<a href={`/${page.slug}`} class="guide-card">
+										<h3>{page.title}</h3>
+										<p>{page.description}</p>
+										<span>Read the guide →</span>
+									</a>
+								))}
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="site-shell py-24 sm:py-32">
+					<div class="rounded-[2rem] bg-black px-6 py-14 text-center text-white sm:px-12 sm:py-20">
+						<h2 class="section-title mx-auto max-w-[12ch]">Give every event one place to come together.</h2>
+						<p class="mx-auto mt-6 max-w-xl text-lg leading-7 text-white/80">Keep ideas, decisions, people, and the timeline connected in Gatherory.</p>
+						<a href="/#product" class="pill-button-inverse mt-8 h-12 px-7 text-base">Explore Gatherory</a>
+					</div>
+				</section>
+			</main>
+
+			<footer class="border-t border-black/10">
+				<div class="site-shell grid gap-10 py-12 sm:grid-cols-[1fr_auto] sm:items-end">
+					<div>
+						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]" aria-label="Gatherory home">
+							<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" /> Gatherory
+						</a>
+						<p class="mt-5 max-w-sm text-sm">Events, decisions, and people—gathered with purpose.</p>
+					</div>
+					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
+						<a class="nav-link" href="/resources">Guides</a>
+						<a class="nav-link" href="/privacy">Privacy</a>
+						<a class="nav-link" href="/terms">Terms</a>
+					</nav>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

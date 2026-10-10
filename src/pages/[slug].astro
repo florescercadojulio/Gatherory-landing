@@ -1,0 +1,33 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import SeoLayout from "@/layouts/seo-layout.astro";
+
+interface Props {
+	page: CollectionEntry<"seo">;
+	relatedPages: Array<{ slug: string; title: string; description: string }>;
+}
+
+export async function getStaticPaths() {
+	const pages = await getCollection("seo");
+
+	return pages.map((page) => ({
+		params: { slug: page.data.slug },
+		props: {
+			page,
+			relatedPages: page.data.related.flatMap((slug) => {
+				const related = pages.find((candidate) => candidate.data.slug === slug);
+				return related
+					? [{ slug, title: `${related.data.title} ${related.data.accent}`, description: related.data.description }]
+					: [];
+			}),
+		},
+	}));
+}
+
+const { page, relatedPages } = Astro.props;
+const { Content, headings } = await render(page);
+---
+
+<SeoLayout {...page.data} headings={headings} relatedPages={relatedPages}>
+	<Content />
+</SeoLayout>
