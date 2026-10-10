@@ -6,6 +6,8 @@
 		IconSparkles,
 		IconUsers,
 	} from "@tabler/icons-svelte";
+	import { APP_SIGN_IN_URL, APP_SIGN_UP_URL } from "@/lib/site-links";
+	import MobileNav from "@/lib/components/mobile-nav.svelte";
 	import DecisionDeck from "./decision-deck.svelte";
 	import EventCanvas from "./event-canvas.svelte";
 
@@ -48,10 +50,8 @@
 				<a class="nav-link" href="#people">People</a>
 			</nav>
 
-			<a href="#product" class="pill-button h-11 px-5 text-[0.95rem]">
-				<span class="sm:hidden">Explore</span>
-				<span class="hidden sm:inline">Explore Gatherory</span>
-			</a>
+			<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">Sign in</a>
+			<MobileNav />
 		</div>
 	</header>
 
@@ -64,8 +64,8 @@
 				Plan the main event, shape the moments around it, collect ideas, and invite each person into exactly the context they need.
 			</p>
 			<div class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-				<a href="#product" class="pill-button h-12 px-7 text-base">
-					See the gathering <IconArrowRight class="size-4" />
+				<a href={APP_SIGN_UP_URL} class="pill-button h-12 px-7 text-base">
+					Start planning <IconArrowRight class="size-4" />
 				</a>
 				<a href="#how-it-works" class="text-link">How it works</a>
 			</div>
@@ -155,8 +155,8 @@
 				<img src="/gatherory-icon.png" alt="" class="mx-auto size-16 rounded-2xl" width="64" height="64" />
 				<h2 class="section-title mx-auto mt-8 max-w-[13ch]">The gathering is the point. Planning should help you reach it.</h2>
 				<p class="mx-auto mt-6 max-w-xl text-lg leading-7 text-white/85">Create the main event, invite your people, and let every good idea find its place.</p>
-				<a href="#top" class="pill-button-inverse mt-9 h-12 px-7 text-base">
-					Explore Gatherory <IconArrowRight class="size-4" />
+				<a href={APP_SIGN_UP_URL} class="pill-button-inverse mt-9 h-12 px-7 text-base">
+					Create your event <IconArrowRight class="size-4" />
 				</a>
 			</div>
 		</section>
@@ -174,6 +174,7 @@
 				<a class="nav-link" href="/resources">Guides</a>
 				<a class="nav-link" href="/privacy">Privacy</a>
 				<a class="nav-link" href="/terms">Terms</a>
+				<a class="nav-link" href={APP_SIGN_IN_URL}>Sign in</a>
 				<a class="nav-link" href="#top">Back to top</a>
 			</nav>
 		</div>

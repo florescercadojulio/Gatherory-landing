@@ -1,5 +1,7 @@
 ---
 import "@/styles/global.css";
+import { APP_SIGN_IN_URL } from "@/lib/site-links";
+import MobileNav from "@/lib/components/mobile-nav.svelte";
 
 interface Props {
 	title: string;
@@ -42,10 +44,8 @@ const { title, accent, description, updated, activePage } = Astro.props;
 						<a class:list={["nav-link", { "text-brand-blue": activePage === "terms" }]} href="/terms" aria-current={activePage === "terms" ? "page" : undefined}>Terms</a>
 					</nav>
 
-					<a href="/#product" class="pill-button h-11 px-5 text-[0.95rem]">
-						<span class="sm:hidden">Explore</span>
-						<span class="hidden sm:inline">Explore Gatherory</span>
-					</a>
+					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">Sign in</a>
+					<MobileNav client:load />
 				</div>
 			</header>
 
@@ -87,6 +87,7 @@ const { title, accent, description, updated, activePage } = Astro.props;
 						<a class="nav-link" href="/">Home</a>
 						<a class="nav-link" href="/privacy">Privacy</a>
 						<a class="nav-link" href="/terms">Terms</a>
+						<a class="nav-link" href={APP_SIGN_IN_URL}>Sign in</a>
 					</nav>
 				</div>
 			</footer>
