@@ -48,6 +48,7 @@
 				<a class="nav-link" href="#product">Product</a>
 				<a class="nav-link" href="#how-it-works">How it works</a>
 				<a class="nav-link" href="#people">People</a>
+				<a class="nav-link" href="/resources">Guides</a>
 			</nav>
 
 			<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">Sign in</a>
