@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import { APP_SIGN_IN_URL, APP_SIGN_UP_URL } from "@/lib/site-links";
+import { getTranslations } from "@/i18n";
 import MobileNav from "@/lib/components/mobile-nav.svelte";
 
 interface Heading {
@@ -44,8 +45,9 @@ const {
 	headings,
 	relatedPages,
 } = Astro.props;
+const copy = getTranslations(Astro.currentLocale ?? "en");
 
-const updatedLabel = new Intl.DateTimeFormat("en-US", {
+const updatedLabel = new Intl.DateTimeFormat(Astro.currentLocale ?? "en", {
 	month: "long",
 	day: "numeric",
 	year: "numeric",
@@ -70,7 +72,7 @@ const structuredData = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={Astro.currentLocale ?? "en"}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -94,19 +96,19 @@ const structuredData = {
 		<div class="min-h-screen overflow-x-clip bg-background text-foreground">
 			<header class="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
 				<div class="site-shell relative flex h-16 items-center justify-between">
-					<a href="/" class="inline-flex items-center gap-2.5" aria-label="Gatherory home">
+					<a href="/" class="inline-flex items-center gap-2.5" aria-label={copy.nav.homeAria}>
 						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
 						<span class="text-base font-[540] tracking-[-0.02em]">Gatherory</span>
 					</a>
 
-					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label="Main navigation">
-						<a class="nav-link" href="/">Home</a>
-						<a class="nav-link text-brand-blue" href="/resources">Guides</a>
-						<a class="nav-link" href="/#product">Product</a>
+					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label={copy.nav.mainNavigation}>
+						<a class="nav-link" href="/">{copy.nav.home}</a>
+						<a class="nav-link text-brand-blue" href="/resources">{copy.nav.guides}</a>
+						<a class="nav-link" href="/#product">{copy.nav.product}</a>
 					</nav>
 
-					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">Sign in</a>
-					<MobileNav client:load />
+					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">{copy.nav.signIn}</a>
+					<MobileNav client:load copy={copy} />
 				</div>
 			</header>
 
@@ -115,7 +117,7 @@ const structuredData = {
 					<div class="max-w-[70rem]">
 						<h1 class="seo-title max-w-[14ch]">{title} <span class="text-brand-blue">{accent}</span></h1>
 						<p class="mt-8 max-w-3xl text-xl leading-8 sm:text-2xl sm:leading-9">{intro}</p>
-						<p class="mt-6 text-sm text-black/60">Updated {updatedLabel} · By Gatherory</p>
+						<p class="mt-6 text-sm text-black/60">{copy.seo.updatedBy.replace("{{date}}", updatedLabel)}</p>
 					</div>
 				</section>
 
@@ -130,8 +132,8 @@ const structuredData = {
 
 				<section class="site-shell pb-24 sm:pb-32">
 					<div class="seo-document-grid">
-						<aside class="seo-toc" aria-label="Page contents">
-							<p class="font-[540]">On this page</p>
+						<aside class="seo-toc" aria-label={copy.seo.pageContents}>
+							<p class="font-[540]">{copy.seo.onThisPage}</p>
 							<ol>
 								{headings.filter((heading) => heading.depth === 2).map((heading) => (
 									<li><a href={`#${heading.slug}`}>{heading.text}</a></li>
@@ -148,13 +150,13 @@ const structuredData = {
 				<section class="border-y border-black/10 bg-surface-soft">
 					<div class="site-shell py-20 sm:py-24">
 						<div class="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
-							<h2 class="section-title max-w-[8ch]">Keep planning.</h2>
+							<h2 class="section-title max-w-[8ch]">{copy.seo.keepPlanning}</h2>
 							<div class="grid gap-4 sm:grid-cols-2">
 								{relatedPages.map((page) => (
 									<a href={`/${page.slug}`} class="guide-card">
 										<h3>{page.title}</h3>
 										<p>{page.description}</p>
-										<span>Read the guide →</span>
+									<span>{copy.seo.readGuide}</span>
 									</a>
 								))}
 							</div>
@@ -164,9 +166,9 @@ const structuredData = {
 
 				<section class="site-shell py-24 sm:py-32">
 					<div class="rounded-[2rem] bg-black px-6 py-14 text-center text-white sm:px-12 sm:py-20">
-						<h2 class="section-title mx-auto max-w-[12ch]">Give every event one place to come together.</h2>
-						<p class="mx-auto mt-6 max-w-xl text-lg leading-7 text-white/80">Keep ideas, decisions, people, and the timeline connected in Gatherory.</p>
-						<a href={APP_SIGN_UP_URL} class="pill-button-inverse mt-8 h-12 px-7 text-base">Start planning</a>
+						<h2 class="section-title mx-auto max-w-[12ch]">{copy.seo.finalCtaTitle}</h2>
+						<p class="mx-auto mt-6 max-w-xl text-lg leading-7 text-white/80">{copy.seo.finalCtaDescription}</p>
+						<a href={APP_SIGN_UP_URL} class="pill-button-inverse mt-8 h-12 px-7 text-base">{copy.seo.startPlanning}</a>
 					</div>
 				</section>
 			</main>
@@ -174,16 +176,16 @@ const structuredData = {
 			<footer class="border-t border-black/10">
 				<div class="site-shell grid gap-10 py-12 sm:grid-cols-[1fr_auto] sm:items-end">
 					<div>
-						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]" aria-label="Gatherory home">
+						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]" aria-label={copy.nav.homeAria}>
 							<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" /> Gatherory
 						</a>
-						<p class="mt-5 max-w-sm text-sm">Events, decisions, and people—gathered with purpose.</p>
+						<p class="mt-5 max-w-sm text-sm">{copy.footer.description}</p>
 					</div>
-					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
-						<a class="nav-link" href="/resources">Guides</a>
-						<a class="nav-link" href="/privacy">Privacy</a>
-						<a class="nav-link" href="/terms">Terms</a>
-						<a class="nav-link" href={APP_SIGN_IN_URL}>Sign in</a>
+					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label={copy.nav.footerNavigation}>
+						<a class="nav-link" href="/resources">{copy.nav.guides}</a>
+						<a class="nav-link" href="/privacy">{copy.nav.privacy}</a>
+						<a class="nav-link" href="/terms">{copy.nav.terms}</a>
+						<a class="nav-link" href={APP_SIGN_IN_URL}>{copy.nav.signIn}</a>
 					</nav>
 				</div>
 			</footer>

@@ -2,30 +2,10 @@
 	import { IconCheck, IconHeart, IconRefresh, IconX } from "@tabler/icons-svelte";
 	import { Badge } from "@/lib/components/ui/badge/index.js";
 	import { Button } from "@/lib/components/ui/button/index.js";
+	import type { SiteCopy } from "@/i18n";
 
-	const ideas = [
-		{
-			title: "A candlelit dinner under the trees?",
-			note: "Added by Maya",
-			label: "Reception",
-			color: "bg-block-coral",
-			detail: "Long tables · warm lights · family style",
-		},
-		{
-			title: "Wildflower bouquets in every color?",
-			note: "Added by Nia",
-			label: "Flowers",
-			color: "bg-block-lilac",
-			detail: "Loose stems · local blooms · lots of texture",
-		},
-		{
-			title: "A tiny cake and a giant dessert table?",
-			note: "Added by Theo",
-			label: "Food",
-			color: "bg-block-lime",
-			detail: "One cutting cake · twelve favorite sweets",
-		},
-	];
+	let { copy } = $props<{ copy: SiteCopy["landing"] }>();
+	const ideas = copy.demoIdeas;
 
 	let index = $state(0);
 	let verdict = $state<"yes" | "pass" | null>(null);
@@ -68,7 +48,7 @@
 				</div>
 				{#if verdict}
 					<div class={`absolute right-6 top-6 rotate-6 rounded-xl border-4 px-4 py-2 font-mono text-xl font-bold uppercase tracking-widest ${verdict === "yes" ? "border-black bg-block-lime" : "border-black bg-white"}`}>
-						{verdict === "yes" ? "Saved" : "Passed"}
+						{verdict === "yes" ? copy.saved : copy.passed}
 					</div>
 				{/if}
 			</div>
@@ -86,7 +66,7 @@
 						size="icon-lg"
 						class="size-14 border-black/20 bg-white text-black hover:border-black hover:bg-black hover:text-white"
 						onclick={() => decide("pass")}
-						aria-label="Pass on this idea"
+						aria-label={copy.passIdea}
 					>
 						<IconX class="size-6" stroke={1.8} />
 					</Button>
@@ -95,7 +75,7 @@
 						size="icon-lg"
 						class="size-16 bg-brand-blue text-white shadow-[0_10px_24px_rgba(40,120,255,0.24)] hover:bg-brand-blue-deep"
 						onclick={() => decide("yes")}
-						aria-label="Save this idea"
+						aria-label={copy.saveIdea}
 					>
 						<IconHeart class="size-7" stroke={1.8} />
 					</Button>
@@ -105,9 +85,9 @@
 	</div>
 
 	<div class="mt-2 flex items-center justify-between px-2 font-mono text-xs uppercase tracking-[0.1em] text-muted-foreground">
-		<span>{index + 1} of {ideas.length}</span>
-		<span class="inline-flex items-center gap-1.5"><IconCheck class="size-4" /> Private to your circle</span>
-		<button class="rounded-full p-2 transition-colors hover:bg-muted hover:text-foreground" onclick={reset} aria-label="Reset the demo">
+		<span>{copy.progress.replace("{{current}}", String(index + 1)).replace("{{total}}", String(ideas.length))}</span>
+		<span class="inline-flex items-center gap-1.5"><IconCheck class="size-4" /> {copy.privateToCircle}</span>
+		<button class="rounded-full p-2 transition-colors hover:bg-muted hover:text-foreground" onclick={reset} aria-label={copy.resetDemo}>
 			<IconRefresh class="size-4" />
 		</button>
 	</div>

@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import { APP_SIGN_IN_URL } from "@/lib/site-links";
+import { getTranslations } from "@/i18n";
 import MobileNav from "@/lib/components/mobile-nav.svelte";
 
 interface Props {
@@ -9,13 +10,15 @@ interface Props {
 	description: string;
 	updated: string;
 	activePage: "privacy" | "terms";
+	releaseReview?: boolean;
 }
 
-const { title, accent, description, updated, activePage } = Astro.props;
+const { title, accent, description, updated, activePage, releaseReview = false } = Astro.props;
+const copy = getTranslations(Astro.currentLocale ?? "en");
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={Astro.currentLocale ?? "en"}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -33,19 +36,19 @@ const { title, accent, description, updated, activePage } = Astro.props;
 		<div class="min-h-screen overflow-x-clip bg-background text-foreground">
 			<header class="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
 				<div class="site-shell relative flex h-16 items-center justify-between">
-					<a href="/" class="inline-flex items-center gap-2.5" aria-label="Gatherory home">
+					<a href="/" class="inline-flex items-center gap-2.5" aria-label={copy.nav.homeAria}>
 						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
 						<span class="text-base font-[540] tracking-[-0.02em]">Gatherory</span>
 					</a>
 
-					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label="Legal navigation">
-						<a class="nav-link" href="/">Home</a>
-						<a class:list={["nav-link", { "text-brand-blue": activePage === "privacy" }]} href="/privacy" aria-current={activePage === "privacy" ? "page" : undefined}>Privacy</a>
-						<a class:list={["nav-link", { "text-brand-blue": activePage === "terms" }]} href="/terms" aria-current={activePage === "terms" ? "page" : undefined}>Terms</a>
+					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label={copy.nav.legalNavigation}>
+						<a class="nav-link" href="/">{copy.nav.home}</a>
+						<a class:list={["nav-link", { "text-brand-blue": activePage === "privacy" }]} href="/privacy" aria-current={activePage === "privacy" ? "page" : undefined}>{copy.nav.privacy}</a>
+						<a class:list={["nav-link", { "text-brand-blue": activePage === "terms" }]} href="/terms" aria-current={activePage === "terms" ? "page" : undefined}>{copy.nav.terms}</a>
 					</nav>
 
-					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">Sign in</a>
-					<MobileNav client:load />
+					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">{copy.nav.signIn}</a>
+					<MobileNav client:load copy={copy} />
 				</div>
 			</header>
 
@@ -55,19 +58,25 @@ const { title, accent, description, updated, activePage } = Astro.props;
 						<h1 class="legal-title max-w-[10ch]">{title} <span class="text-brand-blue">{accent}</span></h1>
 						<div>
 							<p class="text-xl leading-8 sm:text-2xl sm:leading-9">{description}</p>
-							<p class="mt-6 text-sm text-black/60">Last updated {updated}</p>
+							<p class="mt-6 text-sm text-black/60">{copy.legal.lastUpdated.replace("{{date}}", updated)}</p>
 						</div>
 					</div>
 				</section>
 
 				<section class="site-shell pb-24 sm:pb-32">
 					<div class="legal-document-grid">
-						<aside class="legal-toc" aria-label="Page contents">
-							<p class="font-[540]">On this page</p>
+						<aside class="legal-toc" aria-label={copy.legal.pageContents}>
+							<p class="font-[540]">{copy.legal.onThisPage}</p>
 							<slot name="toc" />
 						</aside>
 
 						<article class="legal-copy">
+							{releaseReview && (
+								<div class="mb-10 border-l-2 border-brand-blue pl-5" role="note">
+								<p class="mt-0! font-semibold">{copy.legal.releaseReviewTitle}</p>
+								<p>{copy.legal.releaseReviewDescription}</p>
+								</div>
+							)}
 							<slot />
 						</article>
 					</div>
@@ -77,17 +86,17 @@ const { title, accent, description, updated, activePage } = Astro.props;
 			<footer class="border-t border-black/10">
 				<div class="site-shell grid gap-10 py-12 sm:grid-cols-[1fr_auto] sm:items-end">
 					<div>
-						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]" aria-label="Gatherory home">
+						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]" aria-label={copy.nav.homeAria}>
 							<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
 							Gatherory
 						</a>
-						<p class="mt-5 max-w-sm text-sm">Events, decisions, and people—gathered with purpose.</p>
+						<p class="mt-5 max-w-sm text-sm">{copy.footer.description}</p>
 					</div>
-					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
-						<a class="nav-link" href="/">Home</a>
-						<a class="nav-link" href="/privacy">Privacy</a>
-						<a class="nav-link" href="/terms">Terms</a>
-						<a class="nav-link" href={APP_SIGN_IN_URL}>Sign in</a>
+					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label={copy.nav.footerNavigation}>
+						<a class="nav-link" href="/">{copy.nav.home}</a>
+						<a class="nav-link" href="/privacy">{copy.nav.privacy}</a>
+						<a class="nav-link" href="/terms">{copy.nav.terms}</a>
+						<a class="nav-link" href={APP_SIGN_IN_URL}>{copy.nav.signIn}</a>
 					</nav>
 				</div>
 			</footer>

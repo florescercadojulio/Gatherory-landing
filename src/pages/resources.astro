@@ -2,49 +2,51 @@
 import { getCollection } from "astro:content";
 import "@/styles/global.css";
 import { APP_SIGN_IN_URL } from "@/lib/site-links";
+import { getTranslations } from "@/i18n";
 import MobileNav from "@/lib/components/mobile-nav.svelte";
 
+const copy = getTranslations(Astro.currentLocale ?? "en");
 const pages = (await getCollection("seo")).sort((a, b) => a.data.order - b.data.order);
 const canonical = new URL("/resources", Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={Astro.currentLocale ?? "en"}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="Practical event planning guides, app comparisons, checklists, and Gatherory tutorials." />
+		<meta name="description" content={copy.resources.metaDescription} />
 		<link rel="canonical" href={canonical} />
 		<link rel="icon" type="image/png" href="/gatherory-icon.png" />
 		<link rel="apple-touch-icon" href="/gatherory-icon.png" />
 		<meta name="theme-color" content="#ffffff" />
-		<meta property="og:title" content="Event planning guides · Gatherory" />
-		<meta property="og:description" content="Practical event planning guides, app comparisons, checklists, and Gatherory tutorials." />
+		<meta property="og:title" content={copy.resources.metaTitle} />
+		<meta property="og:description" content={copy.resources.metaDescription} />
 		<meta property="og:url" content={canonical} />
-		<title>Event planning guides · Gatherory</title>
+		<title>{copy.resources.metaTitle}</title>
 	</head>
 	<body>
 		<div class="min-h-screen overflow-x-clip bg-background text-foreground">
 			<header class="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
 				<div class="site-shell relative flex h-16 items-center justify-between">
-					<a href="/" class="inline-flex items-center gap-2.5" aria-label="Gatherory home">
+					<a href="/" class="inline-flex items-center gap-2.5" aria-label={copy.nav.homeAria}>
 						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
 						<span class="text-base font-[540] tracking-[-0.02em]">Gatherory</span>
 					</a>
-					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label="Main navigation">
-						<a class="nav-link" href="/">Home</a>
-						<a class="nav-link text-brand-blue" href="/resources" aria-current="page">Guides</a>
-						<a class="nav-link" href="/#product">Product</a>
+					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label={copy.nav.mainNavigation}>
+						<a class="nav-link" href="/">{copy.nav.home}</a>
+						<a class="nav-link text-brand-blue" href="/resources" aria-current="page">{copy.nav.guides}</a>
+						<a class="nav-link" href="/#product">{copy.nav.product}</a>
 					</nav>
-					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">Sign in</a>
-					<MobileNav client:load />
+					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">{copy.nav.signIn}</a>
+					<MobileNav client:load copy={copy} />
 				</div>
 			</header>
 
 			<main>
 				<section class="site-shell py-20 sm:py-28 lg:py-32">
-					<h1 class="display-title max-w-[11ch]">Plan with more <span class="text-brand-blue">clarity.</span></h1>
-					<p class="mt-8 max-w-2xl text-xl leading-8 sm:text-2xl sm:leading-9">Practical comparisons, checklists, and step-by-step guides for bringing an event together.</p>
+					<h1 class="display-title max-w-[11ch]">{copy.resources.title} <span class="text-brand-blue">{copy.resources.titleAccent}</span></h1>
+					<p class="mt-8 max-w-2xl text-xl leading-8 sm:text-2xl sm:leading-9">{copy.resources.description}</p>
 				</section>
 
 				<section class="site-shell pb-24 sm:pb-32">
@@ -53,7 +55,7 @@ const canonical = new URL("/resources", Astro.site);
 							<a href={`/${page.data.slug}`} class:list={["resource-card", index === 0 && "resource-card-featured"]}>
 								<h2>{page.data.title} <span class="text-brand-blue">{page.data.accent}</span></h2>
 								<p>{page.data.description}</p>
-								<span>Read the guide →</span>
+								<span>{copy.resources.readGuide}</span>
 							</a>
 						))}
 					</div>
@@ -64,10 +66,10 @@ const canonical = new URL("/resources", Astro.site);
 				<div class="site-shell grid gap-10 py-12 sm:grid-cols-[1fr_auto] sm:items-end">
 					<div>
 						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]"><img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" /> Gatherory</a>
-						<p class="mt-5 max-w-sm text-sm">Events, decisions, and people—gathered with purpose.</p>
+						<p class="mt-5 max-w-sm text-sm">{copy.footer.description}</p>
 					</div>
-					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label="Footer navigation">
-						<a class="nav-link" href="/">Home</a><a class="nav-link" href="/privacy">Privacy</a><a class="nav-link" href="/terms">Terms</a><a class="nav-link" href={APP_SIGN_IN_URL}>Sign in</a>
+					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label={copy.nav.footerNavigation}>
+						<a class="nav-link" href="/">{copy.nav.home}</a><a class="nav-link" href="/privacy">{copy.nav.privacy}</a><a class="nav-link" href="/terms">{copy.nav.terms}</a><a class="nav-link" href={APP_SIGN_IN_URL}>{copy.nav.signIn}</a>
 					</nav>
 				</div>
 			</footer>

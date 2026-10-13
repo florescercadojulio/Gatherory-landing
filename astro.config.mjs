@@ -7,6 +7,11 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
   site: "https://gatherory.com",
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+    routing: { prefixDefaultLocale: false },
+  },
 
   vite: {
     plugins: [tailwindcss()],

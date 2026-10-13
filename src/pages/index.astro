@@ -1,27 +1,29 @@
 ---
 import "@/styles/global.css";
 import LandingPage from "@/lib/components/landing/landing-page.svelte";
+import { getTranslations } from "@/i18n";
 
+const copy = getTranslations(Astro.currentLocale ?? "en");
 const canonical = new URL("/", Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={Astro.currentLocale ?? "en"}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="Gatherory brings events, ideas, decisions, and people into one shared planning space." />
+		<meta name="description" content={copy.landing.metaDescription} />
 		<link rel="canonical" href={canonical} />
 		<link rel="icon" type="image/png" href="/gatherory-icon.png" />
 		<link rel="apple-touch-icon" href="/gatherory-icon.png" />
 		<meta name="theme-color" content="#ffffff" />
-		<meta property="og:title" content="Gatherory · Bring every part of the gathering together" />
-		<meta property="og:description" content="Plan the event, shape the moments around it, and invite people into exactly the context they need." />
+		<meta property="og:title" content={copy.landing.socialTitle} />
+		<meta property="og:description" content={copy.landing.socialDescription} />
 		<meta property="og:image" content="/gatherory-icon.png" />
 		<meta property="og:url" content={canonical} />
-		<title>Gatherory · Plan every part together</title>
+		<title>{copy.landing.metaTitle}</title>
 	</head>
 	<body>
-		<LandingPage client:load />
+		<LandingPage client:load copy={copy} />
 	</body>
 </html>

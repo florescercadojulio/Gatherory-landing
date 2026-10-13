@@ -1,26 +1,32 @@
 ---
 import LegalLayout from "@/layouts/legal-layout.astro";
+import { LEGAL_DETAILS } from "@/lib/legal-details";
 ---
 
-<!-- Before launch, have counsel confirm the operating entity, contact mailbox, retention practices, and jurisdiction-specific disclosures. -->
+<!-- Release review: verify cookie/SDK consent, retention and provider transfer
+     arrangements. Required address/EEA representative disclosures remain open;
+     do not remove the review label merely because this copy has been revised. -->
 
 <LegalLayout
 	title="Privacy"
 	accent="Policy."
 	description="This policy explains what Gatherory collects, why we use it, and the choices you have when you plan and share an event."
-	updated="October 10, 2026"
+	updated={LEGAL_DETAILS.updated}
 	activePage="privacy"
+	releaseReview={LEGAL_DETAILS.releaseReview}
 >
 	<ol slot="toc">
-		<li><a href="#scope">Scope</a></li>
+		<li><a href="#scope">Who we are and scope</a></li>
 		<li><a href="#information">Information we collect</a></li>
 		<li><a href="#use">How we use information</a></li>
+		<li><a href="#legal-bases">Legal bases</a></li>
 		<li><a href="#sharing">How we share information</a></li>
 		<li><a href="#cookies">Cookies and analytics</a></li>
 		<li><a href="#retention">Retention and security</a></li>
 		<li><a href="#choices">Your choices</a></li>
 		<li><a href="#children">Children</a></li>
 		<li><a href="#international">International transfers</a></li>
+		<li><a href="#automated-decisions">Automated decisions</a></li>
 		<li><a href="#changes">Changes and contact</a></li>
 	</ol>
 
@@ -30,8 +36,10 @@ import LegalLayout from "@/layouts/legal-layout.astro";
 	</div>
 
 	<section id="scope">
-		<h2>1. Scope</h2>
-		<p>This Privacy Policy applies to Gatherory’s websites, applications, and related services. It does not cover third-party services that you choose to connect to or visit, which operate under their own privacy policies.</p>
+		<h2>1. Who we are and scope</h2>
+		<p>Gatherory is operated by {LEGAL_DETAILS.operator}, established in the {LEGAL_DETAILS.country}. In this policy, “we,” “us,” and “our” mean {LEGAL_DETAILS.operator}. We are the data controller for the account and service processing described here: we decide why and how that information is used. Contact us at <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a> for privacy matters.</p>
+		<p>This policy covers Gatherory’s marketing website, web application, iPhone application, and related services. Separate notices may apply to a specific feature. Services you choose to connect to or visit have their own policies.</p>
+		<p>An organization using Gatherory may also have responsibilities for the participant information it supplies. Its notice does not replace your rights in relation to our processing.</p>
 	</section>
 
 	<section id="information">
@@ -45,7 +53,10 @@ import LegalLayout from "@/layouts/legal-layout.astro";
 			<li><strong>Communications.</strong> Messages you send to us, including support requests and feedback.</li>
 			<li><strong>Usage and device information.</strong> Browser and device type, IP address, approximate location derived from an IP address, pages and features used, timestamps, diagnostic data, and similar log information.</li>
 		</ul>
-		<p>Other people may provide information about you when they invite you to an event or add you as a participant. If you provide another person’s information, you are responsible for having permission to do so.</p>
+		<p>Other people may provide information about you when they invite you or add you as a participant. If you supply someone else’s details, you must have an appropriate lawful basis and provide any privacy information required of you. Permission or consent is not the only possible lawful basis, but an invitation is not permission for unrelated marketing.</p>
+		<p>You do not need an account simply to read the marketing website. An email address and sign-in credentials or a supported sign-in provider are needed for an account. Images, many planning details, and optional device permissions are not required for basic account access; declining them may limit the associated feature.</p>
+		<p><strong>Device permissions and connected features.</strong> When you choose them, location and map features can use a selected place or device location, Apple Music can supply playlist and song details, and notification access can deliver reminders. Images you choose and their file metadata may be uploaded to our private storage. You can change system permissions in your device settings. A device permission is not blanket consent to unrelated processing.</p>
+		<p>Please avoid adding unnecessary sensitive information, such as medical, religious, or identity-document details, to event notes or images. If someone else added your details, you can contact us without creating an account to ask about that information or exercise your rights.</p>
 	</section>
 
 	<section id="use">
@@ -62,12 +73,25 @@ import LegalLayout from "@/layouts/legal-layout.astro";
 		</ul>
 	</section>
 
+	<section id="legal-bases">
+		<h2>4. Legal bases for European personal data</h2>
+		<p>Where the GDPR applies, each purpose needs an appropriate lawful basis. The basis depends on the processing, not simply on accepting the Terms:</p>
+		<ul>
+			<li><strong>Contract.</strong> Account access, requested event planning, synchronization, sharing, and essential service messages, to the extent needed to provide the service you request.</li>
+			<li><strong>Legitimate interests.</strong> Proportionate account security, abuse prevention, essential reliability diagnostics, handling support, and facilitating invitations supplied by event organizers. Our interests are running a secure, reliable collaborative service; they must be balanced against your rights and reasonable expectations.</li>
+			<li><strong>Consent.</strong> Optional analytics or marketing when consent is required. It must be a separate, informed choice, and you may withdraw it. Signing up or continuing to browse does not itself give that consent.</li>
+			<li><strong>Legal obligation.</strong> Information necessary to meet an applicable legal requirement or respond to a legally binding request.</li>
+		</ul>
+		<p>We do not treat optional tracking as necessary to perform the account contract. Withdrawing consent does not invalidate processing already lawfully carried out on that basis.</p>
+	</section>
+
 	<section id="sharing">
-		<h2>4. How we share information</h2>
+		<h2>5. How we share information</h2>
 		<p>Gatherory is collaborative by design. Event content and participant details are shared with hosts, collaborators, and guests according to the event role, access rules, and visibility settings selected by the people managing the event.</p>
+		<p>An “anyone with the link” invitation can be forwarded. People admitted through it receive the access set by the host. Revoking a link prevents further use of that link; it cannot retrieve copies that another person has already saved or shared.</p>
 		<p>We may also share information with:</p>
 		<ul>
-			<li><strong>Service providers.</strong> Companies that help us host the service, store data and private media, deliver email, provide authentication, monitor reliability, and understand product usage. They may process information only to perform services for us and under appropriate obligations.</li>
+			<li><strong>Service providers.</strong> Hosting, database, private-media storage, email-delivery, and diagnostic providers receive information needed for their functions. Cloudflare R2 is used for private uploaded media. The web application can use PostHog for product analytics when configured. Providers acting as processors must be subject to appropriate data-processing obligations.</li>
 			<li><strong>Connected services.</strong> Google, Apple, or another service when you choose to connect it or use it to sign in.</li>
 			<li><strong>Legal and safety recipients.</strong> Authorities or other parties when reasonably necessary to comply with law, respond to valid legal process, prevent fraud or abuse, or protect people and rights.</li>
 			<li><strong>A successor.</strong> A buyer, investor, or successor in connection with a merger, financing, reorganization, or sale of all or part of the business, subject to appropriate confidentiality protections.</li>
@@ -76,36 +100,62 @@ import LegalLayout from "@/layouts/legal-layout.astro";
 	</section>
 
 	<section id="cookies">
-		<h2>5. Cookies and analytics</h2>
-		<p>Gatherory uses cookies and similar storage technologies to keep you signed in, remember preferences, protect accounts, and operate the service. When analytics is enabled, we may also use these technologies to understand which pages and features are used and to improve the experience.</p>
-		<p>You can control cookies through your browser settings. Blocking required cookies may prevent sign-in or other parts of Gatherory from working correctly.</p>
+		<h2>6. Cookies, device storage, and analytics</h2>
+		<p>Account sessions, security, and requested preferences use cookies or device storage needed for those functions. The iPhone app also stores local planning data and sign-in information so it can work offline and synchronize later.</p>
+		<p>The marketing pages do not currently initialize the web application’s product-analytics SDK. When configured in the web application, product analytics can collect interaction and device data and use cookies or similar identifiers. It is distinct from storage needed to sign in.</p>
+		<p>Where European law requires consent, non-essential storage and tracking need a prior opt-in. Rejecting optional tracking must not block the basic service, and withdrawing consent must be as easy as giving it. Browser cookie settings are an additional control, not a substitute for those consent requirements. Accepting this policy or the Terms is not consent to optional analytics.</p>
+		<p>You can clear browser storage or change device permissions in system settings. Blocking essential session storage can prevent sign-in. For questions or to withdraw consent to processing for which we rely on consent, contact <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a>.</p>
 	</section>
 
 	<section id="retention">
-		<h2>6. Retention and security</h2>
-		<p>We keep personal information for as long as needed to provide Gatherory, maintain legitimate business records, resolve disputes, enforce agreements, and meet legal obligations. Retention can vary by the type of information and why it was collected. Event content may remain available to other authorized participants even after one participant leaves an event.</p>
+		<h2>7. Retention and security</h2>
+		<p>Retention is determined by the purpose and category of information, rather than a single indefinite period:</p>
+		<ul>
+			<li><strong>Accounts and planning content.</strong> Kept while needed for your account and active shared plans, subject to deletion requests and any applicable exception.</li>
+			<li><strong>Invitations and sessions.</strong> Needed for admission, account security, and invitation history; an expired invitation or session is no longer usable for access. Expiry alone does not mean its database record has been erased.</li>
+			<li><strong>Support and security records.</strong> Retention depends on resolving the specific request or incident and any applicable legal claim or recordkeeping duty.</li>
+			<li><strong>Backups and provider logs.</strong> These can persist beyond removal from active systems according to the relevant backup or provider retention cycle. They are not an exception permitting unlimited reuse.</li>
+		</ul>
+		<p>You can request account deletion in the app or contact us. Shared plans may remain for other participants; that is not a blanket exception to your right to erase personal information. We assess any retained information against its actual lawful purpose. Copies held independently by other participants are outside our direct control.</p>
 		<p>We use administrative, technical, and organizational safeguards designed to protect information. Private event media is stored with restricted access and is delivered through time-limited access methods. No system is completely secure, so we cannot guarantee absolute security.</p>
 	</section>
 
 	<section id="choices">
-		<h2>7. Your choices</h2>
-		<p>You can update certain account and event information in Gatherory, leave events when the product allows it, and manage browser cookies through your device settings. You may also ask us to access, correct, export, or delete personal information, or object to certain uses, where applicable law provides those rights.</p>
-		<p>Some information may need to be retained for security, fraud prevention, legal compliance, or to preserve records shared with other event participants. To make a privacy request, contact us using the address below. We may need to verify your identity before completing it.</p>
+		<h2>8. Your privacy rights and requests</h2>
+		<p>Where the GDPR applies, you can request:</p>
+		<ul>
+			<li>access to your personal data and information about its use;</li>
+			<li>correction of inaccurate or incomplete information;</li>
+			<li>erasure or restriction of processing in the circumstances provided by law;</li>
+			<li>a portable, machine-readable copy of data you provided where automated processing is based on consent or contract, and transmission to another controller where technically feasible; and</li>
+			<li>withdrawal of consent, without affecting earlier lawful processing.</li>
+		</ul>
+		<p><strong>You may object to processing based on legitimate interests because of your particular situation. You may object to direct marketing at any time.</strong></p>
+		<p>Send requests to <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a>. We may seek proportionate information to verify identity, not unrelated personal documents. GDPR requests are normally free. We respond without undue delay and within one month; if complexity or the number of requests justifies an extension of up to two further months, we explain that within the first month. If we cannot fulfill a request, we explain why and your available remedies.</p>
+		<p>You may complain directly to the supervisory authority where you habitually live, work, or believe an infringement occurred. You do not need to contact us first. Find the authority through the <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_en">European Data Protection Board’s authority directory</a>. Other applicable privacy laws may give you additional rights.</p>
 	</section>
 
 	<section id="children">
-		<h2>8. Children</h2>
-		<p>Gatherory is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information in violation of this policy, please contact us so we can review and take appropriate action.</p>
+		<h2>9. Children and age requirements</h2>
+		<p>Gatherory is not directed to children under 13. A higher minimum age or parental authorization may be required in your country. In the EEA, the age for a child’s own consent to relevant online-service processing varies between 13 and 16. Being 13 does not automatically satisfy those rules or the separate requirements for entering a contract.</p>
+		<p>Where verified parental consent is required, ordinary permission to use a phone is not a substitute. Do not use a feature requiring that consent unless an appropriate verification process is available and completed. If you believe we have processed a child’s information unlawfully, contact us so we can investigate and take appropriate action.</p>
 	</section>
 
 	<section id="international">
-		<h2>9. International transfers</h2>
-		<p>Gatherory and its service providers may process information in countries other than the country where you live. Those countries may have different data-protection laws. Where required, we use appropriate safeguards for these transfers.</p>
+		<h2>10. International transfers</h2>
+		<p>{LEGAL_DETAILS.operator} is established in the United States. Gatherory and its providers may process data there and in other countries where their infrastructure operates. Laws and government-access rules may differ from those in your country.</p>
+		<p>Transfers subject to the GDPR need a valid transfer mechanism, such as an applicable adequacy decision or appropriate contractual safeguards with any necessary supplementary measures. A provider’s brand name or the existence of a standard contract template does not establish that a particular transfer is covered.</p>
+		<p>Contact <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a> to ask which recipients, countries, and safeguards apply to your information, or to request a copy of applicable safeguards, with lawful confidentiality redactions. This draft does not claim that Gatherory is certified under the EU–US Data Privacy Framework or that any unverified transfer agreement is already in place.</p>
+	</section>
+
+	<section id="automated-decisions">
+		<h2>11. Automated decisions</h2>
+		<p>The app’s planning decisions and votes are choices made by participants. Gatherory does not currently make decisions about you based solely on automated processing that produce legal or similarly significant effects. A new feature involving such processing would require a separate explanation of its purpose, basis, and your rights.</p>
 	</section>
 
 	<section id="changes">
-		<h2>10. Changes and contact</h2>
+		<h2>12. Changes and contact</h2>
 		<p>We may update this policy as Gatherory changes. If an update materially affects how we use personal information, we will provide notice through the service or another appropriate channel. The date at the top shows when this policy was last revised.</p>
-		<p>Questions or privacy requests can be sent to <a href="mailto:privacy@gatherory.com">privacy@gatherory.com</a>.</p>
+		<p>Privacy requests and questions about this policy should be sent to {LEGAL_DETAILS.operator} at <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a>. A policy update does not retroactively create consent or waive your statutory rights.</p>
 	</section>
 </LegalLayout>

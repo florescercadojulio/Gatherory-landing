@@ -10,33 +10,36 @@
 	import { onMount } from "svelte";
 	import * as Sheet from "@/lib/components/ui/sheet";
 	import { APP_SIGN_IN_URL, APP_SIGN_UP_URL } from "@/lib/site-links";
+	import type { SiteCopy } from "@/i18n";
 
-	const links = [
+	let { copy } = $props<{ copy: SiteCopy }>();
+
+	const links = $derived([
 		{
 			href: "/#product",
-			label: "Product",
-			description: "See how the whole gathering stays connected.",
+			label: copy.nav.product,
+			description: copy.mobileNav.productDescription,
 			icon: IconLayoutGrid,
 		},
 		{
 			href: "/#how-it-works",
-			label: "How it works",
-			description: "Move ideas into decisions and a shared plan.",
+			label: copy.nav.howItWorks,
+			description: copy.mobileNav.howItWorksDescription,
 			icon: IconRoute,
 		},
 		{
 			href: "/#people",
-			label: "People",
-			description: "Give hosts, collaborators, and guests the right context.",
+			label: copy.nav.people,
+			description: copy.mobileNav.peopleDescription,
 			icon: IconUsers,
 		},
 		{
 			href: "/resources",
-			label: "Guides",
-			description: "Practical help for planning an event with clarity.",
+			label: copy.nav.guides,
+			description: copy.mobileNav.guidesDescription,
 			icon: IconBook2,
 		},
-	];
+	]);
 
 	let mobileMenuOpen = $state(false);
 	let mobileSheetKey = $state(0);
@@ -74,7 +77,7 @@
 	<Sheet.Root bind:open={mobileMenuOpen}>
 		<Sheet.Trigger
 			class="inline-flex size-11 items-center justify-center rounded-full border border-black bg-white text-black transition-colors hover:bg-black hover:text-white lg:hidden"
-			aria-label="Open navigation menu"
+			aria-label={copy.nav.navigationMenu}
 		>
 			<IconMenu2 class="size-5" stroke={1.8} aria-hidden="true" />
 		</Sheet.Trigger>
@@ -84,8 +87,8 @@
 			showCloseButton={true}
 			class="w-[min(82vw,23rem)] border-l border-black/15 bg-white p-0 text-black shadow-[-12px_0_32px_rgba(0,0,0,0.08)] lg:hidden"
 		>
-			<Sheet.Title class="sr-only">Navigation menu</Sheet.Title>
-			<Sheet.Description class="sr-only">Main navigation links for Gatherory.</Sheet.Description>
+		<Sheet.Title class="sr-only">{copy.nav.navigationTitle}</Sheet.Title>
+		<Sheet.Description class="sr-only">{copy.nav.navigationDescription}</Sheet.Description>
 
 			<div class="flex h-dvh min-h-0 flex-col bg-white text-black">
 				<div class="shrink-0 border-b border-black/15 px-4 pb-5 pt-3">
@@ -93,14 +96,12 @@
 						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
 						<span class="font-[540] tracking-[-0.02em]">Gatherory</span>
 					</a>
-					<p class="mt-4 text-sm leading-5 text-black/70">
-						Plan the event, shape the moments around it, and bring the right people in.
-					</p>
+					<p class="mt-4 text-sm leading-5 text-black/70">{copy.mobileNav.intro}</p>
 				</div>
 
 				<nav
 					class="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto overscroll-contain p-3"
-					aria-label="Mobile navigation"
+					aria-label={copy.nav.mobileNavigation}
 				>
 					{#each links as link}
 						<a
@@ -117,21 +118,21 @@
 					{/each}
 
 					<div class="mt-auto flex flex-wrap gap-x-5 gap-y-2 px-1 pb-1 pt-3 text-sm">
-						<a class="nav-link" href="/privacy" onclick={closeMobileMenu}>Privacy</a>
-						<a class="nav-link" href="/terms" onclick={closeMobileMenu}>Terms</a>
+						<a class="nav-link" href="/privacy" onclick={closeMobileMenu}>{copy.nav.privacy}</a>
+						<a class="nav-link" href="/terms" onclick={closeMobileMenu}>{copy.nav.terms}</a>
 					</div>
 				</nav>
 
 				<div class="grid shrink-0 gap-2 border-t border-black/15 bg-white p-3">
 					<a href={APP_SIGN_UP_URL} class="pill-button h-12 w-full px-5" onclick={closeMobileMenu}>
-						Start planning <IconArrowRight class="size-4" />
+						{copy.nav.startPlanning} <IconArrowRight class="size-4" />
 					</a>
 					<a
 						href={APP_SIGN_IN_URL}
 						class="inline-flex h-11 items-center justify-center rounded-full border border-black font-[480] transition-colors hover:bg-black hover:text-white"
 						onclick={closeMobileMenu}
 					>
-						Sign in
+						{copy.nav.signIn}
 					</a>
 				</div>
 			</div>

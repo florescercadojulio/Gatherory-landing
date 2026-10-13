@@ -1,20 +1,24 @@
 ---
 import LegalLayout from "@/layouts/legal-layout.astro";
+import { LEGAL_DETAILS } from "@/lib/legal-details";
 ---
 
-<!-- Before launch, have counsel confirm the operating entity, contact mailbox, governing law, dispute venue, and liability terms. -->
+<!-- Release review: resolve mandatory trader/EEA disclosures and obtain legal
+     review before removing the draft label. No private address is published. -->
 
 <LegalLayout
 	title="Terms of"
 	accent="Use."
 	description="These terms set the ground rules for using Gatherory and collaborating with the people around an event."
-	updated="October 10, 2026"
+	updated={LEGAL_DETAILS.updated}
 	activePage="terms"
+	releaseReview={LEGAL_DETAILS.releaseReview}
 >
 	<ol slot="toc">
 		<li><a href="#agreement">Agreement</a></li>
 		<li><a href="#accounts">Accounts and eligibility</a></li>
 		<li><a href="#service">Using Gatherory</a></li>
+		<li><a href="#consumer-rights">European consumer rights</a></li>
 		<li><a href="#content">Your content</a></li>
 		<li><a href="#collaboration">Invitations and collaboration</a></li>
 		<li><a href="#acceptable-use">Acceptable use</a></li>
@@ -35,36 +39,46 @@ import LegalLayout from "@/layouts/legal-layout.astro";
 
 	<section id="agreement">
 		<h2>1. Agreement</h2>
-		<p>These Terms of Use are an agreement between you and Gatherory. They apply when you access or use Gatherory’s websites, applications, and related services. By creating an account or using the service, you agree to these Terms and acknowledge our <a href="/privacy">Privacy Policy</a>. If you do not agree, do not use Gatherory.</p>
+		<p>These Terms are an agreement between you and {LEGAL_DETAILS.operator}, established in the {LEGAL_DETAILS.country}, which operates Gatherory. “Gatherory,” “we,” “us,” and “our” refer to that operator. The Terms apply to our websites, applications, and related services.</p>
+		<p>By creating an account or using the service where these Terms apply, you agree to them and acknowledge our <a href="/privacy">Privacy Policy</a>. That acknowledgment is not consent to optional analytics, marketing, or unrelated use of personal data. If you do not agree to the Terms, do not use the service.</p>
 		<p>If you use Gatherory for an organization, you represent that you have authority to accept these Terms for that organization.</p>
 	</section>
 
 	<section id="accounts">
 		<h2>2. Accounts and eligibility</h2>
-		<p>You must be at least 13 years old to use Gatherory. If you are under the age of legal majority where you live, a parent or legal guardian must permit your use.</p>
+		<p>You must be at least 13 and meet any higher age requirement that applies where you live. If you cannot legally enter this agreement on your own, a parent or legal guardian must authorize it where the law permits. Rules for a child’s consent to personal-data processing are separate; where verified parental consent is required and no appropriate process is available, you must not use the affected feature.</p>
 		<p>Provide accurate account information, keep your credentials confidential, and notify us promptly if you believe your account has been compromised. You are responsible for activity under your account unless applicable law says otherwise. We may require email verification or other reasonable steps to protect an account.</p>
 	</section>
 
 	<section id="service">
 		<h2>3. Using Gatherory</h2>
 		<p>Gatherory provides tools for creating events, shaping ideas, making decisions, coordinating schedules, inviting people, managing attendance, and keeping related details together. Features and permissions may differ for hosts, collaborators, and guests.</p>
-		<p>You are responsible for how you configure an event, who you invite, and the accuracy of information you provide. Gatherory is a planning tool; it is not responsible for venues, vendors, travel, gifts, payments, or other real-world arrangements made through or in connection with an event.</p>
+		<p>You are responsible for how you configure an event, who you invite, and the accuracy of information you provide. Gatherory supplies planning tools, not the venues, travel, gifts, or other arrangements you make with third parties. This distinction does not exclude responsibility for our own service or remove mandatory consumer rights.</p>
+	</section>
+
+	<section id="consumer-rights">
+		<h2>4. European consumer rights</h2>
+		<p>If you use Gatherory as a consumer in the EU or EEA, mandatory protections under the laws applicable to you take priority over inconsistent wording in these Terms. A service being free of charge does not by itself remove those protections.</p>
+		<p>Where applicable digital-service law gives you rights concerning supply, conformity, necessary updates, correction of faults, termination, reimbursement, or retrieval of content, these Terms do not exclude them. Nor do they waive a statutory withdrawal right. Contact <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a> about a problem or remedy.</p>
+		<p>No arbitration requirement, waiver of access to courts, or blanket surrender of privacy rights is imposed by these Terms. The liability provisions below cannot override protections that the law makes mandatory for consumers.</p>
 	</section>
 
 	<section id="content">
-		<h2>4. Your content</h2>
-		<p>You retain ownership of content you submit to Gatherory, including event details, ideas, notes, images, and invitations. You grant Gatherory a worldwide, non-exclusive, royalty-free license to host, store, reproduce, process, display, and transmit that content only as needed to provide, secure, maintain, and improve the service.</p>
-		<p>This license lasts while your content is stored with us and ends when the content is deleted from our systems, subject to reasonable backup, legal, and shared-record retention. You represent that you have the rights and permissions needed to submit the content and allow us to use it as described here.</p>
+		<h2>5. Your content</h2>
+		<p>You retain ownership of the content you submit, including plans, notes, images, and invitations. You grant us a worldwide, non-exclusive, royalty-free license limited to hosting, processing, reproducing, displaying, and transmitting that content to provide and secure the features you choose and the sharing you authorize.</p>
+		<p>This is not permission to sell your private event content, use it in unrelated advertising, or train unrelated AI models on it. Processing personal information still requires an appropriate lawful basis; the content license is not a waiver of data-protection rights.</p>
+		<p>The license ends when the content is deleted, except to the limited extent storage or continued use is lawful and necessary for backups, legal obligations, or shared content that other participants are entitled to keep. You must have the rights and lawful basis needed to submit other people’s images or personal details. Rights to deletion, restriction, and retrieval under applicable law take priority.</p>
 	</section>
 
 	<section id="collaboration">
-		<h2>5. Invitations and collaboration</h2>
+		<h2>6. Invitations and collaboration</h2>
 		<p>When you invite someone, assign a role, or share event content, that person may be able to view or change information according to the permissions you select. Review an event’s participants and visibility before adding private or sensitive information.</p>
+		<p>Anyone-with-the-link invitations can be forwarded. People admitted through them receive the chosen access level; revoking a link cannot retrieve copies already saved by another person. A host should share only the information needed by that audience.</p>
 		<p>Do not invite people without a legitimate reason or use Gatherory to send unwanted messages. If someone invites you, the event host—not Gatherory—is responsible for the event and the content they choose to share.</p>
 	</section>
 
 	<section id="acceptable-use">
-		<h2>6. Acceptable use</h2>
+		<h2>7. Acceptable use</h2>
 		<p>You may not use Gatherory to:</p>
 		<ul>
 			<li>break the law, violate another person’s rights, or facilitate harmful or fraudulent activity;</li>
@@ -78,49 +92,53 @@ import LegalLayout from "@/layouts/legal-layout.astro";
 	</section>
 
 	<section id="third-parties">
-		<h2>7. Third-party services</h2>
-		<p>Gatherory may let you sign in with, link to, or use third-party services. Your use of those services is governed by their own terms and privacy policies. We do not control and are not responsible for third-party services, content, or availability.</p>
+		<h2>8. Third-party services</h2>
+		<p>You may choose to sign in with or use providers such as Apple or Google, map or music features, and external event links. Their services have separate terms and policies. We do not control their content or availability, but remain responsible for our own legal obligations when integrating or processing data through them.</p>
 	</section>
 
 	<section id="ownership">
-		<h2>8. Gatherory’s rights</h2>
-		<p>Gatherory and its licensors own the service, including its software, design, branding, and documentation. These Terms give you a limited, revocable, non-transferable right to use the service for its intended purpose. They do not transfer any ownership rights to you.</p>
+		<h2>9. Gatherory’s rights</h2>
+		<p>{LEGAL_DETAILS.operator} and its licensors own the service’s software, design, branding, and documentation. These Terms give you a limited, non-transferable right to use the service for its intended purpose, subject to the suspension and termination rules below. They do not transfer ownership rights to you.</p>
 		<p>If you send feedback or suggestions, you permit us to use them without restriction or compensation, but you are not required to provide feedback.</p>
 	</section>
 
 	<section id="availability">
-		<h2>9. Changes and availability</h2>
-		<p>We may add, change, suspend, or discontinue features and may set reasonable limits on use. We aim to keep Gatherory available and reliable, but we do not promise that the service will always be available, uninterrupted, or error-free.</p>
-		<p>We may update these Terms from time to time. If a change materially affects your rights, we will provide notice through the service or another appropriate channel. Continuing to use Gatherory after the updated Terms take effect means you accept them.</p>
+		<h2>10. Changes and availability</h2>
+		<p>We may make reasonable changes for security, legal compliance, compatibility, or service improvements. We aim for reliable operation but cannot guarantee an absence of outages. This does not limit a consumer’s statutory entitlement to a conforming service or necessary updates.</p>
+		<p>For material changes to the service or these Terms, we will explain the reason, effect, and effective date with advance notice where required, using a form you can retain when the law requires it. Urgent security or legal measures may need to take effect sooner.</p>
+		<p>If a change negatively affects your access or use beyond what applicable law permits, any statutory right to reject the change, end the contract without charge, or retrieve your content remains available. Continued use alone does not waive those rights or supply any separate consent required by law.</p>
 	</section>
 
 	<section id="termination">
-		<h2>10. Suspension and termination</h2>
-		<p>You may stop using Gatherory at any time. We may suspend or terminate access if you materially or repeatedly violate these Terms, create risk or legal exposure, or if necessary to protect Gatherory or other people. Where appropriate, we will provide notice and a chance to address the issue.</p>
+		<h2>11. Suspension and termination</h2>
+		<p>You may stop using Gatherory or request account deletion at any time. We may restrict access for a material or repeated violation, a legal requirement, or a concrete security or safety risk. Restrictions should be proportionate. Unless law or an urgent risk prevents it, we will explain the reason and give an opportunity to resolve or challenge it through <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a>.</p>
+		<p>Where the law requires it, you may retrieve qualifying content after termination within a reasonable time, free of charge and in an appropriate format, subject to legal exceptions. Account deletion does not erase all contributions belonging to other participants. Our <a href="/privacy#retention">Privacy Policy</a> explains retention and shared records.</p>
 		<p>Terms that by their nature should continue after termination—including ownership, disclaimers, limits of liability, and general provisions—will remain in effect.</p>
 	</section>
 
 	<section id="disclaimers">
-		<h2>11. Disclaimers</h2>
-		<p>To the fullest extent permitted by law, Gatherory is provided “as is” and “as available.” We disclaim implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement. We do not warrant that Gatherory will meet every requirement, preserve every item of content indefinitely, or prevent every unauthorized act.</p>
-		<p>Some jurisdictions do not allow certain warranty exclusions, so parts of this section may not apply to you.</p>
+		<h2>12. Disclaimers and statutory guarantees</h2>
+		<p>We do not promise that the service will suit every plan or preserve content indefinitely. For business users, and only to the extent permitted by applicable law, the service is supplied “as is” and “as available” without implied warranties.</p>
+		<p>That business-user disclaimer does not apply to statutory consumer guarantees. In particular, European consumers retain applicable rights concerning conformity, supply, security updates, and remedies. No disclaimer excludes rights or obligations that cannot lawfully be excluded.</p>
 	</section>
 
 	<section id="liability">
-		<h2>12. Limitation of liability</h2>
-		<p>To the fullest extent permitted by law, Gatherory and its affiliates, officers, employees, and service providers will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, data, goodwill, or opportunities arising from your use of the service.</p>
-		<p>To the fullest extent permitted by law, Gatherory’s total liability for claims relating to the service will not exceed the greater of the amount you paid Gatherory for the service during the 12 months before the claim or 100 US dollars. These limits do not apply where liability cannot legally be limited.</p>
+		<h2>13. Liability</h2>
+		<p>Nothing in these Terms excludes or limits liability for fraud, intentional misconduct, death or personal injury caused by negligence, or any other responsibility that cannot lawfully be excluded or limited. Statutory data-protection remedies and mandatory consumer rights are preserved.</p>
+		<p>If you are a consumer, our responsibility is determined by the applicable law; the business-user exclusions and cap below do not apply to you.</p>
+		<p>For business users only, to the extent permitted by law, we exclude indirect or consequential losses and losses of profit or opportunity. Our total liability for claims relating to the service is limited to the greater of the amount paid to us for it in the 12 months before the claim or US$100, except for the non-excludable responsibilities stated above.</p>
 	</section>
 
 	<section id="general">
-		<h2>13. General terms</h2>
-		<p>You will be responsible for claims, losses, and reasonable costs arising from your content, your misuse of Gatherory, or your violation of these Terms or another person’s rights, to the extent permitted by law.</p>
+		<h2>14. General terms and disputes</h2>
+		<p>You remain responsible under applicable law for unlawful content and misuse. These Terms do not impose a blanket duty on consumers to indemnify us for every third-party claim.</p>
 		<p>If a provision of these Terms is unenforceable, the remaining provisions will remain in effect. Our failure to enforce a provision is not a waiver. You may not assign these Terms without our consent; we may assign them in connection with a reorganization, financing, merger, or sale of the business.</p>
-		<p>Applicable law governs these Terms. Before starting a formal dispute, you and Gatherory agree to try to resolve it informally by written notice. Any unresolved dispute may be brought in a court that has lawful jurisdiction.</p>
+		<p>Applicable conflict-of-law rules determine governing law. These Terms do not deprive an EU or EEA consumer of mandatory protections available under the law of their habitual residence, or of access to a competent court there where the law provides it.</p>
+		<p>We welcome an opportunity to resolve a concern by email, but contacting us first is not a condition of seeking a court remedy, urgent relief, or a complaint to a competent regulator. No exclusive US court or mandatory arbitration venue is imposed.</p>
 	</section>
 
 	<section id="contact">
-		<h2>14. Contact</h2>
-		<p>Questions about these Terms can be sent to <a href="mailto:legal@gatherory.com">legal@gatherory.com</a>.</p>
+		<h2>15. Contact</h2>
+		<p>The service operator is {LEGAL_DETAILS.operator} ({LEGAL_DETAILS.country}). Questions, service complaints, privacy requests, and reports of unlawful content can be sent to <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a>. Please include enough context to identify the issue without sending unnecessary sensitive information.</p>
 	</section>
 </LegalLayout>
