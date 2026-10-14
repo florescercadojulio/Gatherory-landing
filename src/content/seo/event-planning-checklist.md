@@ -5,7 +5,7 @@ accent: "the whole event in view."
 seoTitle: "Event Planning Checklist: From First Idea to Event Day | Gatherory"
 description: "Use this practical event planning checklist to move from purpose and budget through venue, guests, schedule, communication, and event-day details."
 intro: "A useful checklist does more than collect tasks. It puts decisions in the right order, so you do not polish an invitation before the event underneath it is ready."
-updated: 2026-10-10
+updated: 2026-10-14
 kind: "guide"
 summaryHeading: "Start in this order"
 takeaways:
@@ -16,11 +16,13 @@ takeaways:
 related:
   - "event-planning-app-for-couples"
   - "how-to-plan-an-event-on-iphone"
-  - "best-event-planning-apps"
-order: 4
+  - "inviting-people-and-managing-access"
+order: 6
 ---
 
 ## 1. Define the event before filling the calendar
+
+This is a planning checklist, not a list of automated app features. Contracts, payments, reminders, and vendor arrangements may need separate tools.
 
 - Write one sentence explaining why the event exists.
 - Name the primary host or decision-makers.
@@ -86,6 +88,8 @@ For each event, record:
 - Assign collaborators a specific responsibility and deadline.
 - Review who can see private notes, budgets, addresses, and unfinished ideas.
 
+In Gatherory, share guest access for attendance and collaborator access for planning. Review collaborator-link permissions and whether approval is required before you send the link. Pending requests appear in **Workspace Settings → People & Access → Join Requests**.
+
 Inviting someone into the planning process is different from inviting them to attend. Use roles that preserve that difference.
 
 ## 7. Turn ideas into decisions
@@ -98,6 +102,8 @@ Inviting someone into the planning process is different from inviting them to at
 - Archive rejected ideas so they stop competing for attention.
 
 This is where many plans stall. A saved idea feels like progress, but it only becomes useful when the group knows whether it is still being considered.
+
+Gatherory’s **Pass**, **Maybe**, and **Love It** choices collect personal input. They do not approve or delete an idea. Review the team’s responses, including unanswered input, before an authorized planner approves it separately.
 
 ## 8. Build the schedule backward
 
@@ -120,6 +126,8 @@ Leave margin. A schedule with no breathing room becomes inaccurate after the fir
 - Make important accessibility and contact information easy to find.
 
 Read the invitation as someone who has seen none of the planning conversation. If it assumes hidden context, revise it.
+
+Check **Who’s Coming** for each event’s RSVP status: **Going**, **Not Sure**, or **Not Going**. Pull down to refresh before relying on the latest attendance count.
 
 ## 10. Run the final review
 

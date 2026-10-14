@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "test:legal": "node --experimental-strip-types --test tests/legal-pages.test.mjs",
+    "test:content": "node --test tests/product-content.test.mjs",
     "astro": "astro"
   },
   "dependencies": {

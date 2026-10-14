@@ -5,11 +5,11 @@ accent: "iPhone."
 seoTitle: "Best Event Planning Apps for iPhone in 2026 | Gatherory"
 description: "Compare event planning apps for iPhone, from collaborative planning and invitations to weddings, RSVPs, and ticketed events."
 intro: "An iPhone event app should make the plan easier to understand in the moments when decisions actually happen: walking a venue, saving an idea, answering a guest, or changing a time."
-updated: 2026-10-10
+updated: 2026-10-14
 kind: "comparison"
 summaryHeading: "Choose by workflow"
 takeaways:
-  - "Gatherory is the planning-first choice for ideas, decisions, related events, budgets, people, and timelines."
+  - "Gatherory’s iPhone release centers event-linked ideas, team input, sub-events, invitations, and costs."
   - "Apple Invites is the most direct Apple-native option for beautiful invitations and RSVPs."
   - "Partiful is strong for fast, social, link-based party invitations."
   - "Zola and Joy are purpose-built for wedding websites, guests, and registries; Eventbrite is built for registration and tickets."
@@ -17,7 +17,7 @@ related:
   - "best-event-planning-apps"
   - "how-to-plan-an-event-on-iphone"
   - "how-to-create-an-event-in-gatherory"
-order: 2
+order: 8
 ---
 
 ## What makes an event planning app good on iPhone?
@@ -34,9 +34,11 @@ The best option depends on which of those questions matters most for your event.
 
 ## Gatherory: planning that starts with the event
 
-Gatherory’s iOS experience is organized around a main event and the moments connected to it. The app separates the work into clear views for Home, Ideas, Decide, Timeline, and Insights.
+Gatherory’s iOS experience is organized around a main event and its sub-events. The four planning tabs are Home, Ideas, Decide, and Insights. Guests see shared invitation content without those planning tabs.
 
-That structure is useful when you are planning with a partner, family member, friend, or coordinator. Someone can add inspiration, the planning circle can decide what moves forward, and an approved event idea can continue into the timeline instead of becoming a dead note.
+That structure is useful when you are planning with a partner, family member, friend, or coordinator. Each eligible planner can respond Pass, Maybe, or Love It. The team response bar includes unanswered input; approval remains a separate action. Approved Event ideas with dates can appear on Home.
+
+The iPhone app is preparing for release. The workflow described here is not an App Store availability announcement. This is Gatherory’s own workflow comparison, not an independent hands-on ranking.
 
 Gatherory also distinguishes hosts, collaborators, and guests. That means the people helping shape the event do not have to receive the same experience as someone who only needs the invitation and schedule.
 

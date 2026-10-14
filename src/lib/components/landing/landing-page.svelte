@@ -51,6 +51,7 @@
 				</a>
 				<a href="#how-it-works" class="text-link">{copy.landing.howItWorks}</a>
 			</div>
+			<p class="mx-auto mt-5 max-w-xl text-sm text-muted-foreground">{copy.landing.availability}</p>
 		</section>
 
 		<section id="product" class="site-shell scroll-mt-24 pb-24 sm:pb-32">

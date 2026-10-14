@@ -1,81 +1,70 @@
 ---
 slug: "event-planning-app-for-couples"
-title: "An event planning app for couples who"
-accent: "plan together."
+title: "One gathering."
+accent: "Both of your perspectives."
 seoTitle: "Event Planning App for Couples | Gatherory"
-description: "Gatherory gives couples one shared place for event ideas, decisions, budgets, related events, collaborators, and guests."
-intro: "A shared event should not create two separate mental checklists. Gatherory keeps the main event, the smaller moments around it, and the people helping you in one understandable place."
-updated: 2026-10-10
+description: "Plan together with event-linked ideas, individual preferences, shared costs, and clear access for family, collaborators, and guests."
+intro: "One person can love an idea while the other is still thinking. Gatherory makes room for both without confusing a reaction with a final decision."
+updated: 2026-10-14
 kind: "product"
-summaryHeading: "What couples need"
+summaryHeading: "Plan together without losing context"
 takeaways:
-  - "One shared source of truth for the main event and every connected moment."
-  - "A visible path from inspiration to decision to scheduled plan."
-  - "Clear roles for the couple, trusted collaborators, and invited guests."
-  - "Budgets, notes, locations, and event details that stay attached to the right context."
+  - "Keep the main event and its sub-events in one workspace."
+  - "Each eligible planner gives their own input; approval stays separate."
+  - "Bring trusted collaborators into planning and guests into the invitation."
+  - "Review recorded costs and budget allocations in Insights."
 related:
+  - "how-team-decisions-work"
+  - "inviting-people-and-managing-access"
   - "event-planning-checklist"
-  - "how-to-plan-an-event-on-iphone"
-  - "how-to-create-an-event-in-gatherory"
-order: 3
+order: 5
 ---
 
-## Planning together should mean seeing the same plan
+## Share the plan, not just a group chat
 
-Couples often split responsibilities naturally. One person researches venues while the other handles the guest list. One saves visual ideas while the other watches the budget. The problem begins when each person’s work lives in a different app, note, message thread, or browser tab.
+A wedding, anniversary, trip, or family celebration often creates two parallel sets of notes. One person saves venues; the other collects music, meal ideas, and questions from relatives.
 
-Gatherory gives that work a shared center. The main event holds the larger story. Related events—such as a tasting, fitting, rehearsal, dinner, or weekend activity—remain connected without becoming one enormous checklist.
+Gatherory keeps those possibilities attached to the event they support. A workspace holds the main gathering and its sub-events, such as a venue visit, welcome dinner, ceremony, or brunch.
 
-## Keep ideas open without losing decisions
+## Let each person respond
 
-Early planning is full of maybes. A restaurant, photographer, color palette, song, invitation style, or trip can be worth saving before it is ready to become a commitment.
+In Decide, **Love It**, **Maybe**, and **Pass** record your own preference. They do not approve or remove the idea for your partner.
 
-In Gatherory, ideas have their own place and can be organized by the event they support. The Decide view gives the planning circle a lightweight way to pass, consider, or love an idea. Approved event ideas can move toward the Timeline, so a decision has somewhere to go next.
+The horizontal response bar shows support in green, uncertainty in yellow, passes in red, and unanswered input in gray. New eligible collaborators count as unanswered until they respond. Missing input is not agreement.
 
-That creates a useful distinction:
+When you are ready, an authorized planner approves the idea separately. For Event ideas, approval and a date make the plan eligible to appear on Home.
 
-- **Ideas** are possibilities.
-- **Decisions** show what the couple has chosen.
-- **Timeline items** are plans with a next step or date.
+## Invite family with a clear role
 
-## Give family and friends a clear role
+Choose a role based on what the person needs to do:
 
-Not everyone involved needs the same access. A sibling helping with music may need to contribute ideas. A parent coordinating a dinner may need planning context. A guest may only need the finished schedule, attire guidance, location, and RSVP.
+- **Host:** manages the gathering and its people.
+- **Collaborator:** participates in the planning views, with manage, contribute, or view-only permission.
+- **Guest:** sees shared invitation content and responds for the event, without planning tabs.
 
-Gatherory separates hosts, collaborators, and guests so the planning circle can remain useful without exposing every unfinished detail to everyone invited.
+A collaborator can see planning information that a guest cannot. View-only means they cannot make changes; it is not a way to hide individual planning details from that collaborator.
 
-Before adding a person, decide which relationship they actually have to the event:
+For collaborator links, enable approval if you want to review people before giving them planning access. Requests are available under **Workspace Settings → People & Access → Join Requests**.
 
-1. **Host:** owns and shapes the gathering.
-2. **Collaborator:** helps move selected plans forward.
-3. **Guest:** receives the context needed to attend.
+## Make the tradeoffs visible
 
-## Plan one event without ignoring the moments around it
+Keep estimated prices with ideas while comparing options. Record event expenses and use Insights for spending and budget allocations.
 
-Many meaningful events are really a small collection of events. A wedding can include a shower, tasting, rehearsal, ceremony, reception, and next-day gathering. A trip can include travel, meals, reservations, and activities. A milestone birthday may include a surprise setup and a separate family dinner.
+Agree between yourselves on who approves a commitment. A green response bar is not a booking, a payment, or permission to spend.
 
-Gatherory treats those as connected moments. Each can have its own date, location, people, budget, details, and visibility while still belonging to the main event.
+## Keep the guest experience separate
 
-## Keep budget conversations attached to real choices
+Check which details are shown on the invitation before sharing it. Guests can respond **Going**, **Not Sure**, or **Not Going**. Who’s Coming reflects attendance for that particular event, not someone’s opinion of a planning idea.
 
-A budget is easier to understand when it is connected to what you are deciding. Gatherory can begin with a budget for the main event, then allocate portions to related events. Event expenses and estimated idea costs remain part of the planning context instead of living in a disconnected total.
+A destination wedding may involve several days of shared moments. Add those as sub-events with their own dates and locations; a reusable package or business template is not required to organize the weekend.
 
-The goal is not to turn the relationship into accounting software. It is to make the tradeoff visible when a choice is being made.
+## Try a short weekly check-in
 
-## A simple weekly planning rhythm
+1. Review new ideas and the event each belongs to.
+2. Respond individually in Decide.
+3. Discuss uncertainty or missing input.
+4. Approve the choices you have actually agreed on.
+5. Add dates to approved Event ideas and review upcoming cards on Home.
+6. Check costs and any guest updates.
 
-Couples do not need to manage the event every day. A small recurring rhythm is often enough:
-
-1. Add new inspiration to Ideas as it appears.
-2. Review the Decide queue together once a week.
-3. Move approved event ideas into the Timeline.
-4. Check the next scheduled moment and any unresolved details.
-5. Invite a collaborator only when their help becomes relevant.
-
-This keeps planning moving without letting it occupy every conversation.
-
-## Choose a tool that protects the relationship
-
-The best event planning app for a couple should reduce repeated questions, make ownership visible, and leave room for both people’s ideas. It should help you reach a decision without making the process feel like another workplace.
-
-Gatherory is built around that balance: enough structure to keep the plan coherent, and enough openness for the event to become yours.
+The goal is fewer repeated questions—and more room for the gathering itself.

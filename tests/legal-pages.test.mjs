@@ -46,7 +46,8 @@ test("unresolved EU release checks keep a visible review label", () => {
   for (const page of pages) {
     assert.match(read(`src/pages/${page}.astro`), /releaseReview=\{LEGAL_DETAILS\.releaseReview\}/);
   }
-  assert.match(read("src/layouts/legal-layout.astro"), /Release-review draft/);
+  assert.match(read("src/layouts/legal-layout.astro"), /copy\.legal\.releaseReviewTitle/);
+  assert.match(read("src/i18n/locales/en.ts"), /releaseReviewTitle: "Release-review draft"/);
 });
 
 test("consumer protections and privacy-request routes remain explicit", () => {
