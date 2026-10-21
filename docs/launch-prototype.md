@@ -45,6 +45,9 @@ an assigned to-do, and an Updates section whose body is partly covered by the
 native floating event picker. The budget card has more vertical room to keep
 the remaining amount clear of the chart. Both walkthrough images preserve their full content
 and can open at full size; compact mobile layouts put the copy before the image.
+The walkthrough previews use dark phone outlines with metal rims, side buttons,
+and subtle desktop tilt. Mobile previews stay upright, and the frame treatment
+does not alter the native image files or their aspect ratios.
 The iPhone page retains its Home hero and the “Drinks & catch-ups” invitation
 as the Events preview, with RSVP choices in one horizontal row. Shared planning
 remains the core message, with photo personalization as a supporting benefit.

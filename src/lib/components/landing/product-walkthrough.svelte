@@ -52,9 +52,13 @@
 	.feature-row:last-child { padding-bottom: 0; border-bottom: 0; }
 	.feature-copy { min-width: 0; }
 	.feature-visual { display: grid; justify-items: center; gap: 1rem; min-width: 0; margin: 0; }
-	.screenshot-stage { display: grid; width: min(100%, 23rem); place-items: center; padding: .75rem; border: 1px solid #e2e7f0; border-radius: 1.5rem; background: #f4f6fc; box-shadow: 0 24px 60px -42px #162b5450; }
-	.feature-duo .screenshot-stage { width: min(100%, 32rem); }
-	.screenshot-stage img { display: block; width: 100%; height: auto; }
+	.screenshot-stage { position: relative; display: block; width: min(100%, 23rem); padding: .5rem; border: 2px solid #777d87; border-radius: 2.75rem; background: #16181d; box-shadow: inset 0 0 0 1px #06070a, 0 0 0 1px #252830, 3px 3px 0 #090b10, 0 28px 50px -28px #162b5460; transform: rotate(1deg); }
+	.screenshot-stage::before, .screenshot-stage::after { content: ""; position: absolute; z-index: -1; width: 3px; border-radius: 2px; background: linear-gradient(90deg, #272b33, #979da7, #272b33); }
+	.screenshot-stage::before { top: 21%; left: -5px; height: 12%; }
+	.screenshot-stage::after { top: 26%; right: -5px; height: 8%; }
+	.feature-duo .screenshot-stage { width: min(100%, 32rem); border-radius: 2rem; transform: rotate(-.6deg); }
+	.screenshot-stage img { display: block; width: 100%; height: auto; border-radius: 2.15rem; background: #fff; }
+	.feature-duo .screenshot-stage img { border-radius: 1.4rem; }
 	.screenshot-stage:focus-visible { outline: 3px solid var(--brand-blue); outline-offset: 6px; }
 	.feature-visual figcaption { color: #4f5663; font-size: .8rem; font-weight: 520; line-height: 1.4; }
 	.feature-reversed { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
@@ -64,6 +68,6 @@
 		.feature-row, .feature-reversed { grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-block: 3rem; }
 		.feature-row:first-child { padding-top: 1rem; }
 		.feature-reversed .feature-copy, .feature-reversed .feature-visual { order: initial; }
-		.screenshot-stage, .feature-duo .screenshot-stage { width: min(100%, 24rem); padding: .5rem; border-radius: 1rem; }
+		.screenshot-stage, .feature-duo .screenshot-stage { width: min(100%, 24rem); transform: none; }
 	}
 </style>
