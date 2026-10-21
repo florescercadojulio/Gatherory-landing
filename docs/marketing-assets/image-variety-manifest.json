@@ -1,0 +1,117 @@
+{
+  "license": "Unsplash License (all source pages below stated free to use under this license when checked on October 21, 2026).",
+  "licenseUrl": "https://unsplash.com/license",
+  "checkedAt": "2026-10-21",
+  "assets": [
+    {
+      "key": "birthday_cover",
+      "name": "Indoor birthday dinner",
+      "assetName": "MarketingBirthdayCover",
+      "sourceUrl": "https://unsplash.com/photos/young-woman-celebrating-birthday-with-cake-and-drinks-B3whzyVe0oY",
+      "photographer": "sadiq abdulmalik",
+      "usage": "Birthday event cover: an indoor restaurant birthday dinner with a celebrant, cake, and dinner plates.",
+      "altText": "A woman celebrates her birthday with cake and dinner at an indoor restaurant.",
+      "url": "https://images.unsplash.com/photo-1768767106814-3ae533acba95?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_table",
+      "name": "Candlelit dinner table",
+      "assetName": "MarketingBirthdayTable",
+      "sourceUrl": "https://unsplash.com/photos/friends-gathered-around-a-table-with-food-and-candles-YfidYnwtXok",
+      "photographer": "Andrii Solok",
+      "usage": "Decor idea only: candlelit dinner table. This is the existing dinner photo, retained only for decor.",
+      "altText": "Friends around a candlelit dinner table.",
+      "url": "https://images.unsplash.com/photo-1771837602933-c1cc6293702b?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_pasta",
+      "name": "Shared pasta",
+      "assetName": "MarketingBirthdayPasta",
+      "sourceUrl": "https://unsplash.com/photos/two-pasta-dishes-and-drinks-on-a-table-89PS_ZfaxHs",
+      "photographer": "Ruby Huang",
+      "usage": "Shared food idea: two pasta dishes and drinks on a restaurant table.",
+      "altText": "Two pasta dishes and drinks on a table.",
+      "url": "https://images.unsplash.com/photo-1770889068715-3c6e5f2ab05f?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_playlist",
+      "name": "Vinyl playlist",
+      "assetName": "MarketingBirthdayPlaylist",
+      "sourceUrl": "https://unsplash.com/photos/vinyl-record-on-turntable--ja1xVOENMo",
+      "photographer": "Vincent Chan",
+      "usage": "Playlist idea: vinyl playing on a turntable.",
+      "altText": "A vinyl record on a turntable.",
+      "url": "https://images.unsplash.com/photo-1520354127549-fcecfe79d058?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_cake",
+      "name": "Chocolate birthday cake",
+      "assetName": "MarketingBirthdayCake",
+      "sourceUrl": "https://unsplash.com/photos/chocolate-birthday-cake-with-lit-candles-spelling-happy-birthday-Db6fGhkV7ug",
+      "photographer": "T (Tanya Barrow)",
+      "usage": "Cake idea: close-up chocolate cake with lit letter candles filling the upper and central frame.",
+      "altText": "A close-up of a chocolate birthday cake topped with lit Happy Birthday candles.",
+      "url": "https://images.unsplash.com/photo-1763634708683-b9c5307dcaa0?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_flowers",
+      "name": "Colorful flower bouquet",
+      "assetName": "MarketingBirthdayFlowers",
+      "sourceUrl": "https://unsplash.com/photos/a-close-up-of-a-colorful-bouquet-of-various-flowers-NTkFwBWZ7nE",
+      "photographer": "Harshit Maurya",
+      "usage": "Flowers idea: close-up of a colorful bouquet filling the frame so the flowers remain clear above the card text.",
+      "altText": "A close-up of a colorful bouquet of white, yellow, orange, and purple flowers.",
+      "url": "https://images.unsplash.com/photo-1771603074775-9194aae19678?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_photo",
+      "name": "Group photo",
+      "assetName": "MarketingBirthdayPhoto",
+      "sourceUrl": "https://unsplash.com/photos/a-diverse-group-of-friends-taking-a-selfie-together-PpQyCTcADtw",
+      "photographer": "Vitaly Gariev",
+      "usage": "Group photo idea: friends gathering around a phone for a selfie.",
+      "altText": "A diverse group of friends gathering around a phone for a selfie.",
+      "url": "https://images.unsplash.com/photo-1758272133833-3a2277d426e4?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_setup",
+      "name": "Dinner table setup",
+      "assetName": "MarketingBirthdaySetup",
+      "sourceUrl": "https://unsplash.com/photos/a-table-setting-with-a-floral-centerpiece-and-lit-candles-JIcLfbDASXg",
+      "photographer": "Filipp Romanovski",
+      "usage": "Child event: setting the table with tulips, candles, and glassware.",
+      "altText": "Tulips, candles, and wine glasses on a dinner table.",
+      "url": "https://images.unsplash.com/photo-1773913106047-d8e205a63e4b?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_drinks",
+      "name": "Cocktails and catchups",
+      "assetName": "MarketingBirthdayDrinks",
+      "sourceUrl": "https://unsplash.com/photos/friends-enjoying-cocktails-and-snacks-at-a-table-hJqfore3SH4",
+      "photographer": "Diana Díaz",
+      "usage": "Child event: cocktails and snacks as friends catch up around a table.",
+      "altText": "Cocktails and snacks arranged on a table during a friends’ catchup.",
+      "url": "https://images.unsplash.com/photo-1771395999627-a57a7c6739d1?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_served",
+      "name": "Dinner is served",
+      "assetName": "MarketingBirthdayServed",
+      "sourceUrl": "https://unsplash.com/photos/dinner-is-served-with-white-wine-and-food-Hl4eg9Up4s0",
+      "photographer": "Tommaso Ubezio",
+      "usage": "Child event: a plated dinner and wine served at the table.",
+      "altText": "A plated dinner served with a glass of white wine.",
+      "url": "https://images.unsplash.com/photo-1750943024048-a4c9912b1425?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+      "key": "birthday_candles",
+      "name": "Birthday candle moment",
+      "assetName": "MarketingBirthdayCandles",
+      "sourceUrl": "https://unsplash.com/photos/a-group-of-people-standing-around-a-birthday-cake-H8-HAaRoxK0",
+      "photographer": "Alina Perekatenkova",
+      "usage": "Child event: friends gather as the birthday person is photographed beside a candlelit cake.",
+      "altText": "Friends surrounding a cake as the birthday person is photographed.",
+      "url": "https://images.unsplash.com/photo-1681716349822-33b7af89d04e?auto=format&fit=crop&q=80&w=1200"
+    }
+  ]
+}

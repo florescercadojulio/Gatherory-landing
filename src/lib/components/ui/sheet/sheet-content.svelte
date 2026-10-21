@@ -17,6 +17,7 @@
 		class: className,
 		side = "right",
 		showCloseButton = true,
+		closeLabel = "Close",
 		portalProps,
 		children,
 		...restProps
@@ -24,6 +25,7 @@
 		portalProps?: WithoutChildrenOrChild<ComponentProps<typeof SheetPortal>>;
 		side?: Side;
 		showCloseButton?: boolean;
+		closeLabel?: string;
 		children: Snippet;
 	} = $props();
 </script>
@@ -46,7 +48,7 @@
 				{#snippet child({ props })}
 					<Button variant="ghost" class="absolute top-4 right-4 bg-secondary" size="icon-sm" {...props}>
 						<IconX  />
-						<span class="sr-only">Close</span>
+						<span class="sr-only">{closeLabel}</span>
 					</Button>
 				{/snippet}
 			</SheetPrimitive.Close>

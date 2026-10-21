@@ -2,6 +2,9 @@
 
 The public marketing site for Gatherory, built with Astro and Svelte. This project is intentionally presentation-only.
 
+For product context and work spanning repositories, start with the
+[Gatherory AI onboarding guide](../gatherory-web-app/docs/development/ai-onboarding.md).
+
 ## Local setup
 
 Install dependencies and start Astro in background mode:
@@ -11,7 +14,9 @@ pnpm install
 pnpm astro dev --background
 ```
 
-The future authenticated product will live in a separate TanStack application on the `app` subdomain. Authentication, APIs, database models, and persistence belong there rather than in this landing repository.
+The authenticated companion and server live in the separate TanStack application
+at `app.gatherory.com`. Authentication, APIs, database models, and persistence
+belong in `gatherory-web-app`.
 
 ## Commands
 

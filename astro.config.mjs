@@ -8,7 +8,7 @@ import svelte from "@astrojs/svelte";
 export default defineConfig({
   site: "https://gatherory.com",
   i18n: {
-    locales: ["en"],
+    locales: ["en", "es"],
     defaultLocale: "en",
     routing: { prefixDefaultLocale: false },
   },

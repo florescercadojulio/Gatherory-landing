@@ -1,8 +1,10 @@
 import en from "@/i18n/locales/en";
+import es from "@/i18n/locales/es";
 
-export const translations = { en } as const;
+export const translations = { en, es } as const;
 export type Locale = keyof typeof translations;
-export type SiteCopy = (typeof translations)[Locale];
+type Localized<T> = T extends string ? string : T extends readonly (infer U)[] ? readonly Localized<U>[] : { [K in keyof T]: Localized<T[K]> };
+export type SiteCopy = Localized<typeof en>;
 
 export const defaultLocale: Locale = "en";
 

@@ -9,32 +9,38 @@
 	} from "@tabler/icons-svelte";
 	import { onMount } from "svelte";
 	import * as Sheet from "@/lib/components/ui/sheet";
-	import { APP_SIGN_IN_URL, APP_SIGN_UP_URL } from "@/lib/site-links";
+	import { APP_SIGN_IN_URL } from "@/lib/site-links";
 	import type { SiteCopy } from "@/i18n";
 
 	let { copy } = $props<{ copy: SiteCopy }>();
 
 	const links = $derived([
 		{
-			href: "/#product",
+			href: copy.nav.iphoneHref,
+			label: copy.nav.iphone,
+			description: copy.mobileNav.iphoneDescription,
+			icon: IconLayoutGrid,
+		},
+		{
+			href: `${copy.nav.homeHref}#product`,
 			label: copy.nav.product,
 			description: copy.mobileNav.productDescription,
 			icon: IconLayoutGrid,
 		},
 		{
-			href: "/#how-it-works",
+			href: `${copy.nav.homeHref}#how-it-works`,
 			label: copy.nav.howItWorks,
 			description: copy.mobileNav.howItWorksDescription,
 			icon: IconRoute,
 		},
 		{
-			href: "/#people",
+			href: `${copy.nav.homeHref}#people`,
 			label: copy.nav.people,
 			description: copy.mobileNav.peopleDescription,
 			icon: IconUsers,
 		},
 		{
-			href: "/resources",
+			href: copy.nav.guidesHref,
 			label: copy.nav.guides,
 			description: copy.mobileNav.guidesDescription,
 			icon: IconBook2,
@@ -85,6 +91,7 @@
 		<Sheet.Content
 			side="right"
 			showCloseButton={true}
+			closeLabel={copy.nav.closeNavigation}
 			class="w-[min(82vw,23rem)] border-l border-black/15 bg-white p-0 text-black shadow-[-12px_0_32px_rgba(0,0,0,0.08)] lg:hidden"
 		>
 		<Sheet.Title class="sr-only">{copy.nav.navigationTitle}</Sheet.Title>
@@ -92,7 +99,7 @@
 
 			<div class="flex h-dvh min-h-0 flex-col bg-white text-black">
 				<div class="shrink-0 border-b border-black/15 px-4 pb-5 pt-3">
-					<a href="/" class="inline-flex items-center gap-2.5 pr-12" onclick={closeMobileMenu}>
+					<a href={copy.nav.homeHref} class="inline-flex items-center gap-2.5 pr-12" onclick={closeMobileMenu}>
 						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
 						<span class="font-[540] tracking-[-0.02em]">Gatherory</span>
 					</a>
@@ -118,13 +125,14 @@
 					{/each}
 
 					<div class="mt-auto flex flex-wrap gap-x-5 gap-y-2 px-1 pb-1 pt-3 text-sm">
+						<a class="nav-link" href={copy.nav.languageHref} onclick={closeMobileMenu}>{copy.nav.languageLabel}</a>
 						<a class="nav-link" href="/privacy" onclick={closeMobileMenu}>{copy.nav.privacy}</a>
 						<a class="nav-link" href="/terms" onclick={closeMobileMenu}>{copy.nav.terms}</a>
 					</div>
 				</nav>
 
 				<div class="grid shrink-0 gap-2 border-t border-black/15 bg-white p-3">
-					<a href={APP_SIGN_UP_URL} class="pill-button h-12 w-full px-5" onclick={closeMobileMenu}>
+					<a href={copy.nav.iphoneHref} class="pill-button h-12 w-full px-5" onclick={closeMobileMenu}>
 						{copy.nav.startPlanning} <IconArrowRight class="size-4" />
 					</a>
 					<a
