@@ -46,7 +46,8 @@ native floating event picker. The budget card has more vertical room to keep
 the remaining amount clear of the chart. Both walkthrough images preserve their full content
 and can open at full size; compact mobile layouts put the copy before the image.
 The walkthrough previews use dark phone outlines with metal rims, side buttons,
-and subtle desktop tilt. Mobile previews stay upright, and the frame treatment
+and subtle desktop tilt. A shared decorative camera cutout also appears in the
+hero pairs and iPhone gallery. Duo frames reserve headroom for it above the app. Mobile previews stay upright, and the frame treatment
 does not alter the native image files or their aspect ratios.
 The iPhone page retains its Home hero and the “Drinks & catch-ups” invitation
 as the Events preview, with RSVP choices in one horizontal row. Shared planning

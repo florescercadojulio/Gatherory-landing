@@ -1,4 +1,5 @@
 <script lang="ts">
+	import DeviceNotch from "./device-notch.svelte";
 	import { IconArrowDown, IconArrowRight, IconWifiOff } from "@tabler/icons-svelte";
 	import type { IphoneCopy } from "@/lib/iphone-copy";
 	import DevicePair from "./device-pair.svelte";
@@ -71,6 +72,7 @@
 						{#each copy.steps as step, index}
 							<figure hidden={activeStep !== index}>
 								<div class="phone-frame preview-phone">
+									<DeviceNotch />
 									<img src={`/images/ios/${step.key}.webp`} alt={step.alt} width="1206" height="2622" loading="lazy" />
 								</div>
 								<figcaption class="mt-5 text-center text-sm font-[480]">{step.label}</figcaption>
