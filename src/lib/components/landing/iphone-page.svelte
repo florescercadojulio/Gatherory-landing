@@ -72,8 +72,10 @@
 						{#each copy.steps as step, index}
 							<figure hidden={activeStep !== index}>
 								<div class="phone-frame preview-phone">
-									<DeviceNotch />
-									<img src={`/images/ios/${step.key}.webp`} alt={step.alt} width="1206" height="2622" loading="lazy" />
+									<div class="phone-screen">
+										<img src={`/images/ios/${step.key}.webp`} alt={step.alt} width="1206" height="2622" loading="lazy" />
+										<DeviceNotch />
+									</div>
 								</div>
 								<figcaption class="mt-5 text-center text-sm font-[480]">{step.label}</figcaption>
 							</figure>
@@ -133,6 +135,7 @@
 	.hero-circle { position: absolute; z-index: -1; top: 11%; width: 115%; aspect-ratio: 1; border-radius: 50%; background: #e7eeff; }
 	.phone-frame { position: relative; padding: 6px; overflow: hidden; border: 1px solid #303238; border-radius: 41px; background: #1c1d21; box-shadow: 0 22px 50px -20px #17284750; }
 	.phone-frame img { display: block; width: 100%; height: auto; border-radius: 35px; background: #f8f8f8; }
+	.phone-screen { position: relative; }
 	.hero-caption { position: relative; max-width: 28rem; margin-top: 30px; padding-inline: 1rem; font-size: 13px; line-height: 1.6; text-align: center; }
 	.preview-section { background: #f7f8fa; border-block: 1px solid #e9ebef; }
 	.preview-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 80px; margin-top: 56px; }

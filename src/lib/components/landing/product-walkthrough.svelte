@@ -38,8 +38,10 @@
 			</div>
 			<figure class="feature-visual" class:feature-duo={feature.isDuo}>
 				<a class="screenshot-stage" href={feature.image} target="_blank" rel="noopener noreferrer" aria-label={`${feature.device}: ${copy.viewFullSize}`}>
-					<DeviceNotch duo={feature.isDuo} />
-					<img src={feature.image} alt={feature.alt} width={feature.width} height={feature.height} loading="lazy" decoding="async" />
+					<span class="screenshot-screen">
+						<img src={feature.image} alt={feature.alt} width={feature.width} height={feature.height} loading="lazy" decoding="async" />
+						{#if !feature.isDuo}<DeviceNotch />{/if}
+					</span>
 				</a>
 				<figcaption>{feature.device} · {copy.viewFullSize} <span aria-hidden="true">↗</span></figcaption>
 			</figure>
@@ -60,7 +62,8 @@
 	.screenshot-stage::after { top: 26%; right: -5px; height: 8%; }
 	.feature-duo .screenshot-stage { width: min(100%, 32rem); border-radius: 2rem; transform: rotate(-.6deg); }
 	.screenshot-stage img { display: block; width: 100%; height: auto; border-radius: 2.15rem; background: #fff; }
-	.feature-duo .screenshot-stage img { padding-top: 4%; border-radius: 1.4rem; }
+	.screenshot-screen { position: relative; display: block; }
+	.feature-duo .screenshot-stage img { border-radius: 1.4rem; }
 	.screenshot-stage:focus-visible { outline: 3px solid var(--brand-blue); outline-offset: 6px; }
 	.feature-visual figcaption { color: #4f5663; font-size: .8rem; font-weight: 520; line-height: 1.4; }
 	.feature-reversed { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }

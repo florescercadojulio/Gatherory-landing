@@ -20,14 +20,15 @@
 <div class="device-pair">
 	<figure class="device-item phone-item">
 		<div class="phone-frame">
-			<DeviceNotch />
-			<img src={phoneSrc} alt={phoneAlt} width="1206" height="2622" />
+			<div class="phone-screen">
+				<img src={phoneSrc} alt={phoneAlt} width="1206" height="2622" />
+				<DeviceNotch />
+			</div>
 		</div>
 		<figcaption>{phoneLabel}</figcaption>
 	</figure>
 	<figure class="device-item duo-item">
 		<div class="duo-frame">
-			<DeviceNotch duo />
 			<img src={duoSrc} alt={duoAlt} width="2853" height="2007" />
 		</div>
 		<figcaption>{duoLabel}</figcaption>
@@ -40,8 +41,9 @@
 	.device-item figcaption { color: #4f5663; font-size: .75rem; font-weight: 520; line-height: 1.25; text-align: center; }
 	.phone-frame { position: relative; width: min(100%, 9rem); padding: 5px; overflow: hidden; border: 1px solid #303238; border-radius: 1.5rem; background: #1c1d21; box-shadow: 0 18px 36px -18px #17284760; transform: rotate(2deg); }
 	.phone-frame img { display: block; width: 100%; height: auto; border-radius: 1.2rem; background: #f8f8f8; }
+	.phone-screen { position: relative; }
 	.duo-frame { position: relative; width: 100%; padding: 6px; overflow: hidden; border: 1px solid #303238; border-radius: 1.15rem; background: #1c1d21; box-shadow: 0 18px 36px -18px #17284760; transform: rotate(-1deg); }
-	.duo-frame img { padding-top: 4%; display: block; width: 100%; height: auto; border-radius: .7rem; background: #f8f8f8; }
+	.duo-frame img { display: block; width: 100%; height: auto; border-radius: .7rem; background: #f8f8f8; }
 	@media (max-width: 380px) {
 		.device-pair { grid-template-columns: minmax(0, .4fr) minmax(0, 1fr); gap: .45rem; }
 		.device-item figcaption { font-size: .68rem; }
