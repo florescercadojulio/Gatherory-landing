@@ -5,10 +5,11 @@
 		IconSparkles,
 		IconUsers,
 	} from "@tabler/icons-svelte";
-	import { APP_SIGN_IN_URL } from "@/lib/site-links";
+	import { APP_SIGN_IN_URL, TESTFLIGHT_BETA_URL } from "@/lib/site-links";
 	import MobileNav from "@/lib/components/mobile-nav.svelte";
 	import DevicePair from "./device-pair.svelte";
 	import ProductWalkthrough from "./product-walkthrough.svelte";
+	import BetaInvite from "./beta-invite.svelte";
 	import type { SiteCopy } from "@/i18n";
 
 	let { copy } = $props<{ copy: SiteCopy }>();
@@ -25,7 +26,7 @@
 			</a>
 
 			<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 text-[0.9rem] font-[480] lg:flex" aria-label={copy.nav.mainNavigation}>
-				<a class="nav-link" href="#product">{copy.nav.product}</a>
+				<a class="nav-link" href={copy.nav.iphoneHref}>{copy.nav.product}</a>
 				<a class="nav-link" href="#people">{copy.nav.people}</a>
 				<a class="nav-link" href={copy.nav.guidesHref}>{copy.nav.guides}</a>
 			</nav>
@@ -46,7 +47,7 @@
 				</h1>
 				<p class="body-lead mt-6 max-w-xl">{copy.landing.heroDescription}</p>
 				<div class="mt-9">
-					<a href={copy.nav.iphoneHref} class="pill-button min-h-12 px-6 py-3 text-base">
+					<a href={TESTFLIGHT_BETA_URL} class="pill-button min-h-12 px-6 py-3 text-base">
 						{copy.landing.startPlanning} <IconArrowRight class="size-4 shrink-0" />
 					</a>
 				</div>
@@ -139,14 +140,7 @@
 		</section>
 
 		<section class="site-shell py-24 sm:py-32">
-			<div class="rounded-[2rem] bg-black px-6 py-16 text-center text-white sm:px-12 sm:py-24">
-				<img src="/gatherory-icon.png" alt="" class="mx-auto size-16 rounded-2xl" width="64" height="64" />
-				<h2 class="section-title mx-auto mt-8 max-w-[13ch]">{copy.landing.closingTitle}</h2>
-				<p class="mx-auto mt-6 max-w-xl text-lg leading-7 text-white/85">{copy.landing.closingDescription}</p>
-				<a href={copy.nav.iphoneHref} class="pill-button-inverse mt-9 h-12 px-7 text-base">
-					{copy.landing.createEvent} <IconArrowRight class="size-4" />
-				</a>
-			</div>
+			<BetaInvite copy={copy.beta} />
 		</section>
 	</main>
 

@@ -33,3 +33,16 @@ belong in `gatherory-web-app`.
 - `src/lib/components/landing` — Gatherory product storytelling components
 - `src/styles/global.css` — Raycast-inspired visual tokens and shared styles
 - `DESIGN.md` — Raycast-inspired visual language used by the web experience
+
+## Public beta invitation
+
+The beta CTA uses `TESTFLIGHT_BETA_URL` in `src/lib/site-links.ts`. Static PNG and
+SVG QR assets live in `public/images/beta/`; they encode that same Apple invite.
+After changing the URL, regenerate and verify both assets on macOS:
+
+```sh
+swift scripts/generate-beta-qr.swift
+```
+
+The script uses Core Image and Vision, preserves a quiet zone, and verifies the
+PNG decodes to the configured URL. See [beta implementation notes](docs/launch-prototype.md#public-beta).

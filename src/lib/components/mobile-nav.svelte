@@ -8,14 +8,14 @@
 	} from "@tabler/icons-svelte";
 	import { onMount } from "svelte";
 	import * as Sheet from "@/lib/components/ui/sheet";
-	import { APP_SIGN_IN_URL } from "@/lib/site-links";
+	import { APP_SIGN_IN_URL, TESTFLIGHT_BETA_URL } from "@/lib/site-links";
 	import type { SiteCopy } from "@/i18n";
 
 	let { copy } = $props<{ copy: SiteCopy }>();
 
 	const links = $derived([
 		{
-			href: `${copy.nav.homeHref}#product`,
+			href: copy.nav.iphoneHref,
 			label: copy.nav.product,
 			description: copy.mobileNav.productDescription,
 			icon: IconLayoutGrid,
@@ -118,7 +118,7 @@
 				</nav>
 
 				<div class="grid shrink-0 gap-2 border-t border-black/15 bg-white p-3">
-					<a href={copy.nav.iphoneHref} class="pill-button h-12 w-full px-5" onclick={closeMobileMenu}>
+					<a href={TESTFLIGHT_BETA_URL} class="pill-button h-12 w-full px-5" onclick={closeMobileMenu}>
 						{copy.nav.startPlanning} <IconArrowRight class="size-4" />
 					</a>
 					<a

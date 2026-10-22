@@ -1,8 +1,11 @@
 <script lang="ts">
 	import DeviceNotch from "./device-notch.svelte";
-	import { IconArrowDown, IconArrowRight, IconWifiOff } from "@tabler/icons-svelte";
+	import { IconArrowUpRight, IconWifiOff } from "@tabler/icons-svelte";
+	import { getTranslations } from "@/i18n";
+	import { TESTFLIGHT_BETA_URL } from "@/lib/site-links";
 	import type { IphoneCopy } from "@/lib/iphone-copy";
 	import DevicePair from "./device-pair.svelte";
+	import BetaInvite from "./beta-invite.svelte";
 
 	let { copy, locale = "en" } = $props<{ copy: IphoneCopy; locale?: string }>();
 	let activeStep = $state(0);
@@ -32,7 +35,7 @@
 			<div class="hero-copy">
 				<h1 class="display-title">{copy.title}<br /><span class="text-brand-blue">{copy.accent}</span></h1>
 				<p class="body-lead mt-6 max-w-lg">{copy.description}</p>
-				<a class="pill-button mt-8 min-h-12 px-7 text-base" href="#app-preview">{copy.cta}<IconArrowDown size={18} /></a>
+				<a class="pill-button mt-8 min-h-12 px-7 text-base" href={TESTFLIGHT_BETA_URL}>{copy.cta}<IconArrowUpRight size={18} aria-hidden="true" /></a>
 				<p class="mt-5 text-sm text-muted-foreground">{copy.status}</p>
 			</div>
 			<figure class="hero-product">
@@ -111,12 +114,8 @@
 			</div>
 		</section>
 
-		<section class="bg-brand-blue-light py-20 sm:py-24">
-			<div class="site-shell text-center">
-				<h2 class="section-title mx-auto max-w-[18ch]">{copy.finalTitle}</h2>
-				<p class="mx-auto mt-6 max-w-xl text-lg leading-7">{copy.finalDescription}</p>
-				<a href={home} class="pill-button mt-8 min-h-12 px-7 text-base">{copy.finalCta}<IconArrowRight size={18} /></a>
-			</div>
+		<section class="site-shell pb-20 sm:pb-24">
+			<BetaInvite copy={getTranslations(locale).beta} />
 		</section>
 	</main>
 

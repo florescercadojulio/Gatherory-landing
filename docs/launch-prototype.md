@@ -6,17 +6,16 @@ October 21, 2026. Local implementation; not deployed.
 
 - Homepage hero: “Plan the celebration together,” leading with the photo-filled
   Ideas screen from the native app on regular iPhone and open iPhone Duo.
-- Primary CTAs open the iPhone preview instead of web account creation. Guide
-  CTAs and mobile navigation use the same destination; sign-in remains secondary.
+- Primary CTAs join the public iPhone beta through TestFlight. Guide CTAs and
+  mobile navigation use the same invitation; sign-in remains secondary.
 - Birthday/dinner examples, shared-planning benefits, and shorter role messaging.
 - Large native Decide and Manage sections directly after the hero: iPhone Decide
   and the Duo Manage overview, each linked to its full-size image.
-  The hero’s secondary CTA leads to this product walkthrough. Product imagery
-  replaces the rendered illustrative event poster and abstract decision demo;
-  their source components remain available.
+  Product imagery replaces the rendered illustrative event poster and abstract
+  decision demo; their source components remain available.
   [Screenshot content and provenance](marketing-assets/product-showcase.md).
 - `/iphone`: screenshot selector for Events, Ideas, Decide, and the Manage overview, offline
-  explanation, availability/platform FAQs, and a clear pre-release status.
+  explanation, availability/platform FAQs, and TestFlight beta signup.
 - `/es/` and `/es/iphone`: Spanish marketing copy, language links, localized
   mobile navigation, and canonical/alternate metadata. Guides and legal pages
   remain English and Spanish links disclose that.
@@ -75,11 +74,33 @@ for the reusable updater and its localhost/fixture restrictions.
 ## Link hierarchy
 
 The homepage header uses Product, People, and Guides for browsing, with language
-and Sign in as text utilities. The hero has one app-page CTA; the closing
-section repeats that next step after the product story. The footer contains
-Privacy and Terms rather than repeating section navigation. Mobile navigation
-uses the same three browsing destinations, one app CTA, and a secondary text
+and Sign in as text utilities. Product now opens the iPhone overview. The hero
+has one TestFlight CTA; the closing section provides the same invitation and a
+QR code after the product story. The footer contains Privacy and Terms rather
+than repeating section navigation. Mobile navigation
+uses the same three browsing destinations, one beta CTA, and a secondary text
 Sign in link. This also applies to shared mobile menus on guide/legal pages.
+
+## Public beta
+
+The user supplied [Gatherory’s public TestFlight invitation](https://testflight.apple.com/join/rUDD4MCY)
+on October 21, 2026. Homepage, iPhone-page, guide, and mobile-menu signup buttons
+all read `TESTFLIGHT_BETA_URL` from `src/lib/site-links.ts`. English and Spanish
+copy distinguishes beta access from an App Store release. App screenshots still
+show fictional example content.
+
+The homepage and iPhone page each include the shared `BetaInvite` panel with
+setup instructions and a downloadable QR code. The QR is generated locally,
+encodes the invitation directly, and uses no QR redirect service.
+
+- [Shareable PNG](../public/images/beta/gatherory-testflight-qr.png)
+- [Vector SVG](../public/images/beta/gatherory-testflight-qr.svg)
+- Regenerate after changing the invite: `swift scripts/generate-beta-qr.swift`
+
+The generator reads the CTA URL, uses Core Image at correction level M, adds
+four quiet-zone modules, and verifies the PNG payload with Apple Vision before
+reporting success. It requires macOS; no new website runtime dependency is added.
+Local implementation is complete; no deployment or App Store release is implied.
 
 ## Preview
 
@@ -89,6 +110,8 @@ The current local preview is `http://localhost:4321/`, with `/iphone`, `/es/`, a
 
 Saved review images:
 
+- [Public beta invitation and QR, desktop](marketing-assets/previews/beta-invite-desktop.jpg)
+- [Spanish beta invitation, mobile](marketing-assets/previews/beta-invite-spanish-mobile.jpg)
 - [Simplified header and hero links](marketing-assets/previews/homepage-links-desktop.jpg)
 - [Closing CTA and legal footer](marketing-assets/previews/homepage-links-footer-desktop.jpg)
 - [Spanish mobile link hierarchy](marketing-assets/previews/homepage-links-menu-spanish-mobile.jpg)
@@ -140,8 +163,8 @@ Saved review images:
 
 ## Next work
 
-Replace the pre-release preview CTA with the verified App Store or beta
-destination when available. Replace temporary stock photography with approved original content and capture
+Replace the beta destination with a verified App Store link when the app launches.
+Replace temporary stock photography with approved original content and capture
 Spanish app screenshots for final launch assets. Confirm the features and
 platform statements against the actual release build before publication.
 Acquisition tracking, a waitlist, campaign outreach, paid media, and deployment
