@@ -5,8 +5,9 @@ accent: "the whole event in view."
 seoTitle: "Event Planning Checklist: From First Idea to Event Day | Gatherory"
 description: "Use this practical event planning checklist to move from purpose and budget through venue, guests, schedule, communication, and event-day details."
 intro: "A useful checklist does more than collect tasks. It puts decisions in the right order, so you do not polish an invitation before the event underneath it is ready."
-updated: 2026-10-14
+updated: 2026-10-21
 kind: "guide"
+category: "getting-started"
 summaryHeading: "Start in this order"
 takeaways:
   - "Define the purpose, owners, budget, and approximate size before booking around assumptions."
@@ -14,11 +15,23 @@ takeaways:
   - "Keep undecided ideas separate from approved plans and scheduled work."
   - "Give collaborators explicit responsibilities and give guests only the details they need."
 related:
-  - "event-planning-app-for-couples"
-  - "how-to-plan-an-event-on-iphone"
-  - "inviting-people-and-managing-access"
+  - "birthday-dinner-planning-checklist"
+  - "dinner-party-planning-checklist"
+  - "how-to-split-party-planning-tasks"
 order: 6
 ---
+
+## Choose a checklist for your gathering
+
+Use this general sequence for the whole plan, or start with an example closer to your event:
+
+- [Birthday dinner checklist](/birthday-dinner-planning-checklist): meal, birthday details, helping jobs, and an evening timeline.
+- [Surprise birthday checklist](/surprise-birthday-party-checklist): guest arrival instructions, secrecy, and a fallback.
+- [Dinner party checklist](/dinner-party-planning-checklist): a manageable menu, prep, serving, and cleanup.
+- [Potluck checklist](/potluck-planning-checklist): contributions, portions, serving gear, and changes.
+- [Friendsgiving checklist](/friendsgiving-planning-checklist): holiday schedules, a shared meal, and a welcoming space.
+
+Planning with others? [Split the tasks with clear owners and handoffs](/how-to-split-party-planning-tasks) before the work piles up.
 
 ## 1. Define the event before filling the calendar
 
@@ -88,7 +101,7 @@ For each event, record:
 - Assign collaborators a specific responsibility and deadline.
 - Review who can see private notes, budgets, addresses, and unfinished ideas.
 
-In Gatherory, share guest access for attendance and collaborator access for planning. Review collaborator-link permissions and whether approval is required before you send the link. Pending requests appear in **Workspace Settings → People & Access → Join Requests**.
+In Gatherory, share guest access for attendance and collaborator access for planning. Review collaborator-link permissions and whether approval is required before you send the link. Pending requests appear in **Event Settings → People & Access → Join Requests**.
 
 Inviting someone into the planning process is different from inviting them to attend. Use roles that preserve that difference.
 

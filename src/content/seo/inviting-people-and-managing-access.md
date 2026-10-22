@@ -5,13 +5,14 @@ accent: "the right access."
 seoTitle: "Gatherory Invitations, Join Requests, and RSVPs"
 description: "Share an invitation, set collaborator permissions, approve join requests, and check each event’s RSVP list in Gatherory for iPhone."
 intro: "Helping plan an event and attending it are different jobs. Choose access deliberately, then make it easy for each person to find what they need."
-updated: 2026-10-14
+updated: 2026-10-21
 kind: "product"
+category: "getting-started"
 summaryHeading: "Before you share"
 takeaways:
   - "Open Share Invitation beside the workspace button on Home."
   - "Guest access shows shared invitation content; collaborator access includes planning views."
-  - "Review pending requests in Workspace Settings → People & Access → Join Requests."
+  - "Review pending requests in Event Settings → People & Access → Join Requests."
   - "Who’s Coming shows RSVP responses for the selected event, not the entire workspace."
 related:
   - "how-to-create-an-event-in-gatherory"
@@ -52,7 +53,7 @@ With approval enabled, a person requests access and waits for review before ente
 
 ## Find and review join requests
 
-For the main event, open **Workspace Settings → People & Access → Join Requests**. Pending requests also appear in that event’s sharing view; Home’s Share button shows a pending count after requests load.
+For the main event, open **Event Settings → People & Access → Join Requests**. Pending requests also appear in that event’s sharing view; Home’s Share button shows a pending count after requests load.
 
 Review the person and access level, then choose **Approve** or **Decline**. These controls are for hosts and collaborators with management permission. Pull down on the request list to refresh. A network connection is needed to load and review requests.
 

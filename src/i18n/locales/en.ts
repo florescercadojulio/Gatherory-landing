@@ -136,11 +136,17 @@ const en = {
     progress: "{{current}} of {{total}}",
   },
   resources: {
-    metaDescription: "Learn Gatherory’s iPhone workflow: create events, collect ideas, understand team input, invite people, approve requests, and check RSVPs.",
-    metaTitle: "Event planning guides · Gatherory",
-    title: "Plan with more",
-    titleAccent: "clarity.",
-    description: "Start with your first event, learn how team input works, and bring people in with the right access. These guides describe the iPhone release workflow.",
+    metaDescription: "Practical checklists for birthday dinners, dinner parties, potlucks, and Friendsgiving, plus shared planning advice and guides to Gatherory for iPhone.",
+    metaTitle: "Party Planning Checklists and Hosting Guides | Gatherory",
+    title: "Make plans for",
+    titleAccent: "good company.",
+    description: "Start with the gathering you have in mind. Find a checklist, share the work with your co-hosts, and learn how to bring the plan together on iPhone. Guides are currently in English.",
+    groups: [
+      { id: "occasions", title: "Plan your next gathering.", description: "Checklists, sample timelines, and guest messages for the moments you want to bring people together." },
+      { id: "collaboration", title: "Share the planning.", description: "Give everyone a say and make it clear who is taking care of each part." },
+      { id: "getting-started", title: "Get started with Gatherory.", description: "Learn the iPhone workflow, from your first event to ideas, invitations, and access." },
+      { id: "choosing-app", title: "Choose your planning tools.", description: "Compare planning, invitation, and guest tools based on what your gathering needs." },
+    ],
     readGuide: "Read the guide →",
   },
   seo: {

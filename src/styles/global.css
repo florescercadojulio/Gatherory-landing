@@ -375,7 +375,7 @@
 		@apply bg-brand-blue-light md:col-span-2;
 	}
 
-	.resource-card h2 {
+	.resource-card h3 {
 		@apply max-w-2xl text-3xl font-[540] leading-tight tracking-[-0.035em] sm:text-4xl;
 	}
 

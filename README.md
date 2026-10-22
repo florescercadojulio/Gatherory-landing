@@ -46,3 +46,10 @@ swift scripts/generate-beta-qr.swift
 
 The script uses Core Image and Vision, preserves a quiet zone, and verifies the
 PNG decodes to the configured URL. See [beta implementation notes](docs/launch-prototype.md#public-beta).
+
+## Planning guides
+
+Articles live in `src/content/seo/` and render at their root-level `slug` URLs.
+Every article declares a category for the grouped `/resources` page. See the
+[SEO content plan](docs/seo-content-plan.md) for the first occasion-focused
+batch, editorial scope, and release checks.

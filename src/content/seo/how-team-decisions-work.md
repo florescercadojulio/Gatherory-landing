@@ -7,6 +7,7 @@ description: "Understand Pass, Maybe, Love It, the team response bar, unanswered
 intro: "Decide helps your planning circle understand each other. A response expresses a preference; it does not make a commitment on everyone’s behalf."
 updated: 2026-10-14
 kind: "product"
+category: "collaboration"
 summaryHeading: "Input is not approval"
 takeaways:
   - "Pass, Maybe, and Love It are each person’s responses."
@@ -15,7 +16,7 @@ takeaways:
   - "Approved Event ideas need a date before they appear on Home."
 related:
   - "how-to-create-an-event-in-gatherory"
-  - "inviting-people-and-managing-access"
+  - "how-to-split-party-planning-tasks"
   - "event-planning-app-for-couples"
 order: 2
 ---

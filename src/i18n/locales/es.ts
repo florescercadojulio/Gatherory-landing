@@ -136,11 +136,17 @@ const es = {
     progress: "{{current}} de {{total}}",
   },
   resources: {
-    metaDescription: "Conoce Gatherory para iPhone: crea eventos, reúne ideas, consulta opiniones, invita a tu gente, aprueba solicitudes y revisa las confirmaciones.",
-    metaTitle: "Guías para organizar eventos · Gatherory",
-    title: "Organiza con más",
-    titleAccent: "claridad.",
-    description: "Crea tu primer evento, conoce las preferencias del grupo e invita a tu gente con los permisos adecuados. Estas guías describen el funcionamiento de la versión para iPhone.",
+    metaDescription: "Listas para organizar cumpleaños, cenas, comidas compartidas y Friendsgiving, consejos para repartir tareas y guías de Gatherory para iPhone.",
+    metaTitle: "Listas y guías para organizar celebraciones | Gatherory",
+    title: "Haz planes para",
+    titleAccent: "estar juntos.",
+    description: "Empieza por la reunión que tienes en mente. Encuentra una lista, reparte las tareas con quienes organizan contigo y aprende a reunir los planes en iPhone. Las guías están en inglés por ahora.",
+    groups: [
+      { id: "occasions", title: "Organiza tu próxima reunión.", description: "Listas, ejemplos de horarios y mensajes para invitados que te ayudarán a reunir a tu gente." },
+      { id: "collaboration", title: "Comparte la organización.", description: "Dale voz a cada persona y deja claro quién se encarga de cada parte." },
+      { id: "getting-started", title: "Empieza con Gatherory.", description: "Conoce la app para iPhone, desde tu primer evento hasta las ideas, invitaciones y permisos." },
+      { id: "choosing-app", title: "Elige tus herramientas.", description: "Compara las herramientas de organización e invitaciones según las necesidades de tu reunión." },
+    ],
     readGuide: "Leer la guía →",
   },
   seo: {

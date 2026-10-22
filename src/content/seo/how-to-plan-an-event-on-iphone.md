@@ -5,8 +5,9 @@ accent: "your iPhone."
 seoTitle: "How to Plan an Event on iPhone | Gatherory"
 description: "A practical Gatherory workflow for capturing ideas, collecting team input, organizing sub-events, and keeping guests informed."
 intro: "The plan should be useful at the venue, at the kitchen table, and during the conversation where something changes—not just when you are at a desk."
-updated: 2026-10-14
+updated: 2026-10-21
 kind: "guide"
+category: "getting-started"
 summaryHeading: "A simple mobile rhythm"
 takeaways:
   - "Start with one workspace for the gathering and sub-events for its connected moments."
@@ -44,7 +45,7 @@ An authorized planner approves the idea separately. Approved Event ideas with da
 
 ## 4. Check costs where they belong
 
-Record costs against the relevant event and use **Insights** to review spending and budget allocations. Estimated idea prices are useful for comparison, but they are not a substitute for a confirmed expense or agreement.
+Record costs against the relevant event and use **Manage** to review spending and budget allocations. Estimated idea prices are useful for comparison, but they are not a substitute for a confirmed expense or agreement.
 
 Keep contracts, payment deadlines, and other records in the tools your team uses for those jobs. Gatherory is not a payment processor.
 

@@ -5,8 +5,9 @@ accent: "different kinds of gatherings."
 seoTitle: "Best Event Planning Apps in 2026 | Gatherory"
 description: "Compare the best event planning apps for shared planning, invitations, weddings, ticketing, and guest communication in 2026."
 intro: "The right app depends on whether your hardest problem is shaping the plan, sending an invitation, managing a wedding, or selling tickets. This guide separates those jobs so you can choose clearly."
-updated: 2026-10-14
+updated: 2026-10-21
 kind: "comparison"
+category: "choosing-app"
 summaryHeading: "The quick answer"
 takeaways:
   - "Choose Gatherory when the planning process itself—ideas, decisions, related events, and collaborators—needs one shared home."
@@ -37,11 +38,11 @@ That is why there is no honest single winner for every event. The best event pla
 
 ## Gatherory: best for planning with your people
 
-Gatherory is designed for the work that happens before and after an invitation is sent. Its iPhone planning views are Home, Ideas, Decide, and Insights. One workspace connects the main event, sub-events, ideas, people, and recorded costs.
+Gatherory is designed for the work that happens before and after an invitation is sent. Its iPhone planning views are Home, Ideas, Decide, and Manage. One workspace connects the main event, sub-events, ideas, people, and recorded costs.
 
 Decide collects each eligible planner’s Pass, Maybe, or Love It response. Approval is separate; an approved Event idea with a date can appear on Home. Collaborator links support configurable access and approval, while guests receive the shared invitation and RSVP experience without planning tabs.
 
-The iPhone app is preparing for release. This guide describes its release workflow, not a claim that it is already available in the App Store.
+The iPhone beta is open through TestFlight. Visit the [iPhone page](/iphone) to join; beta access is separate from an App Store release.
 
 It is a strong fit when:
 

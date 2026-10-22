@@ -3,14 +3,15 @@ slug: "how-to-create-an-event-in-gatherory"
 title: "Your first event in"
 accent: "Gatherory."
 seoTitle: "How to Create an Event in Gatherory for iPhone"
-description: "Create a workspace, explore Home, Ideas, Decide, and Insights, then invite people with the right access."
+description: "Create an event, explore Home, Ideas, Decide, and Manage, then invite people with the right access."
 intro: "Give the gathering one home. Start with the essentials, save possibilities without committing to them, and bring people in when you are ready."
-updated: 2026-10-14
+updated: 2026-10-21
 kind: "product"
+category: "getting-started"
 summaryHeading: "Start here"
 takeaways:
-  - "A workspace holds the main event and its connected sub-events."
-  - "The planning tabs are Home, Ideas, Decide, and Insights."
+  - "Keep the main gathering and its connected sub-events together."
+  - "The planning tabs are Home, Ideas, Decide, and Manage."
   - "Love It records your preference; approving an idea is a separate action."
   - "Joining someone else’s event? You can skip creating your own during onboarding."
 related:
@@ -20,11 +21,11 @@ related:
 order: 1
 ---
 
-## Create a workspace—or join someone else’s
+## Create an event—or join someone else’s
 
 Sign in or create an account. If you are organizing a gathering, choose **Create an Event** during onboarding. If someone has invited you, follow their invitation link instead. You can skip creating a new event during onboarding; you do not need an event of your own to participate in theirs.
 
-To create another gathering later, open **Workspaces** and use the plus button.
+To create another gathering later, open **Events** and use the plus button.
 
 ## Set the essentials
 
@@ -39,7 +40,7 @@ Use a separate workspace for a separate gathering. Use sub-events when a dinner,
 - **Home** shows the main event and its visible, dated sub-events. Open a card to see its invitation content and details.
 - **Ideas** collects possibilities by category and event. **All Ideas** is the default; use the event filter to narrow the view.
 - **Decide** collects each eligible planner’s preferences. It is not an automatic approval system.
-- **Insights** brings together recorded costs, spending status, and budget allocations.
+- **Manage** brings together the budget, to-dos, guests, collaborators, and updates.
 
 Guests get the shared invitation experience rather than these planning tabs.
 
@@ -61,7 +62,7 @@ An approved Event idea with a date can appear on Home. An event idea without a d
 
 From Home, tap **Share Invitation** beside the workspace button. Choose whether the invitation is for guests or collaborators.
 
-For collaborator links, **Sharing Settings** controls whether approval is required and what access people receive. Manage pending requests in the sharing view or **Workspace Settings → People & Access → Join Requests**.
+For collaborator links, **Sharing Settings** controls whether approval is required and what access people receive. Manage pending requests in the sharing view or **Event Settings → People & Access → Join Requests**.
 
 See [Inviting people and managing access](/inviting-people-and-managing-access) before sharing a link widely.
 

@@ -13,6 +13,7 @@ const seo = defineCollection({
 		intro: z.string(),
 		updated: z.coerce.date(),
 		kind: z.enum(["comparison", "guide", "product"]),
+		category: z.enum(["occasions", "collaboration", "getting-started", "choosing-app"]),
 		summaryHeading: z.string(),
 		takeaways: z.array(z.string()).min(2).max(5),
 		related: z.array(z.string()).max(3),

@@ -36,7 +36,7 @@ const canonical = new URL("/resources", Astro.site);
 					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label={copy.nav.mainNavigation}>
 						<a class="nav-link" href="/">{copy.nav.home}</a>
 						<a class="nav-link text-brand-blue" href="/resources" aria-current="page">{copy.nav.guides}</a>
-						<a class="nav-link" href="/#product">{copy.nav.product}</a>
+						<a class="nav-link" href="/iphone">{copy.nav.product}</a>
 					</nav>
 					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">{copy.nav.signIn}</a>
 					<MobileNav client:load copy={copy} />
@@ -49,17 +49,23 @@ const canonical = new URL("/resources", Astro.site);
 					<p class="mt-8 max-w-2xl text-xl leading-8 sm:text-2xl sm:leading-9">{copy.resources.description}</p>
 				</section>
 
-				<section class="site-shell pb-24 sm:pb-32">
-					<div class="resource-grid">
-						{pages.map((page, index) => (
-							<a href={`/${page.data.slug}`} class:list={["resource-card", index === 0 && "resource-card-featured"]}>
-								<h2>{page.data.title} <span class="text-brand-blue">{page.data.accent}</span></h2>
-								<p>{page.data.description}</p>
-								<span>{copy.resources.readGuide}</span>
-							</a>
-						))}
-					</div>
-				</section>
+				<div class="site-shell space-y-20 pb-24 sm:space-y-28 sm:pb-32">
+					{copy.resources.groups.map((group, groupIndex) => (
+						<section aria-labelledby={`guides-${group.id}`}>
+							<h2 id={`guides-${group.id}`} class="section-title max-w-3xl scroll-mt-24">{group.title}</h2>
+							<p class="mt-5 mb-8 max-w-2xl text-lg leading-8 text-black/70">{group.description}</p>
+							<div class="resource-grid">
+								{pages.filter((page) => page.data.category === group.id).map((page, index) => (
+									<a href={`/${page.data.slug}`} class:list={["resource-card", groupIndex === 0 && index === 0 && "resource-card-featured"]}>
+										<h3>{page.data.title} <span class="text-brand-blue">{page.data.accent}</span></h3>
+										<p>{page.data.description}</p>
+										<span>{copy.resources.readGuide}</span>
+									</a>
+								))}
+							</div>
+						</section>
+					))}
+				</div>
 			</main>
 
 			<footer class="border-t border-black/10">

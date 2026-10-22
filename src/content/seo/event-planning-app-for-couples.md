@@ -5,14 +5,15 @@ accent: "Both of your perspectives."
 seoTitle: "Event Planning App for Couples | Gatherory"
 description: "Plan together with event-linked ideas, individual preferences, shared costs, and clear access for family, collaborators, and guests."
 intro: "One person can love an idea while the other is still thinking. Gatherory makes room for both without confusing a reaction with a final decision."
-updated: 2026-10-14
+updated: 2026-10-21
 kind: "product"
+category: "collaboration"
 summaryHeading: "Plan together without losing context"
 takeaways:
   - "Keep the main event and its sub-events in one workspace."
   - "Each eligible planner gives their own input; approval stays separate."
   - "Bring trusted collaborators into planning and guests into the invitation."
-  - "Review recorded costs and budget allocations in Insights."
+  - "Review recorded costs and budget allocations in Manage."
 related:
   - "how-team-decisions-work"
   - "inviting-people-and-managing-access"
@@ -44,11 +45,11 @@ Choose a role based on what the person needs to do:
 
 A collaborator can see planning information that a guest cannot. View-only means they cannot make changes; it is not a way to hide individual planning details from that collaborator.
 
-For collaborator links, enable approval if you want to review people before giving them planning access. Requests are available under **Workspace Settings → People & Access → Join Requests**.
+For collaborator links, enable approval if you want to review people before giving them planning access. Requests are available under **Event Settings → People & Access → Join Requests**.
 
 ## Make the tradeoffs visible
 
-Keep estimated prices with ideas while comparing options. Record event expenses and use Insights for spending and budget allocations.
+Keep estimated prices with ideas while comparing options. Record event expenses and use Manage for spending and budget allocations.
 
 Agree between yourselves on who approves a commitment. A green response bar is not a booking, a payment, or permission to spend.
 
