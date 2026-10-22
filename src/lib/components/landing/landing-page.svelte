@@ -25,15 +25,14 @@
 			</a>
 
 			<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 text-[0.9rem] font-[480] lg:flex" aria-label={copy.nav.mainNavigation}>
-				<a class="nav-link" href={copy.nav.iphoneHref}>{copy.nav.iphone}</a>
-				<a class="nav-link" href="#how-it-works">{copy.nav.howItWorks}</a>
+				<a class="nav-link" href="#product">{copy.nav.product}</a>
 				<a class="nav-link" href="#people">{copy.nav.people}</a>
 				<a class="nav-link" href={copy.nav.guidesHref}>{copy.nav.guides}</a>
 			</nav>
 
 			<div class="hidden items-center gap-4 lg:flex">
 				<a href={copy.nav.languageHref} class="nav-link text-sm">{copy.nav.languageLabel}</a>
-				<a href={copy.nav.iphoneHref} class="pill-button h-11 px-5 text-sm">{copy.nav.iphone}</a>
+				<a href={APP_SIGN_IN_URL} class="nav-link text-sm font-[480]">{copy.nav.signIn}</a>
 			</div>
 			<MobileNav {copy} />
 		</div>
@@ -46,11 +45,10 @@
 					{copy.landing.heroTitle} <span class="text-brand-blue">{copy.landing.heroAccent}</span>
 				</h1>
 				<p class="body-lead mt-6 max-w-xl">{copy.landing.heroDescription}</p>
-				<div class="mt-9 flex flex-col items-start gap-5 sm:flex-row sm:flex-wrap sm:items-center">
+				<div class="mt-9">
 					<a href={copy.nav.iphoneHref} class="pill-button min-h-12 px-6 py-3 text-base">
 						{copy.landing.startPlanning} <IconArrowRight class="size-4 shrink-0" />
 					</a>
-					<a href="#product" class="text-link">{copy.landing.howItWorks}</a>
 				</div>
 				<p class="mt-5 text-sm text-muted-foreground">{copy.landing.availability}</p>
 			</div>
@@ -159,14 +157,8 @@
 				<p class="mt-5 max-w-sm text-sm">{copy.footer.description}</p>
 			</div>
 			<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label={copy.nav.footerNavigation}>
-				<a class="nav-link" href="#product">{copy.nav.product}</a>
-				<a class="nav-link" href="#how-it-works">{copy.nav.howItWorks}</a>
-				<a class="nav-link" href={copy.nav.guidesHref}>{copy.nav.guides}</a>
 				<a class="nav-link" href={copy.nav.privacyHref}>{copy.nav.privacy}</a>
 				<a class="nav-link" href={copy.nav.termsHref}>{copy.nav.terms}</a>
-				<a class="nav-link" href={APP_SIGN_IN_URL}>{copy.nav.signIn}</a>
-				<a class="nav-link" href={copy.nav.languageHref}>{copy.nav.languageLabel}</a>
-				<a class="nav-link" href="#top">{copy.nav.backToTop}</a>
 			</nav>
 		</div>
 	</footer>

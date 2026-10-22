@@ -16,7 +16,7 @@ const es = {
     privacy: "Privacidad (en inglés)",
     terms: "Términos (en inglés)",
     signIn: "Iniciar sesión",
-    startPlanning: "Explora la app para iPhone",
+    startPlanning: "Explora la app",
     navigationMenu: "Abrir menú de navegación",
     closeNavigation: "Cerrar menú de navegación",
     navigationTitle: "Menú de navegación",

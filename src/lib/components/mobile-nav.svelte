@@ -4,7 +4,6 @@
 		IconBook2,
 		IconLayoutGrid,
 		IconMenu2,
-		IconRoute,
 		IconUsers,
 	} from "@tabler/icons-svelte";
 	import { onMount } from "svelte";
@@ -16,22 +15,10 @@
 
 	const links = $derived([
 		{
-			href: copy.nav.iphoneHref,
-			label: copy.nav.iphone,
-			description: copy.mobileNav.iphoneDescription,
-			icon: IconLayoutGrid,
-		},
-		{
 			href: `${copy.nav.homeHref}#product`,
 			label: copy.nav.product,
 			description: copy.mobileNav.productDescription,
 			icon: IconLayoutGrid,
-		},
-		{
-			href: `${copy.nav.homeHref}#how-it-works`,
-			label: copy.nav.howItWorks,
-			description: copy.mobileNav.howItWorksDescription,
-			icon: IconRoute,
 		},
 		{
 			href: `${copy.nav.homeHref}#people`,
@@ -103,7 +90,6 @@
 						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
 						<span class="font-[540] tracking-[-0.02em]">Gatherory</span>
 					</a>
-					<p class="mt-4 text-sm leading-5 text-black/70">{copy.mobileNav.intro}</p>
 				</div>
 
 				<nav
@@ -113,7 +99,7 @@
 					{#each links as link}
 						<a
 							href={link.href}
-							class="grid grid-cols-[1.25rem_1fr] gap-3 rounded-xl border border-black/85 p-3.5 transition-colors hover:bg-brand-blue-light"
+							class="grid grid-cols-[1.25rem_1fr] gap-3 rounded-xl p-3.5 transition-colors hover:bg-brand-blue-light"
 							onclick={closeMobileMenu}
 						>
 							<link.icon class="mt-0.5 size-4.5" stroke={1.7} aria-hidden="true" />
@@ -137,7 +123,7 @@
 					</a>
 					<a
 						href={APP_SIGN_IN_URL}
-						class="inline-flex h-11 items-center justify-center rounded-full border border-black font-[480] transition-colors hover:bg-black hover:text-white"
+						class="nav-link inline-flex h-11 items-center justify-center text-sm font-[480]"
 						onclick={closeMobileMenu}
 					>
 						{copy.nav.signIn}

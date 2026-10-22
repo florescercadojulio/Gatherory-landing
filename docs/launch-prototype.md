@@ -72,6 +72,15 @@ No database reset was run. See
 [development seed instructions](../../gatherory-web-app/docs/development/development-seed.md)
 for the reusable updater and its localhost/fixture restrictions.
 
+## Link hierarchy
+
+The homepage header uses Product, People, and Guides for browsing, with language
+and Sign in as text utilities. The hero has one app-page CTA; the closing
+section repeats that next step after the product story. The footer contains
+Privacy and Terms rather than repeating section navigation. Mobile navigation
+uses the same three browsing destinations, one app CTA, and a secondary text
+Sign in link. This also applies to shared mobile menus on guide/legal pages.
+
 ## Preview
 
 Run `pnpm astro dev --background` from the landing repository, following AGENTS.md.
@@ -79,6 +88,10 @@ The current local preview is `http://localhost:4321/`, with `/iphone`, `/es/`, a
 `/es/iphone` available. Manage it with `pnpm astro dev status`, `logs`, and `stop`.
 
 Saved review images:
+
+- [Simplified header and hero links](marketing-assets/previews/homepage-links-desktop.jpg)
+- [Closing CTA and legal footer](marketing-assets/previews/homepage-links-footer-desktop.jpg)
+- [Spanish mobile link hierarchy](marketing-assets/previews/homepage-links-menu-spanish-mobile.jpg)
 
 - [Decide product section, desktop](marketing-assets/previews/homepage-decide-product-desktop.jpg)
 - [Manage product section, desktop](marketing-assets/previews/homepage-manage-product-desktop.jpg)

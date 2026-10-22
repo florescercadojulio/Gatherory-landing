@@ -16,7 +16,7 @@ const en = {
     privacy: "Privacy",
     terms: "Terms",
     signIn: "Sign in",
-    startPlanning: "Explore the iPhone app",
+    startPlanning: "Explore the app",
     navigationMenu: "Open navigation menu",
     closeNavigation: "Close navigation menu",
     navigationTitle: "Navigation menu",
