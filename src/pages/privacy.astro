@@ -11,7 +11,7 @@ import { LEGAL_DETAILS } from "@/lib/legal-details";
 	title="Privacy"
 	accent="Policy."
 	description="This policy explains what Gatherory collects, why we use it, and the choices you have when you plan and share an event."
-	updated={LEGAL_DETAILS.updated}
+	updated="October 22, 2026"
 	activePage="privacy"
 	releaseReview={LEGAL_DETAILS.releaseReview}
 >
@@ -21,7 +21,7 @@ import { LEGAL_DETAILS } from "@/lib/legal-details";
 		<li><a href="#use">How we use information</a></li>
 		<li><a href="#legal-bases">Legal bases</a></li>
 		<li><a href="#sharing">How we share information</a></li>
-		<li><a href="#cookies">Cookies and analytics</a></li>
+		<li><a href="#cookies">Cookies, analytics, and advertising</a></li>
 		<li><a href="#retention">Retention and security</a></li>
 		<li><a href="#choices">Your choices</a></li>
 		<li><a href="#children">Children</a></li>
@@ -100,8 +100,10 @@ import { LEGAL_DETAILS } from "@/lib/legal-details";
 	</section>
 
 	<section id="cookies">
-		<h2>6. Cookies, device storage, and analytics</h2>
+		<h2>6. Cookies, device storage, analytics, and advertising</h2>
 		<p>Account sessions, security, and requested preferences use cookies or device storage needed for those functions. The iPhone app also stores local planning data and sign-in information so it can work offline and synchronize later.</p>
+		<p>Advertising is currently disabled in the iPhone app. If enabled in Explore, we use Google Mobile Ads to request and display ads and Google’s User Messaging Platform to present required consent prompts and privacy choices where configured. When available, open <strong>Privacy choices</strong> in Explore to review or change those choices.</p>
+		<p>Google may process device and network information, diagnostics, and advertising interactions when its SDK is used. Our ad requests are configured for non-personalized ads, with publisher first-party IDs disabled; account, event, attendee, search, and category details are not included for ad targeting or in request metadata. These settings do not prevent all data collection by Google. See <a href="https://policies.google.com/privacy/technologies/partner-sites?hl=en">how Google uses information from sites and apps that use its services</a>.</p>
 		<p>The marketing pages do not currently initialize the web application’s product-analytics SDK. When configured in the web application, product analytics can collect interaction and device data and use cookies or similar identifiers. It is distinct from storage needed to sign in.</p>
 		<p>Where European law requires consent, non-essential storage and tracking need a prior opt-in. Rejecting optional tracking must not block the basic service, and withdrawing consent must be as easy as giving it. Browser cookie settings are an additional control, not a substitute for those consent requirements. Accepting this policy or the Terms is not consent to optional analytics.</p>
 		<p>You can clear browser storage or change device permissions in system settings. Blocking essential session storage can prevent sign-in. For questions or to withdraw consent to processing for which we rely on consent, contact <a href={`mailto:${LEGAL_DETAILS.contactEmail}`}>{LEGAL_DETAILS.contactEmail}</a>.</p>
