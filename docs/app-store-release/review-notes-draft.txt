@@ -1,17 +1,30 @@
-Gatherory helps hosts and collaborators plan celebrations together. Guests have a separate invitation and attendance experience.
+Gatherory helps people plan events together. Hosts and collaborators can organize
+event details, ideas, preferences, tasks, costs, budgets, and guest responses.
+Guests can view an invitation and respond without receiving planning access.
 
-Suggested review sequence
-1. Open the populated App Review event using the existing review account supplied separately in App Store Connect.
-2. Review the event and its related moments on Home.
-3. Open Ideas to see photo-backed options, or add an idea to the intended event.
-4. In Decide, try a preference response. Responses express individual input; approving an idea is a separate action for an authorized planner.
-5. Open Manage to inspect the budget, to-dos, guest responses, collaborators, and pending requests available in the review fixture.
-6. Open an invitation to inspect its details and attendance choices.
+Sign in with the account entered in App Store Connect's App Review Information.
+Open an event in the account's planning workspace to begin. The available editing
+actions depend on the account's role and require an internet connection when
+they are shared with other people.
 
-Guest attendance and collaborator planning permissions are distinct. Sharing an owned event and shared account planning require sign-in. Browser RSVP is not advertised as part of this release.
+Suggested review path
 
-Plans saved on the device can be edited offline. Sharing, invitation access checks, and synchronization require a network connection.
+1. On Home, open an event and review its details and related events.
+2. Open Ideas to browse the event's ideas. If the account can edit, add an idea
+   to the selected event.
+3. Open Decide and choose Pass, Maybe, or Love It on an idea. These are personal
+   preferences; an authorized planner makes the separate approval decision.
+4. Open Manage to review the selected event's tasks, budget and recorded costs,
+   guest responses, collaborators, and any available planning requests.
+5. Return to Home and tap Share Invitation in the toolbar to review the
+   available guest and collaborator invitation options. Guests open an
+   invitation link to preview an event and must explicitly join and respond;
+   guest attendance does not grant planning access.
 
-Optional permission prompts appear when the corresponding feature is selected. Declining an optional media or location permission does not require enabling it just to inspect the core planning views.
+Changes saved on the device can be made while offline. Sharing changes with
+others and synchronizing require a network connection. Guest RSVP changes also
+require a connection and show their confirmation state in the invitation.
 
-This draft does not claim physical-device acceptance or production-service verification. Confirm the intended release build, reviewer account, populated review event, and deployed backend before using these notes for submission. Preserve the existing App Store Connect review credentials and contact fields; no credentials belong in this file.
+Location and photo or camera access are requested only when the corresponding
+feature is selected. These permissions are optional for browsing the planning
+views.

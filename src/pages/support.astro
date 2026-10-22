@@ -1,0 +1,96 @@
+---
+import "@/styles/global.css";
+import { APP_SIGN_IN_URL, SUPPORT_EMAIL } from "@/lib/site-links";
+import { getTranslations } from "@/i18n";
+import MobileNav from "@/lib/components/mobile-nav.svelte";
+
+const copy = getTranslations(Astro.currentLocale ?? "en");
+const description = "Get help using Gatherory, report a problem, and find the information to include when contacting us.";
+const canonical = new URL("/support", Astro.site);
+const supportMailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Gatherory app help")}`;
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale ?? "en"}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/png" href="/gatherory-icon.png" />
+		<link rel="apple-touch-icon" href="/gatherory-icon.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta property="og:title" content="Support · Gatherory" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/gatherory-icon.png" />
+		<meta property="og:url" content={canonical} />
+		<title>Support · Gatherory</title>
+	</head>
+	<body>
+		<div class="min-h-screen overflow-x-clip bg-background text-foreground">
+			<header class="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
+				<div class="site-shell relative flex h-16 items-center justify-between">
+					<a href="/" class="inline-flex items-center gap-2.5" aria-label={copy.nav.homeAria}>
+						<img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" />
+						<span class="text-base font-[540] tracking-[-0.02em]">Gatherory</span>
+					</a>
+					<nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[0.95rem] font-[480] lg:flex" aria-label={copy.nav.mainNavigation}>
+						<a class="nav-link" href="/">{copy.nav.home}</a>
+						<a class="nav-link" href="/resources">{copy.nav.guides}</a>
+						<a class="nav-link" href="/iphone">{copy.nav.product}</a>
+					</nav>
+					<a href={APP_SIGN_IN_URL} class="pill-button hidden h-11 px-5 text-[0.95rem] lg:inline-flex">{copy.nav.signIn}</a>
+					<MobileNav client:load copy={copy} />
+				</div>
+			</header>
+
+			<main class="site-shell py-16 sm:py-24 lg:py-28">
+				<div class="grid gap-10 border-b border-black/15 pb-14 sm:pb-20 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.72fr)] lg:items-end lg:gap-20">
+					<h1 class="legal-title max-w-[11ch]">Get help with <span class="text-brand-blue">Gatherory.</span></h1>
+					<p class="text-xl leading-8 sm:text-2xl sm:leading-9">Questions about using Gatherory or something not working? Contact us and include enough detail to help us understand the issue.</p>
+				</div>
+
+				<div class="mx-auto max-w-3xl py-14 sm:py-20">
+					<section aria-labelledby="contact-heading" class="border-b border-black/15 pb-12">
+						<h2 id="contact-heading" class="section-title">Contact us</h2>
+						<p class="mt-5 max-w-2xl text-lg leading-8 text-black/70">For help using Gatherory or to report a problem, email our app support address. For privacy requests, legal questions, service complaints, or reports of unlawful content, use the contact details in our <a class="nav-link text-brand-blue" href="/terms#contact">Terms of Use</a>.</p>
+						<a class="mt-7 inline-flex min-h-12 items-center rounded-full bg-brand-blue px-6 py-3 font-[540] text-white transition hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue" href={supportMailto}>
+							Email {SUPPORT_EMAIL}
+						</a>
+					</section>
+
+					<section aria-labelledby="report-heading" class="border-b border-black/15 py-12">
+						<h2 id="report-heading" class="section-title">Reporting a problem</h2>
+						<p class="mt-5 text-lg leading-8 text-black/70">If you are testing a TestFlight beta, include the app version and build number if you can find them, your iPhone model and iOS version, what you expected to happen, and the steps that led to the problem. A screenshot can help; remove event or guest details that are not needed to explain the issue.</p>
+						<p class="mt-5 text-lg leading-8 text-black/70">Do not send your password, sign-in codes, or private event information that is not needed for your request.</p>
+					</section>
+
+					<nav aria-label="More Gatherory information" class="pt-12">
+						<h2 class="section-title">More information</h2>
+						<ul class="mt-5 space-y-3 text-lg leading-8">
+							<li><a class="nav-link text-brand-blue" href="/resources">Browse the planning guides</a></li>
+							<li><a class="nav-link text-brand-blue" href="/privacy">Read the Privacy Policy</a></li>
+							<li><a class="nav-link text-brand-blue" href="/terms">Read the Terms of Use</a></li>
+						</ul>
+					</nav>
+				</div>
+			</main>
+
+			<footer class="border-t border-black/10">
+				<div class="site-shell grid gap-10 py-12 sm:grid-cols-[1fr_auto] sm:items-end">
+					<div>
+						<a href="/" class="inline-flex items-center gap-2.5 text-lg font-[540]" aria-label={copy.nav.homeAria}><img src="/gatherory-icon.png" alt="" class="size-8 rounded-lg" width="32" height="32" /> Gatherory</a>
+						<p class="mt-5 max-w-sm text-sm">{copy.footer.description}</p>
+					</div>
+					<nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-[480]" aria-label={copy.nav.footerNavigation}>
+						<a class="nav-link" href="/">{copy.nav.home}</a>
+						<a class="nav-link" href="/resources">{copy.nav.guides}</a>
+						<a class="nav-link" href="/privacy">{copy.nav.privacy}</a>
+						<a class="nav-link" href="/terms">{copy.nav.terms}</a>
+						<a class="nav-link" href={APP_SIGN_IN_URL}>{copy.nav.signIn}</a>
+					</nav>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

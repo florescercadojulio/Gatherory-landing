@@ -3,8 +3,10 @@
 Prepared October 21, 2026; saved to App Store Connect on October 22, 2026.
 Gatherory (Apple ID `6820635528`) remains at **1.0 — Prepare for Submission**.
 English (U.S.) and Spanish (Spain) subtitles, promotional text, descriptions,
-and keywords are saved as drafts. No build or screenshot was uploaded, and no
-review or release was started. Nothing was pushed to Git.
+and keywords are saved as drafts. Marketing, support, and privacy policy URLs,
+copyright, and reviewer walkthrough notes were added in the next preparation
+pass. No build or screenshot was uploaded, and no review or release was
+started. Nothing was pushed to Git.
 
 ## Copy prepared
 
@@ -14,9 +16,21 @@ review or release was started. Nothing was pushed to Git.
 - [Spanish listing](es-ES.json): the same fields; Spanish (Spain) was added as
   a localization. Both localized app names remain Gatherory.
 - [Review notes](review-notes-draft.txt): a proposed walkthrough, separate from
-  credentials and review contact information.
+  credentials and review contact information; saved in the draft Notes field.
+- [Review preparation](review-preparation.md): release build, account, role,
+  backend, and physical-device checks required before using the walkthrough.
+- [Public URL verification](url-verification.md): reachable listing destinations
+  and the unpublished support page.
 - [Screenshot storyboard](screenshot-storyboard.md): ordered English/Spanish
   headlines, existing native reference captures, and capture/export work.
+- [Screenshot review gallery](screenshot-review.html): twenty fresh iPhone and
+  13-inch iPad previews in English and Spanish, captured from the current native working tree with
+  isolated fictional data. These are preparation assets, not release-build proof.
+- [Capture report](screenshots/screenshot-capture-report.md): build provenance,
+  launch flags, device sizes, source fingerprints, and visible qualifications.
+- [Screenshot visual review](screenshot-visual-review.md): localized UI text,
+  clipped Spanish labels, empty playlist content, and lead-image changes to
+  resolve before final marketing exports.
 
 The positioning follows the launch strategy: people co-hosting birthdays,
 dinners, and celebrations. Copy describes shared ideas, personal preferences,
@@ -59,25 +73,42 @@ this preparation pass.
 - English remains the primary language. Only Spanish (Spain) was added.
 - [Saved Spanish subtitle](asc-spanish-subtitle-draft.png) and
   [persisted Spanish listing](asc-spanish-listing-draft.png) document the state.
+- Both locales have Marketing URL `https://gatherory.com/`, Support URL
+  `https://gatherory.com/terms#contact`, and Privacy Policy URL
+  `https://gatherory.com/privacy`. The public pages were verified without a
+  session. The privacy policy link was saved for the next version; no privacy
+  questionnaire answers were entered and Publish was not used.
+- Copyright is `2026 Guide Systems LLC`. The reviewer walkthrough is saved;
+  credentials and review contact fields remain empty. The walkthrough remains
+  subject to actual account, candidate-build, and production verification.
+- [Release details screenshot](asc-release-details-draft.png) shows the saved
+  URLs, copyright, and version status.
 
 ## Remaining preparation
 
-- No build is selected for version 1.0. Local release notes describe build 4;
-  that historical checkpoint is not a selection or validation of a release build.
-- Prepare current English and Spanish screenshots using the storyboard;
-  validate them against the intended release build and export without alpha.
+- No build is selected for version 1.0. On October 22, a read-only TestFlight
+  inspection confirmed build 1.0 (4) is listed as Testing. That status is not
+  selection for submission or validation of the production guest/sync flows.
+- The ten fresh iPhone previews are opaque JPEGs at 1206 × 2622, matching the
+  medium Dynamic Island slot inspected in App Store Connect. They came from a
+  simulator build of the current working tree, not TestFlight build 4. Resolve
+  the visual review findings, then recapture and validate against the intended
+  release build. Spanish UI is partially localized; sample event, idea, and task
+  text remains English. Do not call this a fully localized final asset set.
+- Ten additional iPad previews use the accepted 13-inch portrait dimensions,
+  2064 × 2752. These share the same working-tree build and localization limits.
+  The existing Duo originals remain references; no fresh Duo set was captured
+  in this preparation pass.
 - The header asset slot inspected in both locales is empty. No creative assets
   were uploaded during this pass.
-- Marketing URL candidate: `https://gatherory.com/`. Privacy URL candidate:
-  `https://gatherory.com/privacy`. Confirm them from a signed-out browser before
-  saving. This pass has not verified the live pages. Marketing URL and Copyright
-  were empty in App Store Connect and were left empty.
-- Support URL is empty. There is no `/support` route in the current landing
-  source, and the public URL could not be verified through the web tool. Do not
-  substitute an invented mailbox or an unavailable support page.
-- Review sign-in is required, but the username, password, contact fields, and
-  Notes were empty and remain untouched. Prepare verified review access and
-  contact information separately.
+- A dedicated `/support` page is prepared locally. The user confirmed
+  `info@gatherory.com` for app help; `legal@gatherory.com` remains the legal and
+  privacy contact. Publish the support page in a separately authorized release,
+  verify it publicly, then replace both locales' temporary Terms contact URL
+  with `https://gatherory.com/support`. The live `/support` path returned 404
+  during verification; it is not the saved App Store Support URL.
+- Review sign-in is required, but username, password, and contact fields remain
+  empty. Prepare verified review access and contact information separately.
 - Category, content rights, and age ratings still show setup controls in App
   Information. Complete the appropriate declarations in a later release pass;
   no compliance or privacy settings were changed here.

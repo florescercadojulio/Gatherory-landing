@@ -1,7 +1,10 @@
 # Release screenshot storyboard
 
-Draft, October 21, 2026. Nothing uploaded. Existing captures are visual references,
-not newly verified release screenshots. See the [asset report](../marketing-assets/asset-status.md)
+Draft, October 21, 2026; capture preparation updated October 22. Nothing uploaded.
+Fresh working-tree previews are in the [review gallery](screenshot-review.html);
+see the [visual review](screenshot-visual-review.md) before final export.
+Existing marketing captures below remain visual references, not newly verified
+release screenshots. See the [asset report](../marketing-assets/asset-status.md)
 and [capture map](../marketing-assets/asset-maintenance.md) before refreshing them.
 
 ## iPhone sequence
@@ -36,13 +39,17 @@ The current PNG originals also need an export without alpha.
 
 - Verify screens against the build chosen in App Store Connect, rather than the
   latest uncommitted native source. Recapture changed screens after that check.
-- Capture Spanish UI for the Spanish screenshot set. A translated headline does
-  not make the English app UI a localized capture.
+- Spanish UI previews are captured alongside English. Resolve untranslated
+  generated text and the clipped guest legend before final Spanish exports.
+  A translated headline does not make English app UI a localized capture.
 - The project currently targets device families 1 and 2. Confirm the intended
-  iPad support and prepare the required 13-inch iPad set if it remains enabled.
-  No iPad captures are present in this marketing library.
-- Choose accepted display slots in the live App Store Connect version before
-  preparing final exports. Do not relabel an existing iPhone capture as iPad.
+  iPad support. A fresh 13-inch iPad preview set is now in
+  `screenshots/iPad13/`; it shares the working-tree and localization
+  qualifications documented in the capture report.
+- The live App Store Connect slots were inspected on October 22. The regular
+  iPhone slot accepts 1206 × 2622; Duo accepts 2853 × 2007 / 2007 × 2853;
+  the iPad 13-inch slot accepts 2064 × 2752. Match the intended device, do not
+  relabel an iPhone capture as iPad, and verify final files during upload later.
 
 Source: [Apple screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/),
 reviewed October 21, 2026. These notes prepare the assets; they do not record an
