@@ -596,6 +596,11 @@
           "slug": "how-to-create-an-event-in-gatherory",
           "route": "/how-to-create-an-event-in-gatherory",
           "placement": "heroAsset: ios-home"
+        },
+        {
+          "slug": "party-planning-timeline",
+          "route": "/party-planning-timeline",
+          "placement": "heroAsset: ios-home"
         }
       ]
     },
@@ -649,6 +654,11 @@
         {
           "slug": "how-to-create-an-event-in-gatherory",
           "route": "/how-to-create-an-event-in-gatherory",
+          "placement": "inline Markdown image"
+        },
+        {
+          "slug": "party-budget-worksheet",
+          "route": "/party-budget-worksheet",
           "placement": "inline Markdown image"
         }
       ]
@@ -744,6 +754,11 @@
           "slug": "inviting-people-and-managing-access",
           "route": "/inviting-people-and-managing-access",
           "placement": "inline Markdown image"
+        },
+        {
+          "slug": "party-invitation-wording",
+          "route": "/party-invitation-wording",
+          "placement": "heroAsset: ios-events"
         }
       ]
     },
@@ -794,6 +809,21 @@
         {
           "slug": "event-planning-checklist",
           "route": "/event-planning-checklist",
+          "placement": "inline Markdown image"
+        },
+        {
+          "slug": "party-budget-worksheet",
+          "route": "/party-budget-worksheet",
+          "placement": "heroAsset: ios-manage"
+        },
+        {
+          "slug": "party-planning-timeline",
+          "route": "/party-planning-timeline",
+          "placement": "inline Markdown image"
+        },
+        {
+          "slug": "party-invitation-wording",
+          "route": "/party-invitation-wording",
           "placement": "inline Markdown image"
         }
       ]

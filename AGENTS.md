@@ -1,5 +1,8 @@
 ## Development
 
+Read `../gatherory-web-app/docs/development/ai-onboarding.md` for shared product
+context and repository ownership when starting a fresh AI conversation.
+
 When starting the dev server, use background mode:
 
 ```

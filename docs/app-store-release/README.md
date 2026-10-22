@@ -23,14 +23,16 @@ started. Nothing was pushed to Git.
   and the unpublished support page.
 - [Screenshot storyboard](screenshot-storyboard.md): ordered English/Spanish
   headlines, existing native reference captures, and capture/export work.
-- [Screenshot review gallery](screenshot-review.html): twenty fresh iPhone and
-  13-inch iPad previews in English and Spanish, captured from the current native working tree with
-  isolated fictional data. These are preparation assets, not release-build proof.
+- [Screenshot review gallery](screenshot-review.html): twenty iPhone and
+  13-inch iPad previews in English and Spanish, recaptured after the Spanish
+  copy and layout fixes using an isolated local build with fictional data.
+  These are preparation assets, not release-build proof.
 - [Capture report](screenshots/screenshot-capture-report.md): build provenance,
   launch flags, device sizes, source fingerprints, and visible qualifications.
-- [Screenshot visual review](screenshot-visual-review.md): localized UI text,
-  clipped Spanish labels, empty playlist content, and lead-image changes to
-  resolve before final marketing exports.
+- [Screenshot visual review](screenshot-visual-review.md): checks of the
+  localized text, playlist content, guest legend, and remaining framing limits.
+- [Isolated build notes](capture-build-notes.txt): temporary build-only changes,
+  exact source fingerprints, and the simulator binary used for these captures.
 
 The positioning follows the launch strategy: people co-hosting birthdays,
 dinners, and celebrations. Copy describes shared ideas, personal preferences,
@@ -51,7 +53,10 @@ and [screenshot specifications](https://developer.apple.com/help/app-store-conne
 
 ## App Store Connect editing boundary
 
-Continue saving only editable draft metadata for the version in preparation.
+The October 22 Spanish polish and recapture pass is entirely local. It makes
+no further App Store Connect edits, uploads, build selections, or submissions.
+For any separately authorized metadata preparation, save only editable draft
+metadata for the version in preparation.
 Preserve review credentials, review contacts, and any existing approved
 material. Do not change promotional text on an already released version, since
 a saved change can affect its live listing.
@@ -89,14 +94,15 @@ this preparation pass.
 - No build is selected for version 1.0. On October 22, a read-only TestFlight
   inspection confirmed build 1.0 (4) is listed as Testing. That status is not
   selection for submission or validation of the production guest/sync flows.
-- The ten fresh iPhone previews are opaque JPEGs at 1206 × 2622, matching the
+- The ten recaptured iPhone previews are opaque JPEGs at 1206 × 2622, matching the
   medium Dynamic Island slot inspected in App Store Connect. They came from a
-  simulator build of the current working tree, not TestFlight build 4. Resolve
-  the visual review findings, then recapture and validate against the intended
-  release build. Spanish UI is partially localized; sample event, idea, and task
-  text remains English. Do not call this a fully localized final asset set.
+  isolated simulator build, not TestFlight build 4. Generated Spanish labels,
+  fictional event/idea/task copy, playlist metadata, and the guest legend have
+  been corrected. The isolated build passed 13 focused tests and verification
+  of 1,577 English/Spanish catalog strings. See the visual review for framing
+  qualifications, then validate against the intended release build before upload.
 - Ten additional iPad previews use the accepted 13-inch portrait dimensions,
-  2064 × 2752. These share the same working-tree build and localization limits.
+  2064 × 2752. These use the same isolated build and localized example content.
   The existing Duo originals remain references; no fresh Duo set was captured
   in this preparation pass.
 - The header asset slot inspected in both locales is empty. No creative assets

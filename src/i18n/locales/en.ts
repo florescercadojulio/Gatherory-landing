@@ -134,9 +134,18 @@ const en = {
     privateToCircle: "Private to your circle",
     resetDemo: "Reset the demo",
     progress: "{{current}} of {{total}}",
+    guidesTitle: "A good plan starts here.",
+    guidesDescription: "Work out the budget, give the day a little structure, and send an invitation people can answer. Start with examples you can adapt to your gathering.",
+    readGuide: "Read the guide",
+    allGuides: "Explore all planning guides",
+    featuredGuides: [
+      { href: "/party-budget-worksheet", title: "Party budget worksheet", description: "Track estimates, committed purchases, and a reserve, with a sample birthday dinner budget." },
+      { href: "/party-planning-timeline", title: "Party planning timeline", description: "Go from four weeks out to a 6 p.m. dinner with clear owners and time for the unexpected." },
+      { href: "/party-invitation-wording", title: "Party invitation wording", description: "Adapt birthday dinner and potluck invitations, RSVP reminders, and a final guest note." },
+    ],
   },
   resources: {
-    metaDescription: "Practical checklists for birthday dinners, dinner parties, potlucks, and Friendsgiving, plus shared planning advice and guides to Gatherory for iPhone.",
+    metaDescription: "Party planning checklists, budget worksheets, timelines, and invitation wording for birthdays, dinner parties, potlucks, and celebrations with friends.",
     metaTitle: "Party Planning Checklists and Hosting Guides | Gatherory",
     title: "Make plans for",
     titleAccent: "good company.",
@@ -144,7 +153,7 @@ const en = {
     groups: [
       { id: "occasions", title: "Plan your next gathering.", description: "Checklists, sample timelines, and guest messages for the moments you want to bring people together." },
       { id: "collaboration", title: "Share the planning.", description: "Give everyone a say and make it clear who is taking care of each part." },
-      { id: "getting-started", title: "Get started with Gatherory.", description: "Learn the iPhone workflow, from your first event to ideas, invitations, and access." },
+      { id: "getting-started", title: "From first idea to event day.", description: "Build your timeline and checklist, and learn how shared planning works in Gatherory for iPhone." },
       { id: "choosing-app", title: "Choose your planning tools.", description: "Compare planning, invitation, and guest tools based on what your gathering needs." },
     ],
     readGuide: "Read the guide →",

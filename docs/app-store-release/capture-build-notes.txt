@@ -1,0 +1,50 @@
+Gatherory Spanish capture build snapshot
+Date: 2026-10-22
+
+Snapshot source: /Users/nexus/Documents/gatherory/ios-apps/gatherory
+Snapshot root: /tmp/gatherory-spanish-capture-source
+Derived data: /tmp/gatherory-spanish-capture-build
+
+The isolated tree was copied from the native working tree without .git or DerivedData. Before the initial capture build, Gatherory, GatheroryTests, GatheroryUITests, Config, and DesignAssets were refreshed from the source tree; Localizable.xcstrings was explicitly copied after the localization agent finished. The shared Gatherory scheme and existing Package.resolved were copied into the snapshot. Spanish UI fixes were applied in the original checkout and copied into this snapshot. The temporary SDK wiring and unrelated compile-only fixes below were confined to the snapshot; their original source and project files were left unchanged.
+
+Temporary project wiring:
+- Linked the existing GoogleMobileAds package product to the Gatherory app target.
+- Linked the existing GoogleUserMessagingPlatform package product to the Gatherory app target.
+- Both product references and versions came from the snapshot's existing project references/Package.resolved; no package or version was added.
+
+Temporary compile-only fixes in the snapshot:
+- Gatherory/Advertising/ExploreAdSession.swift: unwrap weak self before awaiting performPreparation so the Task returns Void.
+- Gatherory/Features/Blueprints/BlueprintExploreView.swift: mark the forwarded ViewBuilder header closure @escaping to match its callee.
+These two unrelated compile fixes were authorized for this temp copy only. They do not change the Spanish capture surfaces. The original files were left alone.
+
+Build:
+- Command: xcodebuild -quiet -project Gatherory.xcodeproj -scheme Gatherory -configuration Debug -destination 'platform=iOS Simulator,id=3A4621C1-A19F-4EDD-A25F-6A1AB7663D6F' -derivedDataPath /tmp/gatherory-spanish-capture-build CODE_SIGNING_ALLOWED=NO build
+- Result: passed.
+- App: /tmp/gatherory-spanish-capture-build/Build/Products/Debug-iphonesimulator/Gatherory.app
+- Executable SHA-256: 79970b53fd36ad00569d65183a1abc334f19e023c5b81361f90c6904b7aadf5a
+
+Tests:
+- Command used the Gatherory scheme, same destination and derived data, CODE_SIGNING_ALLOWED=NO, -parallel-testing-enabled NO, and these suites: SpanishGeneratedCopyTests, BirthdayMarketingFixturesTests, LayoutDimensionTests.
+- Result bundle: /tmp/gatherory-spanish-capture-build/Logs/Test/Test-Gatherory-2026.10.22_08-32-06--0400.xcresult
+- Result: 13 passed, 0 failed, 0 skipped.
+
+Localization verification:
+- Command: bash scripts/verify-localizations.sh
+- Result: Localization coverage verified for 1,577 strings in English and Spanish. Existing non-literal-key warning in AppCopy.swift was reported.
+
+Source fingerprints (source and snapshot matched when checked):
+- Gatherory/Localizable.xcstrings: 2b41e14cc0bff48ca3b5f9400bdb306c4448eb25933ef7bfa4d92aa7928d5797
+- Gatherory/Features/Manage/ManagePeoplePill.swift: a9530af6e7547b0f6cf4fc913dcee749829ef4e5b5a831c0f19f3190295eb725
+- Gatherory/App/BirthdayMarketingFixtures.swift: 5f600ace96a3120c62c8ba1c9424a353234de95fac3464a00893ae4d0269830c
+- GatheroryTests/BirthdayMarketingFixturesTests.swift: 1de21fd964942a5ff8b893f7deab06a8810ccc97231c4e4ec9cd29939d16a6ef
+- Gatherory.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved: 44180cc34f890bdec656257c1b3ad87ee31ff12726fd45c81c9c3ae6de1a6be4
+- Gatherory.xcodeproj/xcshareddata/xcschemes/Gatherory.xcscheme: 9284fb96587342b0a0b7a4e397fc1562e661bbc868b128f99e2b92f044ccbbac
+
+RSVP Spanish localization follow-up build (2026-10-22):
+- Snapshot localized the event RSVP heading via `String(localized: "Who's Coming")` for both main events and subevents. It now uses `AppCopy.Home.peopleGoing(_:)` and `peopleInvited(_:)` for attendance summaries. `TimelineCategory.other` now resolves `String(localized: "Other")`.
+- Added compiled Spanish-resource expectations for `Who's Coming` → `Quién viene` and `Other` → `Otro` in `SpanishGeneratedCopyTests.swift`.
+- These three changed files match the original source byte-for-byte: `Gatherory/Features/Events/EventInvitationScreen.swift` SHA-256 `a5e76e06f59d29152ba6c73e62fe0158678710b959d3c0ff0507f02e6081e584`; `Gatherory/Models/PlanningModels.swift` SHA-256 `07ef365af54a34bc8d1142a1ed6177ff1c96c89d3f94161a51018a18635245f1`; `GatheroryTests/SpanishGeneratedCopyTests.swift` SHA-256 `996d670bdb40c0efaeae540223a72e30df7550ce8f48cc54ad2c06d5d818cf99`.
+- Localization verification rerun after the follow-up: passed, 1,577 strings; the existing non-literal-key warning in `AppCopy.swift` remains.
+- Isolated build/test command: same Gatherory scheme, iPhone 18 Pro simulator (`3A4621C1-A19F-4EDD-A25F-6A1AB7663D6F`), `/tmp/gatherory-spanish-capture-build`, and the three focused suites (`SpanishGeneratedCopyTests`, `BirthdayMarketingFixturesTests`, `LayoutDimensionTests`). Result: 13 passed, 0 failed, 0 skipped.
+- Updated result bundle: `/tmp/gatherory-spanish-capture-build/Logs/Test/Test-Gatherory-RSVP-Spanish-2026-10-22.xcresult`.
+- Updated app: `/tmp/gatherory-spanish-capture-build/Build/Products/Debug-iphonesimulator/Gatherory.app`. Its main executable remains the same stable trampoline hash `79970b53fd36ad00569d65183a1abc334f19e023c5b81361f90c6904b7aadf5a`; the compiled app code is in `Gatherory.debug.dylib`, SHA-256 `4ac5a5f6ccc66a66b7888d86eaf3f3fa9cf814739a1a1d0a5a5e5021b5b8fa54`. The compiled Spanish `Localizable.strings` hash is `ab314a077b96c53b2fbe61dbd473b83d8c2d9a3c838f66731a319f228d60aee7`.

@@ -139,7 +139,24 @@
 			</div>
 		</section>
 
-		<section class="site-shell py-24 sm:py-32">
+		<section id="planning-guides" class="site-shell scroll-mt-24 py-24 sm:py-32" aria-labelledby="planning-guides-heading">
+			<div class="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-end">
+				<h2 id="planning-guides-heading" class="section-title max-w-[12ch]">{copy.landing.guidesTitle}</h2>
+				<p class="max-w-2xl text-lg leading-8">{copy.landing.guidesDescription}</p>
+			</div>
+			<div class="mt-10 grid gap-4 md:grid-cols-3">
+				{#each copy.landing.featuredGuides as guide}
+					<a href={guide.href} class="guide-card">
+						<h3>{guide.title}</h3>
+						<p>{guide.description}</p>
+						<span class="inline-flex items-center gap-2">{copy.landing.readGuide} <IconArrowRight class="size-4" aria-hidden="true" /></span>
+					</a>
+				{/each}
+			</div>
+			<a href={copy.nav.guidesHref} class="nav-link mt-8 inline-flex min-h-11 items-center gap-2 font-[540]">{copy.landing.allGuides} <IconArrowRight class="size-4" aria-hidden="true" /></a>
+		</section>
+
+		<section class="site-shell pb-24 sm:pb-32">
 			<BetaInvite copy={copy.beta} />
 		</section>
 	</main>

@@ -108,6 +108,59 @@ clicks, and beta referrals before choosing the next batch. Those account and
 analytics actions have not been performed here. Do not infer indexation from a
 successful local build.
 
-Possible later work: Spanish versions of the strongest guides, small birthday
-activity ideas, and a gathering schedule example. Choose the next topic based
+Possible later work: Spanish versions of the strongest guides and small birthday
+activity ideas. Choose the next topic based
 on reader questions and observed demand rather than publishing near-duplicates.
+
+## Practical planning resources — October 22, 2026
+
+Added three English guides, bringing the collection to seventeen. These cover
+separate reader tasks rather than more variants of an occasion checklist:
+
+| URL | Reader's task | Practical material |
+| --- | --- | --- |
+| `/party-budget-worksheet` | Agree and track spending | Copyable worksheet distinguishing estimates, commitments, deposits, and balances; a fictional $300 dinner allowance totaling correctly, including its reserve |
+| `/party-planning-timeline` | Sequence work and handoffs | Four-week milestones and a 6 p.m. dinner schedule with named owners and fallback decisions |
+| `/party-invitation-wording` | Send an invitation people can answer | Adaptable home dinner, restaurant, potluck, RSVP reminder, and final-details messages |
+
+The homepage now features direct links to the three resources before the beta
+invitation. Its new section has translated English/Spanish copy, no pre-title,
+and explicitly tells Spanish visitors that the linked articles are in English.
+The resource hub includes all seventeen guides, and the general event checklist
+links to the three additions in the corresponding budget, schedule, and guest
+sections. Each new guide connects to relevant older guides and the iPhone beta.
+
+Guide hero images show distinct product surfaces: Manage for budgeting, Home
+for the timeline, and the native invitation for wording. Inline images show
+Ideas or Manage where they support the task. Existing captions identify
+fictional data. Their uses were added to the UI asset map; no screenshot
+baseline was acknowledged or existing refresh requirement cleared. No new
+stock images or native capture work was needed for this content pass.
+
+Article structured data now declares its language. The existing canonical,
+description, social-image, and sitemap generation applies to each new page.
+This follows the same [helpful-content approach](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+as the first batch: give the intended audience something useful to do, with
+concrete examples. No keyword-volume research, ranking forecast, indexation,
+Search Console submission, or publication is claimed.
+
+Validation: all four content checks and sixteen asset checks passed; the static
+build generated twenty-six routes. Generated-page checks verified the three
+new canonicals, descriptions, single main headings, Article language/image
+metadata, beta CTAs, sitemap inclusion, and internal link destinations. Browser
+review covered the desktop homepage section, all three new routes, the 320px
+budget worksheet, and the Spanish homepage section. The worksheet scrolls
+within the article; the budget guide and Spanish homepage have no page overflow
+at that width. A stale development-server hydration error cleared after
+restarting the existing local server; the production build passed.
+
+Saved local previews:
+
+- [Homepage guide section](marketing-assets/previews/seo-planning-guides-home-desktop.png)
+- [Mobile budget worksheet](marketing-assets/previews/seo-budget-worksheet-mobile.png)
+- [Spanish mobile discovery section](marketing-assets/previews/seo-planning-guides-spanish-mobile.png)
+
+Stopping point: local content and checks are complete. Nothing was deployed or
+pushed. After a separately authorized publication, inspect indexing and actual
+queries before selecting another batch; prioritize Spanish guide translations
+or further practical resources based on what readers need.

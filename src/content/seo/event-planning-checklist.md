@@ -5,7 +5,7 @@ accent: "the whole event in view."
 seoTitle: "Event Planning Checklist: From First Idea to Event Day | Gatherory"
 description: "Use this practical event planning checklist to move from purpose and budget through venue, guests, schedule, communication, and event-day details."
 intro: "A useful checklist does more than collect tasks. It puts decisions in the right order, so you do not polish an invitation before the event underneath it is ready."
-updated: 2026-10-21
+updated: 2026-10-22
 heroAsset: "duo-manage"
 kind: "guide"
 category: "getting-started"
@@ -66,6 +66,8 @@ A group chat is useful for conversation, but it is a poor archive. Important con
 - Revisit the budget when a major idea is approved.
 
 Budget conversations are clearer when the expense is connected to the event or decision it supports.
+
+Use the [party budget worksheet](/party-budget-worksheet) to separate estimates, committed totals, deposits, and balances, with a small birthday dinner example.
 
 ![Native Manage overview showing example budget, guest, approval, and to-do cards](/images/ios/manage.webp)
 
@@ -134,6 +136,8 @@ Gatherory’s **Pass**, **Maybe**, and **Love It** choices collect personal inpu
 
 Leave margin. A schedule with no breathing room becomes inaccurate after the first late arrival.
 
+The [party planning timeline](/party-planning-timeline) turns those steps into weekly milestones and a sample event-day schedule for a 6 p.m. dinner.
+
 ## 9. Prepare the guest experience
 
 - Confirm the event name, date, time, location, dress guidance, and RSVP deadline.
@@ -144,6 +148,8 @@ Leave margin. A schedule with no breathing room becomes inaccurate after the fir
 - Make important accessibility and contact information easy to find.
 
 Read the invitation as someone who has seen none of the planning conversation. If it assumes hidden context, revise it.
+
+Start with the [party invitation wording examples](/party-invitation-wording) for a home dinner, restaurant celebration, potluck, or RSVP follow-up.
 
 Check **Who’s Coming** for each event’s RSVP status: **Going**, **Not Sure**, or **Not Going**. Pull down to refresh before relying on the latest attendance count.
 

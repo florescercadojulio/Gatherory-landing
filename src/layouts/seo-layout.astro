@@ -65,6 +65,7 @@ const structuredData = {
 	headline: `${title} ${accent}`,
 	description,
 	image: new URL(heroImage.src, Astro.site).toString(),
+	inLanguage: Astro.currentLocale ?? "en",
 	dateModified: updated.toISOString(),
 	mainEntityOfPage: canonical.toString(),
 	author: { "@type": "Organization", name: "Gatherory", url: Astro.site?.toString() },

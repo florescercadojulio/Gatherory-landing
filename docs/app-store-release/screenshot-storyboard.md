@@ -1,7 +1,7 @@
 # Release screenshot storyboard
 
 Draft, October 21, 2026; capture preparation updated October 22. Nothing uploaded.
-Fresh working-tree previews are in the [review gallery](screenshot-review.html);
+Recaptured isolated-build previews are in the [review gallery](screenshot-review.html);
 see the [visual review](screenshot-visual-review.md) before final export.
 Existing marketing captures below remain visual references, not newly verified
 release screenshots. See the [asset report](../marketing-assets/asset-status.md)
@@ -15,7 +15,7 @@ and [capture map](../marketing-assets/asset-maintenance.md) before refreshing th
 | 2 | A picture for every idea. | Una imagen para cada idea. | `../marketing-assets/ios-originals/ideas.png` | Distinct photos for different birthday dinner ideas |
 | 3 | Give everyone a say. | Dale voz a cada persona. | `../marketing-assets/ios-originals/decide.png` | One complete idea and the group preference bar; no implication of automatic approval |
 | 4 | Keep the whole plan in view. | Ten el plan completo a la vista. | `../marketing-assets/ios-originals/manage.png` | Budget, RSVP distribution, pictured collaborators, pending approvals, and a next task |
-| 5 | Share the details that matter. | Comparte los detalles importantes. | `../marketing-assets/ios-originals/events.png` | Drinks & catch-ups invitation and native RSVP choices |
+| 5 | Share the details that matter. | Comparte los detalles importantes. | `../marketing-assets/ios-originals/events.png` | Drinks & catch-ups / Bebidas y reencuentros invitation and native RSVP choices |
 
 Keep the first three images focused on the host’s planning experience. Use actual
 app screens and fictional example content. Do not use stock lifestyle photos in
@@ -39,12 +39,13 @@ The current PNG originals also need an export without alpha.
 
 - Verify screens against the build chosen in App Store Connect, rather than the
   latest uncommitted native source. Recapture changed screens after that check.
-- Spanish UI previews are captured alongside English. Resolve untranslated
-  generated text and the clipped guest legend before final Spanish exports.
-  A translated headline does not make English app UI a localized capture.
+- Spanish UI previews were recaptured alongside English after localizing
+  generated labels and fictional example content, populating the playlist,
+  and making the guest legend adapt to the available width. Check the
+  [visual review](screenshot-visual-review.md) for remaining framing limits.
 - The project currently targets device families 1 and 2. Confirm the intended
   iPad support. A fresh 13-inch iPad preview set is now in
-  `screenshots/iPad13/`; it shares the working-tree and localization
+  `screenshots/iPad13/`; it shares the isolated-build
   qualifications documented in the capture report.
 - The live App Store Connect slots were inspected on October 22. The regular
   iPhone slot accepts 1206 × 2622; Duo accepts 2853 × 2007 / 2007 × 2853;

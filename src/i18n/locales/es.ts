@@ -134,9 +134,18 @@ const es = {
     privateToCircle: "Privado para tu grupo",
     resetDemo: "Reiniciar la demostración",
     progress: "{{current}} de {{total}}",
+    guidesTitle: "Un buen plan empieza aquí.",
+    guidesDescription: "Organiza el presupuesto, prepara el horario y escribe una invitación fácil de responder. Las guías están en inglés e incluyen ejemplos que puedes adaptar a tu reunión.",
+    readGuide: "Leer la guía en inglés",
+    allGuides: "Ver todas las guías en inglés",
+    featuredGuides: [
+      { href: "/party-budget-worksheet", title: "Plantilla de presupuesto", description: "Organiza estimaciones, compras confirmadas y una reserva con un ejemplo de cena de cumpleaños." },
+      { href: "/party-planning-timeline", title: "Calendario de organización", description: "Desde cuatro semanas antes hasta el día de la cena, con responsables y margen para imprevistos." },
+      { href: "/party-invitation-wording", title: "Ejemplos de invitaciones", description: "Adapta invitaciones para cenas y comidas compartidas, recordatorios y un mensaje final para los invitados." },
+    ],
   },
   resources: {
-    metaDescription: "Listas para organizar cumpleaños, cenas, comidas compartidas y Friendsgiving, consejos para repartir tareas y guías de Gatherory para iPhone.",
+    metaDescription: "Listas, plantillas de presupuesto, calendarios y ejemplos de invitaciones para organizar cumpleaños, cenas y comidas compartidas con amigos.",
     metaTitle: "Listas y guías para organizar celebraciones | Gatherory",
     title: "Haz planes para",
     titleAccent: "estar juntos.",
@@ -144,7 +153,7 @@ const es = {
     groups: [
       { id: "occasions", title: "Organiza tu próxima reunión.", description: "Listas, ejemplos de horarios y mensajes para invitados que te ayudarán a reunir a tu gente." },
       { id: "collaboration", title: "Comparte la organización.", description: "Dale voz a cada persona y deja claro quién se encarga de cada parte." },
-      { id: "getting-started", title: "Empieza con Gatherory.", description: "Conoce la app para iPhone, desde tu primer evento hasta las ideas, invitaciones y permisos." },
+      { id: "getting-started", title: "De la primera idea al día del evento.", description: "Prepara el calendario y la lista de tareas, y conoce la organización con Gatherory para iPhone." },
       { id: "choosing-app", title: "Elige tus herramientas.", description: "Compara las herramientas de organización e invitaciones según las necesidades de tu reunión." },
     ],
     readGuide: "Leer la guía →",
