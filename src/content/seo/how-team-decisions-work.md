@@ -5,7 +5,8 @@ accent: "Then make the decision."
 seoTitle: "How Decide and Team Input Work in Gatherory"
 description: "Understand Pass, Maybe, Love It, the team response bar, unanswered collaborators, and the separate step of approving an idea."
 intro: "Decide helps your planning circle understand each other. A response expresses a preference; it does not make a commitment on everyone’s behalf."
-updated: 2026-10-14
+updated: 2026-10-21
+heroAsset: "ios-decide"
 kind: "product"
 category: "collaboration"
 summaryHeading: "Input is not approval"
@@ -57,6 +58,10 @@ For example, if one of two eligible planners loves an idea and the other has not
 Use the idea’s approval control when an authorized planner is ready to make the choice part of the plan. You do not need to interpret the bar as an automatic rule, and a majority response does not approve the idea on its own.
 
 Discuss uncertainty before committing. A yellow or gray segment can be a useful prompt for a conversation, not an obstacle to clear away.
+
+![Duo Decide screen showing an example birthday idea and team preference bar](/images/ios/duo/decide.webp)
+
+*The native app’s fictional Maya’s Birthday Dinner fixture; the decision card and responses are demonstration data.*
 
 ## Know what appears on Home
 

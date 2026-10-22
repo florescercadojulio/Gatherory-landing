@@ -6,6 +6,7 @@ seoTitle: "Event Planning App for Couples | Gatherory"
 description: "Plan together with event-linked ideas, individual preferences, shared costs, and clear access for family, collaborators, and guests."
 intro: "One person can love an idea while the other is still thinking. Gatherory makes room for both without confusing a reaction with a final decision."
 updated: 2026-10-21
+heroAsset: "duo-ideas"
 kind: "product"
 category: "collaboration"
 summaryHeading: "Plan together without losing context"
@@ -52,6 +53,10 @@ For collaborator links, enable approval if you want to review people before givi
 Keep estimated prices with ideas while comparing options. Record event expenses and use Manage for spending and budget allocations.
 
 Agree between yourselves on who approves a commitment. A green response bar is not a booking, a payment, or permission to spend.
+
+![Duo Decide screen showing a sample idea, example cost, and team preferences](/images/ios/duo/decide.webp)
+
+*The native app’s fictional Maya’s Birthday Dinner fixture; the idea, cost, and preferences are demonstration data.*
 
 ## Keep the guest experience separate
 

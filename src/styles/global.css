@@ -334,6 +334,55 @@
 		@apply font-[500] text-brand-blue underline decoration-brand-blue/35 underline-offset-4 transition-colors hover:text-brand-blue-deep;
 	}
 
+	.seo-copy img {
+		@apply block h-auto w-full rounded-3xl;
+	}
+
+	.seo-copy img[src^="https://images.unsplash.com/"] {
+		aspect-ratio: 8 / 5;
+		object-fit: cover;
+	}
+
+	.seo-copy p:has(> img) {
+		@apply my-10;
+	}
+
+	.seo-copy p:has(> img) + p:has(> em:only-child) {
+		@apply -mt-6 mb-10 text-sm leading-6 text-black/60;
+	}
+
+	.seo-copy p:has(> img[src^="/images/ios/"]) {
+		position: relative;
+		width: min(100%, 18rem);
+		margin-inline: auto;
+		padding: 8px;
+		border: 4px solid #24252a;
+		border-radius: 2.15rem;
+		background: #08090c;
+		box-shadow: 0 12px 25px rgb(0 0 0 / 14%);
+	}
+
+	.seo-copy p:has(> img[src^="/images/ios/"]:not([src*="/duo/"]))::after {
+		content: "";
+		position: absolute;
+		top: calc(8px + 1.60183%);
+		left: 50%;
+		width: calc((100% - 16px) * 0.23880597);
+		aspect-ratio: 288 / 111;
+		transform: translateX(-50%);
+		border-radius: 999px;
+		background: #000;
+	}
+
+	.seo-copy p:has(> img[src*="/images/ios/duo/"]) {
+		width: min(100%, 42rem);
+		border-radius: 1.5rem;
+	}
+
+	.seo-copy img[src*="/images/ios/duo/"] {
+		border-radius: 0.85rem;
+	}
+
 	.seo-copy table {
 		@apply block w-full overflow-x-auto border-y border-black/15 text-left text-sm;
 		border-collapse: collapse;
@@ -372,7 +421,11 @@
 	}
 
 	.resource-card-featured {
-		@apply bg-brand-blue-light md:col-span-2;
+		@apply bg-brand-blue-light md:col-span-2 lg:grid lg:grid-cols-2 lg:gap-x-10;
+	}
+
+	.resource-card-featured > figure {
+		@apply lg:row-span-3 lg:mb-0;
 	}
 
 	.resource-card h3 {

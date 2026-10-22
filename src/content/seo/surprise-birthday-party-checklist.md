@@ -6,6 +6,7 @@ seoTitle: "Surprise Birthday Party Checklist: Secrecy, Timing, and Backup Plans 
 description: "Use this surprise birthday party checklist to protect the secret, coordinate guest arrival, respect the guest of honor’s preferences, and prepare a fallback."
 intro: "A successful surprise starts with the person, not the reveal. Check that they enjoy surprises, keep the plan simple enough to coordinate, and give every helper a clear role and arrival instruction."
 updated: 2026-10-21
+heroAsset: "seo-surprise-birthday-hero"
 kind: "guide"
 category: "occasions"
 summaryHeading: "Protect the secret and the person"
@@ -65,6 +66,10 @@ Keep instructions consistent. Ask one person to watch for updates and another to
 Plan beyond the instant everyone says “surprise.” Decide who greets the birthday person and where coats or bags go. Keep the entrance clear and have a familiar face nearby. If they dislike being the center of attention, choose a quieter greeting and let them join conversations at their own pace.
 
 Make food, drinks, seating, and any planned toast easy to reach. Confirm who handles dessert, photos, music, or a short activity. Do not rely on the birthday person to host their own surprise; guests should know whom to ask for practical help.
+
+![A person holds a colorful birthday cake topped with candles and a smiley face.](https://images.unsplash.com/photo-1721265250433-3e478e48f0f7?auto=format&fit=crop&w=1600&h=1000&q=80)
+
+*Coordinate who carries the cake and when it appears as part of the surprise. Photo by [insung yoon / Unsplash](https://unsplash.com/photos/a-person-holding-a-birthday-cake-with-a-smiley-face-on-it-5l4AP1p2oZg).*
 
 ## 6. Prepare a fallback
 

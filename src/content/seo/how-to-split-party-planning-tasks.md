@@ -6,6 +6,7 @@ seoTitle: "How to Split Party Planning Tasks With Friends | Gatherory"
 description: "Learn how to divide party planning tasks with clear owners, definitions of done, balanced workloads, decision rules, and simple handoffs."
 intro: "A fair task list is more than a set of names beside chores. Give each responsibility one owner, define what completion means, and make handoffs visible to the group."
 updated: 2026-10-21
+heroAsset: "seo-cohost-hero"
 kind: "guide"
 category: "collaboration"
 summaryHeading: "Make shared work easy to follow"
@@ -48,6 +49,10 @@ Here is one way to divide a small party. Adjust the owners to match people’s a
 | Jordan | Space and setup | Confirms seating, entry notes, and setup supplies | Walks the host through the room plan before guests arrive |
 
 All three can weigh in on the party’s overall feel and raise concerns. That does not mean each person must own every task. If one responsibility becomes larger than expected, the owner should say so while there is still time to rebalance it.
+
+![A phone, notebook, and pen sit beside a small potted plant.](https://images.unsplash.com/photo-1508873699372-7aeab60b44ab?auto=format&fit=crop&w=1600&h=1000&q=80)
+
+*Record an owner, due date, and handoff for each planning job in one shared list. Photo by [Dose Media / Unsplash](https://unsplash.com/photos/pen-notebook-and-smartphone-on-table-bU6JyhSI6zo).*
 
 ## Balance the load fairly
 

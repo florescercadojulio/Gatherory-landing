@@ -4,6 +4,8 @@ import "@/styles/global.css";
 import { APP_SIGN_IN_URL } from "@/lib/site-links";
 import { getTranslations } from "@/i18n";
 import MobileNav from "@/lib/components/mobile-nav.svelte";
+import GuideImage from "@/lib/components/guide-image.astro";
+import { getGuideAsset } from "@/lib/guide-assets";
 
 const copy = getTranslations(Astro.currentLocale ?? "en");
 const pages = (await getCollection("seo")).sort((a, b) => a.data.order - b.data.order);
@@ -57,6 +59,7 @@ const canonical = new URL("/resources", Astro.site);
 							<div class="resource-grid">
 								{pages.filter((page) => page.data.category === group.id).map((page, index) => (
 									<a href={`/${page.data.slug}`} class:list={["resource-card", groupIndex === 0 && index === 0 && "resource-card-featured"]}>
+										<GuideImage asset={getGuideAsset(page.data.heroAsset)} variant="card" />
 										<h3>{page.data.title} <span class="text-brand-blue">{page.data.accent}</span></h3>
 										<p>{page.data.description}</p>
 										<span>{copy.resources.readGuide}</span>

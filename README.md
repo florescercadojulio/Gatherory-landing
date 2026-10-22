@@ -25,7 +25,10 @@ belong in `gatherory-web-app`.
 | `pnpm astro dev --background` | Start the development server |
 | `pnpm astro dev status` | Inspect the background server |
 | `pnpm astro dev stop` | Stop the background server |
-| `pnpm build` | Build the static landing site |
+| `pnpm build` | Refresh the asset review report, then build the static landing site |
+| `pnpm assets:check` | Read-only check for screenshots affected by UI changes |
+| `pnpm assets:report` | Write affected assets and routes to the review report |
+| `pnpm test:assets` | Test asset change detection with isolated fixtures |
 
 ## Structure
 
@@ -53,3 +56,14 @@ Articles live in `src/content/seo/` and render at their root-level `slug` URLs.
 Every article declares a category for the grouped `/resources` page. See the
 [SEO content plan](docs/seo-content-plan.md) for the first occasion-focused
 batch, editorial scope, and release checks.
+
+Guide heroes reference `heroAsset` IDs from `src/lib/guide-assets.ts`. Occasion
+photo metadata and credits live in `src/lib/guide-photos.json`; their CDN images
+are prototype stock content. Each occasion has distinct lead and detail images.
+
+The [asset maintenance map](docs/marketing-assets/asset-maintenance.md) connects
+native screenshot files to UI code, fixture data, site renderers, and routes.
+Run `pnpm assets:report` after UI changes to mark affected assets in
+[asset-status.md](docs/marketing-assets/asset-status.md). Builds refresh this
+report automatically. A baseline is acknowledged only after recapture or visual
+review; the initial inventory deliberately leaves capture freshness unverified.

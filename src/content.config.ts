@@ -1,6 +1,7 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { guideAssets } from "./lib/guide-assets";
 
 const seo = defineCollection({
 	loader: glob({ base: "./src/content/seo", pattern: "**/*.md" }),
@@ -14,6 +15,7 @@ const seo = defineCollection({
 		updated: z.coerce.date(),
 		kind: z.enum(["comparison", "guide", "product"]),
 		category: z.enum(["occasions", "collaboration", "getting-started", "choosing-app"]),
+		heroAsset: z.string().refine((id) => guideAssets.some((asset) => asset.id === id), "Unknown guide image"),
 		summaryHeading: z.string(),
 		takeaways: z.array(z.string()).min(2).max(5),
 		related: z.array(z.string()).max(3),

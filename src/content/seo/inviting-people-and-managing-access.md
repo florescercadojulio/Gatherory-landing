@@ -6,6 +6,7 @@ seoTitle: "Gatherory Invitations, Join Requests, and RSVPs"
 description: "Share an invitation, set collaborator permissions, approve join requests, and check each event’s RSVP list in Gatherory for iPhone."
 intro: "Helping plan an event and attending it are different jobs. Choose access deliberately, then make it easy for each person to find what they need."
 updated: 2026-10-21
+heroAsset: "ios-manage"
 kind: "product"
 category: "getting-started"
 summaryHeading: "Before you share"
@@ -70,6 +71,10 @@ An existing participant’s link opens their event with their existing role. It 
 Joining the event and responding to it are separate actions. Use **Going**, **Not Sure**, or **Not Going** on the invitation to set your attendance.
 
 Open **Who’s Coming** to see each person’s response for that event. Pull down to refresh the list. Being a host or collaborator is an access role—not another person’s RSVP.
+
+![Native invitation screen for a fictional event with example RSVP choices](/images/ios/events.webp)
+
+*The native app’s fictional birthday fixture; the invitation and RSVP state are demonstration data.*
 
 ## Stop future joins or remove access
 

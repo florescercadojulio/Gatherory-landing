@@ -6,6 +6,7 @@ seoTitle: "Friendsgiving Planning Checklist for a Relaxed Gathering | Gatherory"
 description: "Use this Friendsgiving planning checklist to coordinate a date, shared meal, guest contributions, arrival details, and cleanup with friends."
 intro: "A good Friendsgiving plan makes room for different schedules and different kinds of help. Agree on the basics together, then give each person a clear way to contribute."
 updated: 2026-10-21
+heroAsset: "seo-friendsgiving-hero"
 kind: "guide"
 category: "occasions"
 summaryHeading: "Make the gathering easier to share"
@@ -48,6 +49,10 @@ Ask about dietary needs or access requirements in a considerate, direct way. Sha
 ### Example: a 12-guest potluck
 
 For a group of twelve, one cohost can keep the main dish and serving space in view, while the other tracks guest contributions. Ask guests to claim broad categories first—such as sides, dessert, drinks, or a non-food task—then add specifics once you see what is missing. Keep a short list of what the hosts are providing, such as plates, utensils, and a serving area. The goal is a balanced table and a workable room, not twelve separate assignments.
+
+![A Thanksgiving table setting with pumpkins, a plate, and a folded napkin.](https://images.unsplash.com/photo-1637531359761-7cccd4e7a3f8?auto=format&fit=crop&w=1600&h=1000&q=80)
+
+*A simple seasonal table setting can make the meal feel welcoming without elaborate decor. Photo by [Benigno Hoyuela / Unsplash](https://unsplash.com/photos/a-table-set-for-a-thanksgiving-dinner-with-pumpkins-and-gourds-W5_uXZh5E0M).*
 
 ## Set arrival, setup, and cleanup expectations
 

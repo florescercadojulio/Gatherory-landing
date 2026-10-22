@@ -42,6 +42,43 @@ the shared article CTA leads to the public TestFlight invitation.
   disclose that guides are currently in English; no Spanish article URLs or
   translation alternates are invented.
 
+## Guide imagery and maintenance
+
+All fourteen guides now have a lead image and an image within the article.
+Birthday dinners, surprise birthdays, dinner parties, potlucks, Friendsgiving,
+and shared hosting each have two distinct stock photos. The product guides use
+the existing native captures, with captions identifying fictional example data.
+The Guides page includes matching thumbnails. Phone captures keep their full
+aspect ratio and device outline; a regular iPhone has the shared camera cutout,
+while an open Duo has no invented centered notch.
+
+`heroAsset` is validated against the central guide registry. Article metadata
+uses that same image for social previews. CDN photo sources, crops, and credits
+are recorded in [the photo source map](marketing-assets/seo-photo-sources.md).
+These are replaceable prototype photos rather than customer photographs.
+
+[The UI asset map](marketing-assets/asset-maintenance.md) connects screenshot
+uses to native screen code, shared UI, and fixture inputs. `pnpm assets:report`
+marks affected assets and lists their routes. The static build refreshes this
+report; it does not recapture or acknowledge images automatically.
+
+The image pass passed the content, legal, and asset-checker tests. All twenty-two
+routes build. Browser checks covered photo and product heroes, the image-led hub,
+and 320px/390px layouts without page overflow. The co-host hero was visually
+reviewed after replacing the earlier office photo with people preparing a meal.
+The eight existing native captures retain an unreviewed initial dependency
+baseline; matching file hashes alone do not verify current UI fidelity.
+
+Image-pass review captures:
+
+- [Birthday dinner](marketing-assets/previews/seo-birthday-illustrated-desktop.jpg)
+- [Dinner party](marketing-assets/previews/seo-dinner-illustrated-desktop.jpg)
+- [Shared hosting](marketing-assets/previews/seo-cohost-illustrated-desktop.jpg)
+- [Guide hub](marketing-assets/previews/seo-illustrated-hub-desktop.jpg)
+- [Distinct occasion photos](marketing-assets/previews/seo-occasion-image-variety-desktop.jpg)
+- [Framed product guide](marketing-assets/previews/seo-product-illustrated-desktop.jpg)
+- [Mobile potluck guide](marketing-assets/previews/seo-potluck-illustrated-mobile.jpg)
+
 The guidance follows [Google’s helpful content documentation](https://developers.google.com/search/docs/fundamentals/creating-helpful-content):
 serve an identifiable audience with useful original material. Content is stored
 in the existing [Astro content collection](https://docs.astro.build/en/guides/content-collections/).

@@ -6,6 +6,7 @@ seoTitle: "Event Planning Checklist: From First Idea to Event Day | Gatherory"
 description: "Use this practical event planning checklist to move from purpose and budget through venue, guests, schedule, communication, and event-day details."
 intro: "A useful checklist does more than collect tasks. It puts decisions in the right order, so you do not polish an invitation before the event underneath it is ready."
 updated: 2026-10-21
+heroAsset: "duo-manage"
 kind: "guide"
 category: "getting-started"
 summaryHeading: "Start in this order"
@@ -65,6 +66,10 @@ A group chat is useful for conversation, but it is a poor archive. Important con
 - Revisit the budget when a major idea is approved.
 
 Budget conversations are clearer when the expense is connected to the event or decision it supports.
+
+![Native Manage overview showing example budget, guest, approval, and to-do cards](/images/ios/manage.webp)
+
+*The native app’s fictional Maya’s Birthday Dinner fixture; amounts, guest counts, and tasks are demonstration data.*
 
 ## 4. Choose the date and place
 

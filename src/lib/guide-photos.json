@@ -1,0 +1,148 @@
+{
+  "assets": [
+    {
+      "id": "seo-birthday-dinner-hero",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1768767106814-3ae533acba95?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "A woman raises a glass beside a birthday cake at a restaurant dinner table.",
+      "caption": "Decide the dinner and dessert plan together to keep the evening and its budget clear.",
+      "sourceUrl": "https://unsplash.com/photos/young-woman-celebrating-birthday-with-cake-and-drinks-B3whzyVe0oY",
+      "credit": "sadiq abdulmalik / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-birthday-dinner-detail",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1763634708683-b9c5307dcaa0?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "A chocolate birthday cake topped with lit Happy Birthday candles.",
+      "caption": "Set the cake order and candle moment before choosing the rest of the evening timeline.",
+      "sourceUrl": "https://unsplash.com/photos/chocolate-birthday-cake-with-lit-candles-spelling-happy-birthday-Db6fGhkV7ug",
+      "credit": "T (Tanya Barrow) / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-surprise-birthday-hero",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1681716349822-33b7af89d04e?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "A friend covers her mouth as another brings over a candlelit birthday cake.",
+      "caption": "Plan where guests wait and how the celebrant will arrive before choosing the reveal moment.",
+      "sourceUrl": "https://unsplash.com/photos/a-group-of-people-standing-around-a-birthday-cake-H8-HAaRoxK0",
+      "credit": "Alina Perekatenkova / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-surprise-birthday-detail",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1721265250433-3e478e48f0f7?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "A person holds a colorful birthday cake topped with candles and a smiley face.",
+      "caption": "Coordinate who carries the cake and when it appears as part of the surprise.",
+      "sourceUrl": "https://unsplash.com/photos/a-person-holding-a-birthday-cake-with-a-smiley-face-on-it-5l4AP1p2oZg",
+      "credit": "insung yoon / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-dinner-party-hero",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1771837602933-c1cc6293702b?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "Friends sit around a table set with food and candles.",
+      "caption": "Set the table before guests arrive so the first minutes stay relaxed.",
+      "sourceUrl": "https://unsplash.com/photos/friends-gathered-around-a-table-with-food-and-candles-YfidYnwtXok",
+      "credit": "Andrii Solok / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-dinner-party-detail",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1770889068715-3c6e5f2ab05f?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "Two pasta dishes and drinks sit on a dining table.",
+      "caption": "A shared main can keep an eight-person dinner menu manageable.",
+      "sourceUrl": "https://unsplash.com/photos/two-pasta-dishes-and-drinks-on-a-table-89PS_ZfaxHs",
+      "credit": "Ruby Huang / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-potluck-hero",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1732850714203-d40cd333968e?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "Guests serve themselves from a buffet line of shared dishes.",
+      "caption": "Give each shared dish a clear place and make serving utensils easy to find.",
+      "sourceUrl": "https://unsplash.com/photos/a-group-of-people-standing-around-a-buffet-line-Mp4ktOqYte0",
+      "credit": "Jacob McGowin / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-potluck-detail",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1721180672611-eb0489be150f?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "Friends reach for plates around a table marked Welcome friends.",
+      "caption": "Leave space for each contribution and label dishes so guests can find what they brought.",
+      "sourceUrl": "https://unsplash.com/photos/a-group-of-people-sitting-at-a-table-with-plates-of-food-s1IQzz8ODrQ",
+      "credit": "DJ Paine / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-friendsgiving-hero",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1771161409360-e07e34e20c1b?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "An overhead view of a Thanksgiving table with turkey, side dishes, and place settings.",
+      "caption": "List the dishes and serving needs before assigning contributions for the meal.",
+      "sourceUrl": "https://unsplash.com/photos/a-thanksgiving-dinner-table-laden-with-food-EiL2KnuY0hc",
+      "credit": "David Todd McCarty / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-friendsgiving-detail",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1637531359761-7cccd4e7a3f8?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "A Thanksgiving table setting with pumpkins, a plate, and a folded napkin.",
+      "caption": "A simple seasonal table setting can make the meal feel welcoming without elaborate decor.",
+      "sourceUrl": "https://unsplash.com/photos/a-table-set-for-a-thanksgiving-dinner-with-pumpkins-and-gourds-W5_uXZh5E0M",
+      "credit": "Benigno Hoyuela / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-cohost-hero",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1763570645098-371723617ee9?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "People gather around a table to prepare a meal together.",
+      "caption": "Shared meal preparation makes it easier to divide setup and food tasks between co-hosts.",
+      "sourceUrl": "https://unsplash.com/photos/people-gathered-around-a-table-preparing-food-together-8cxuRk9N0Ns",
+      "credit": "Kwami Fattah Al Sissi / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    },
+    {
+      "id": "seo-cohost-detail",
+      "kind": "photo",
+      "src": "https://images.unsplash.com/photo-1508873699372-7aeab60b44ab?auto=format&fit=crop&w=1600&h=1000&q=80",
+      "width": 1600,
+      "height": 1000,
+      "alt": "A phone, notebook, and pen sit beside a small potted plant.",
+      "caption": "Record an owner, due date, and handoff for each planning job in one shared list.",
+      "sourceUrl": "https://unsplash.com/photos/pen-notebook-and-smartphone-on-table-bU6JyhSI6zo",
+      "credit": "Dose Media / Unsplash",
+      "reviewNote": "Prototype stock image; replace with approved own content."
+    }
+  ]
+}

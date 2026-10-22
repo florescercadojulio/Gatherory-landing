@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { test } from "node:test";
 import { compile } from "svelte/compiler";
 
@@ -35,8 +35,26 @@ test("local article links resolve to guides or site pages", () => {
     }
   }
   for (const article of articles) {
-    for (const [, path] of article.source.matchAll(/\]\((\/[^)#?]*)(?:[?#][^)]*)?\)/g)) {
+    for (const [, path] of article.source.matchAll(/(?<!!)\[[^\]]*\]\((\/[^)#?]*)(?:[?#][^)]*)?\)/g)) {
       assert.ok(paths.has(path.replace(/\/$/, "") || "/"), `${article.name}: missing ${path}`);
+    }
+  }
+});
+
+test("guides use known hero assets and valid inline images with distinct occasion photography", () => {
+  const photos = JSON.parse(read("src/lib/guide-photos.json")).assets;
+  const knownIds = new Set([...photos.map((asset) => asset.id), ...read("src/lib/guide-assets.ts").matchAll(/id: "([^"]+)"/g)].map((value) => typeof value === "string" ? value : value[1]));
+  const photoSources = new Set(photos.map((asset) => asset.src));
+  assert.equal(new Set(photos.map((asset) => new URL(asset.src).pathname)).size, photos.length, "Occasion photos must not reuse the same source image");
+  for (const article of articles) {
+    const hero = article.metadata.match(/^heroAsset: "([^"]+)"/m)?.[1];
+    assert.ok(knownIds.has(hero), `${article.name}: unknown hero ${hero}`);
+    const images = [...article.source.matchAll(/!\[([^\]]*)\]\(([^\s)]+)\)/g)];
+    assert.ok(images.length > 0, `${article.name} needs an in-article illustration`);
+    for (const [, alt, src] of images) {
+      assert.ok(alt.trim(), `${article.name}: image needs alt text`);
+      if (src.startsWith("/")) assert.ok(existsSync(new URL(`public${src}`, root)), `${article.name}: missing image ${src}`);
+      else assert.ok(photoSources.has(src), `${article.name}: unregistered photo ${src}`);
     }
   }
 });

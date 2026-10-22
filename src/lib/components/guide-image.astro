@@ -1,0 +1,56 @@
+---
+import DeviceNotch from "./landing/device-notch.svelte";
+import { photoSrcSet, type GuideAsset } from "@/lib/guide-assets";
+
+interface Props {
+	asset: GuideAsset;
+	variant?: "hero" | "card";
+}
+
+const { asset, variant = "hero" } = Astro.props;
+const isCard = variant === "card";
+const isPhoto = asset.kind === "photo";
+const deviceWidth = asset.width > asset.height ? "34rem" : asset.device === "duo" ? "20rem" : "14rem";
+const cardWidth = Math.round(192 * asset.width / asset.height) + 22;
+---
+
+<figure class:list={["guide-image", `guide-image--${variant}`, isPhoto ? "guide-image--photo" : "guide-image--product"]}>
+	{isPhoto ? (
+		<img src={asset.src} srcset={photoSrcSet(asset)} sizes={isCard ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 1024px) 45vw, 100vw"} alt={asset.alt} width={asset.width} height={asset.height} loading={isCard ? "lazy" : "eager"} fetchpriority={isCard ? "auto" : "high"} decoding="async" />
+	) : (
+		<div class="guide-product-stage">
+			<div class:list={["guide-device", asset.device === "duo" && "guide-device--duo"]} style={`--device-width:${deviceWidth};--card-width:${cardWidth}px`}>
+				<div class="guide-screen">
+					<img src={asset.src} alt={asset.alt} width={asset.width} height={asset.height} loading={isCard ? "lazy" : "eager"} decoding="async" />
+					{asset.device === "iphone" && <DeviceNotch />}
+				</div>
+			</div>
+		</div>
+	)}
+	{!isCard && (
+		<figcaption>
+			{asset.caption}
+			{asset.credit && asset.sourceUrl && <span class="guide-photo-credit">Prototype photo · <a href={asset.sourceUrl}>{asset.credit}</a></span>}
+			{!isPhoto && <a class="guide-full-image" href={asset.src}>View full image ↗</a>}
+		</figcaption>
+	)}
+</figure>
+
+<style>
+	.guide-image { min-width: 0; margin: 0; }
+	.guide-image--photo > img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; border-radius: 1.5rem; }
+	.guide-image figcaption { margin-top: 1rem; font-size: 0.8125rem; line-height: 1.6; color: rgb(0 0 0 / 60%); }
+	.guide-photo-credit { display: block; margin-top: 0.25rem; }
+	.guide-image figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+	.guide-full-image { display: inline-block; margin-left: 0.35rem; }
+	.guide-product-stage { display: grid; place-items: center; padding: 2rem; border-radius: 1.5rem; background: #f3f5fb; }
+	.guide-device { width: min(100%, var(--device-width)); padding: 6px; border: 5px solid #24252a; border-radius: 2.15rem; background: #08090c; box-shadow: 0 12px 25px rgb(0 0 0 / 16%); }
+	.guide-device--duo { border-radius: 1.5rem; }
+	.guide-screen { position: relative; overflow: hidden; border-radius: 1.5rem; background: #fff; }
+	.guide-device--duo .guide-screen { border-radius: 0.85rem; }
+	.guide-screen img { display: block; width: 100%; height: auto; }
+	.guide-image--card { margin-bottom: 1.75rem; }
+	.guide-image--card .guide-product-stage { height: 15rem; padding: 0.75rem; }
+	.guide-image--card .guide-device { width: min(100%, var(--card-width)); }
+	@media (max-width: 479px) { .guide-product-stage { padding: 1.5rem; } }
+</style>

@@ -6,6 +6,7 @@ seoTitle: "Best Event Planning Apps for iPhone in 2026 | Gatherory"
 description: "Compare event planning apps for iPhone, from collaborative planning and invitations to weddings, RSVPs, and ticketed events."
 intro: "An iPhone event app should make the plan easier to understand in the moments when decisions actually happen: walking a venue, saving an idea, answering a guest, or changing a time."
 updated: 2026-10-21
+heroAsset: "ios-ideas"
 kind: "comparison"
 category: "choosing-app"
 summaryHeading: "Choose by workflow"
@@ -44,6 +45,10 @@ The iPhone beta is open through TestFlight; see the [iPhone page](/iphone) to jo
 Gatherory also distinguishes hosts, collaborators, and guests. That means the people helping shape the event do not have to receive the same experience as someone who only needs the invitation and schedule.
 
 Choose Gatherory when planning is the hard part. Choose a ticketing platform instead when public registration is the hard part.
+
+![Duo Ideas screen showing example shared idea cards for a birthday dinner](/images/ios/duo/ideas.webp)
+
+*The native app’s fictional Maya’s Birthday Dinner fixture; idea cards and contributors are demonstration data.*
 
 ## Apple Invites: the Apple-native invitation choice
 

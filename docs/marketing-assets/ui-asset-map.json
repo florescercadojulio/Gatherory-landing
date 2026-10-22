@@ -1,0 +1,952 @@
+{
+  "schemaVersion": 1,
+  "description": "Dependencies and rendered uses for the eight current native iPhone and iPhone Duo screenshots.",
+  "repositories": {
+    "landing": ".",
+    "ios": "../ios-apps/gatherory",
+    "web": "../gatherory-web-app"
+  },
+  "dependencyGroups": {
+    "native-shared": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/App/GatheroryLaunchExperience.swift",
+        "impact": "recapture",
+        "why": "Shared app shell, tab navigation, and screen presentation."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/App/AppRuntimeConfiguration.swift",
+        "impact": "recapture",
+        "why": "Launch argument parsing and isolated fixture selection."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/App/WorkspaceLibrary.swift",
+        "impact": "recapture",
+        "why": "Loads the selected fixture workspace for the native screens."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/App/PlanningWorkspace.swift",
+        "impact": "recapture",
+        "why": "Shared event and planning data rendered by the screens."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Data/Persistence",
+        "impact": "recapture",
+        "why": "Persistence layer used by the isolated in-memory screenshot fixture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/DesignSystem",
+        "impact": "recapture",
+        "why": "Shared native components and visual tokens."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Localization",
+        "impact": "recapture",
+        "why": "Native screen labels and accessibility copy."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Models",
+        "impact": "recapture",
+        "why": "Native event, guest, idea, and task models displayed in captures."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/App/BirthdayMarketingFixtures.swift",
+        "impact": "recapture",
+        "why": "Isolated Maya’s Birthday Dinner workspace and screenshot-only sample state."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/ContentView.swift",
+        "impact": "recapture",
+        "why": "Root view composition used by the screenshot app."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/GatheroryApp.swift",
+        "impact": "recapture",
+        "why": "App entry point and launch configuration for screenshot rendering."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Localizable.xcstrings",
+        "impact": "recapture",
+        "why": "Shared localized strings used by native screens."
+      },
+      {
+        "repo": "landing",
+        "path": "docs/marketing-assets/README.md",
+        "impact": "landing-review",
+        "why": "Capture provenance, fixture isolation, and asset handling notes."
+      },
+      {
+        "repo": "landing",
+        "path": "docs/marketing-assets/product-showcase.md",
+        "impact": "landing-review",
+        "why": "Documented claims and display requirements for the captures."
+      }
+    ],
+    "home-screen": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Home",
+        "impact": "recapture",
+        "why": "Native Home screen and its event cards."
+      }
+    ],
+    "ideas-screen": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Ideas",
+        "impact": "recapture",
+        "why": "Native Ideas feed, event filter, and card layout."
+      }
+    ],
+    "decide-screen": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Decisions",
+        "impact": "recapture",
+        "why": "Native Decide deck and team response controls."
+      }
+    ],
+    "events-screen": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Events/EventInvitationScreen.swift",
+        "impact": "recapture",
+        "why": "Native event invitation page and child-event RSVP row."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Events/ExperienceGuidanceView.swift",
+        "impact": "recapture",
+        "why": "Native event screen guidance and layout."
+      }
+    ],
+    "manage-screen": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Manage",
+        "impact": "recapture",
+        "why": "Native Manage dashboard, event picker, budget, people, approvals, and tasks."
+      }
+    ],
+    "landing-shared": [
+      {
+        "repo": "landing",
+        "path": "src/lib/components/mobile-nav.svelte",
+        "impact": "landing-review",
+        "why": "Shared site navigation surrounding the product sections."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/components/landing/device-notch.svelte",
+        "impact": "landing-review",
+        "why": "CSS iPhone frame surrounding portrait captures."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/components/landing/device-pair.svelte",
+        "impact": "landing-review",
+        "why": "Phone and Duo composition, frame sizing, and image fit."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/components/landing/event-canvas.svelte",
+        "impact": "landing-review",
+        "why": "Responsive screenshot canvas and displayed image geometry."
+      },
+      {
+        "repo": "landing",
+        "path": "src/styles/global.css",
+        "impact": "landing-review",
+        "why": "Shared typography, layout, and visual styles."
+      }
+    ],
+    "landing-home": [
+      {
+        "repo": "landing",
+        "path": "src/pages/index.astro",
+        "impact": "landing-review",
+        "why": "English home route mounting the screenshot-led landing page."
+      },
+      {
+        "repo": "landing",
+        "path": "src/pages/es/index.astro",
+        "impact": "landing-review",
+        "why": "Spanish home route mounting the screenshot-led landing page."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/components/landing/landing-page.svelte",
+        "impact": "landing-review",
+        "why": "Home hero and image composition."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/components/landing/product-walkthrough.svelte",
+        "impact": "landing-review",
+        "why": "Home Decide and Manage feature panels."
+      },
+      {
+        "repo": "landing",
+        "path": "src/i18n/locales/en.ts",
+        "impact": "landing-review",
+        "why": "English screenshot alt text and labels."
+      },
+      {
+        "repo": "landing",
+        "path": "src/i18n/locales/es.ts",
+        "impact": "landing-review",
+        "why": "Spanish screenshot alt text and labels."
+      }
+    ],
+    "landing-iphone": [
+      {
+        "repo": "landing",
+        "path": "src/pages/iphone.astro",
+        "impact": "landing-review",
+        "why": "English iPhone product route."
+      },
+      {
+        "repo": "landing",
+        "path": "src/pages/es/iphone.astro",
+        "impact": "landing-review",
+        "why": "Spanish iPhone product route."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/components/landing/iphone-page.svelte",
+        "impact": "landing-review",
+        "why": "iPhone hero and five-screen gallery."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/iphone-copy.ts",
+        "impact": "landing-review",
+        "why": "iPhone route screenshot labels and descriptions."
+      }
+    ],
+    "landing-guides": [
+      {
+        "repo": "landing",
+        "path": "src/layouts/seo-layout.astro",
+        "impact": "landing-review",
+        "why": "Shared guide layout and screenshot placement."
+      },
+      {
+        "repo": "landing",
+        "path": "src/pages/[slug].astro",
+        "impact": "landing-review",
+        "why": "Guide routes render guide content and any registered screenshot or photo assets."
+      },
+      {
+        "repo": "landing",
+        "path": "src/content.config.ts",
+        "impact": "landing-review",
+        "why": "Guide content schema and asset frontmatter validation."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/guide-assets.ts",
+        "impact": "landing-review",
+        "why": "Central guide screenshot registry rendered by guide routes."
+      },
+      {
+        "repo": "landing",
+        "path": "src/lib/components/guide-image.astro",
+        "impact": "landing-review",
+        "why": "Shared guide screenshot rendering component used by guide routes."
+      },
+      {
+        "repo": "landing",
+        "path": "src/pages/resources.astro",
+        "impact": "landing-review",
+        "why": "Guide hub renders each guide hero screenshot as a card thumbnail."
+      }
+    ],
+    "native-updates-card": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Announcements/EventAnnouncementsView.swift",
+        "impact": "recapture",
+        "why": "Updates card rendered in Home, Manage, and Duo Manage."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Announcements/EventAnnouncement.swift",
+        "impact": "recapture",
+        "why": "Data shape used by the shared Updates card."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Features/Announcements/AnnouncementCopy.swift",
+        "impact": "recapture",
+        "why": "Copy rendered inside the shared Updates card."
+      }
+    ],
+    "native-home-images": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayCover.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the home capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingAlex.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the home capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingJordan.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the home capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingMaya.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the home capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingRiley.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the home capture."
+      }
+    ],
+    "native-ideas-images": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayTable.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayPasta.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayPlaylist.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayCake.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayFlowers.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayPhoto.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingAlex.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingJordan.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingMaya.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingRiley.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the ideas capture."
+      }
+    ],
+    "native-decide-images": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayTable.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the decide capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingAlex.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the decide capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingJordan.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the decide capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingMaya.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the decide capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingRiley.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the decide capture."
+      }
+    ],
+    "native-events-images": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdaySetup.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayDrinks.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayServed.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingBirthdayCandles.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingAlex.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingJordan.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingMaya.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingRiley.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the events capture."
+      }
+    ],
+    "native-manage-images": [
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingAlex.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingJordan.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingMaya.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingRiley.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingGuestSam.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingGuestNoah.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingGuestPriya.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingGuestGrace.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingGuestMiguel.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingGuestOlivia.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingGuestTheo.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingRequestTaylor.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      },
+      {
+        "repo": "ios",
+        "path": "Gatherory/Assets.xcassets/MarketingRequestCasey.imageset",
+        "impact": "recapture",
+        "why": "Bundled fixture image or portrait visible in the manage capture."
+      }
+    ]
+  },
+  "assetNotes": {
+    "webpFilesAreHashed": "Each published WebP is also listed as a landing-review dependency so manual optimization or replacement receives a visual review.",
+    "guideRoutes": "Each listed guide slug contributes its Markdown file as a landing-review dependency for that screenshot; the shared guide renderer and UI screenshot registry are also dependencies. Screenshot hero assets also appear as guide hub thumbnails on /resources.",
+    "excludedWebSeed": "The web app's development-event-images.ts and scripts/seed/assets describe a separate wedding seed. Native screenshot capture uses the bundled BirthdayMarketingFixtures.swift fixture and does not run web database or server seeds. development-profile-images.ts documents some shared stock portrait source URLs, but native captures use bundled Marketing* asset copies offline; editing those seed files does not change these screenshots.",
+    "separateSeoPhotos": "Guide photo images and stock photo attribution records are maintained separately from these eight UI screenshots."
+  },
+  "assets": [
+    {
+      "id": "home",
+      "screen": "Home",
+      "family": "regular",
+      "webPath": "/images/ios/home.webp",
+      "original": "docs/marketing-assets/ios-originals/home.png",
+      "dimensions": "1206 × 2622",
+      "capture": "iOS 27.0 simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-home-images",
+        "home-screen",
+        "native-updates-card"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-home",
+        "landing-iphone",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/iphone",
+          "placement": "hero iPhone"
+        },
+        {
+          "route": "/es/iphone",
+          "placement": "hero iPhone"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "how-to-create-an-event-in-gatherory",
+          "route": "/how-to-create-an-event-in-gatherory",
+          "placement": "heroAsset: ios-home"
+        }
+      ]
+    },
+    {
+      "id": "ideas",
+      "screen": "Ideas",
+      "family": "regular",
+      "webPath": "/images/ios/ideas.webp",
+      "original": "docs/marketing-assets/ios-originals/ideas.png",
+      "dimensions": "1206 × 2622",
+      "capture": "iOS 27.0 simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-ideas-images",
+        "ideas-screen"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-home",
+        "landing-iphone",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/",
+          "placement": "hero iPhone"
+        },
+        {
+          "route": "/es",
+          "placement": "hero iPhone"
+        },
+        {
+          "route": "/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/es/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "best-event-planning-apps-for-iphone",
+          "route": "/best-event-planning-apps-for-iphone",
+          "placement": "heroAsset: ios-ideas"
+        },
+        {
+          "slug": "how-to-create-an-event-in-gatherory",
+          "route": "/how-to-create-an-event-in-gatherory",
+          "placement": "inline Markdown image"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "screen": "Decide",
+      "family": "regular",
+      "webPath": "/images/ios/decide.webp",
+      "original": "docs/marketing-assets/ios-originals/decide.png",
+      "dimensions": "1206 × 2622",
+      "capture": "iOS 27.0 simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-decide-images",
+        "decide-screen"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-home",
+        "landing-iphone",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/",
+          "placement": "product walkthrough"
+        },
+        {
+          "route": "/es",
+          "placement": "product walkthrough"
+        },
+        {
+          "route": "/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/es/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "how-team-decisions-work",
+          "route": "/how-team-decisions-work",
+          "placement": "heroAsset: ios-decide"
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "screen": "Invitation · Drinks & catch-ups",
+      "family": "regular",
+      "webPath": "/images/ios/events.webp",
+      "original": "docs/marketing-assets/ios-originals/events.png",
+      "dimensions": "1206 × 2622",
+      "capture": "iOS 27.0 simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-events-images",
+        "events-screen"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-iphone",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/es/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "how-to-plan-an-event-on-iphone",
+          "route": "/how-to-plan-an-event-on-iphone",
+          "placement": "heroAsset: ios-events"
+        },
+        {
+          "slug": "inviting-people-and-managing-access",
+          "route": "/inviting-people-and-managing-access",
+          "placement": "inline Markdown image"
+        }
+      ]
+    },
+    {
+      "id": "manage",
+      "screen": "Manage",
+      "family": "regular",
+      "webPath": "/images/ios/manage.webp",
+      "original": "docs/marketing-assets/ios-originals/manage.png",
+      "dimensions": "1206 × 2622",
+      "capture": "iOS 27.1 simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-manage-images",
+        "manage-screen",
+        "native-updates-card"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-iphone",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/es/iphone",
+          "placement": "gallery item"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "inviting-people-and-managing-access",
+          "route": "/inviting-people-and-managing-access",
+          "placement": "heroAsset: ios-manage"
+        },
+        {
+          "slug": "how-to-plan-an-event-on-iphone",
+          "route": "/how-to-plan-an-event-on-iphone",
+          "placement": "inline Markdown image"
+        },
+        {
+          "slug": "event-planning-checklist",
+          "route": "/event-planning-checklist",
+          "placement": "inline Markdown image"
+        }
+      ]
+    },
+    {
+      "id": "duo-ideas",
+      "screen": "Ideas",
+      "family": "duo",
+      "webPath": "/images/ios/duo/ideas.webp",
+      "original": "docs/marketing-assets/ios-originals/duo/ideas-open.png",
+      "dimensions": "2853 × 2007",
+      "capture": "iPhone Duo simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-ideas-images",
+        "ideas-screen"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-home",
+        "landing-iphone",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/",
+          "placement": "hero iPhone Duo"
+        },
+        {
+          "route": "/es",
+          "placement": "hero iPhone Duo"
+        },
+        {
+          "route": "/iphone",
+          "placement": "hero iPhone Duo"
+        },
+        {
+          "route": "/es/iphone",
+          "placement": "hero iPhone Duo"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "event-planning-app-for-couples",
+          "route": "/event-planning-app-for-couples",
+          "placement": "heroAsset: duo-ideas"
+        },
+        {
+          "slug": "best-event-planning-apps-for-iphone",
+          "route": "/best-event-planning-apps-for-iphone",
+          "placement": "inline Markdown image"
+        },
+        {
+          "slug": "best-event-planning-apps",
+          "route": "/best-event-planning-apps",
+          "placement": "inline Markdown image"
+        }
+      ]
+    },
+    {
+      "id": "duo-decide",
+      "screen": "Decide",
+      "family": "duo",
+      "webPath": "/images/ios/duo/decide.webp",
+      "original": "docs/marketing-assets/ios-originals/duo/decide-book.png",
+      "dimensions": "2853 × 2007",
+      "capture": "iPhone Duo simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-decide-images",
+        "decide-screen"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-iphone",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/iphone",
+          "placement": "Duo comparison gallery"
+        },
+        {
+          "route": "/es/iphone",
+          "placement": "Duo comparison gallery"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "best-event-planning-apps",
+          "route": "/best-event-planning-apps",
+          "placement": "heroAsset: duo-decide"
+        },
+        {
+          "slug": "event-planning-app-for-couples",
+          "route": "/event-planning-app-for-couples",
+          "placement": "inline Markdown image"
+        },
+        {
+          "slug": "how-team-decisions-work",
+          "route": "/how-team-decisions-work",
+          "placement": "inline Markdown image"
+        }
+      ]
+    },
+    {
+      "id": "duo-manage",
+      "screen": "Manage",
+      "family": "duo",
+      "webPath": "/images/ios/duo/manage.webp",
+      "original": "docs/marketing-assets/ios-originals/duo/manage-open-portrait.png",
+      "dimensions": "2007 × 2853",
+      "capture": "iPhone Duo simulator, October 21 2026",
+      "nativeGroups": [
+        "native-shared",
+        "native-manage-images",
+        "manage-screen",
+        "native-updates-card"
+      ],
+      "landingGroups": [
+        "landing-shared",
+        "landing-home",
+        "landing-guides"
+      ],
+      "currentUses": [
+        {
+          "route": "/",
+          "placement": "product walkthrough"
+        },
+        {
+          "route": "/es",
+          "placement": "product walkthrough"
+        },
+        {
+          "route": "/resources",
+          "placement": "guide hub thumbnail"
+        }
+      ],
+      "guideContent": [
+        {
+          "slug": "event-planning-checklist",
+          "route": "/event-planning-checklist",
+          "placement": "heroAsset: duo-manage"
+        }
+      ]
+    }
+  ]
+}

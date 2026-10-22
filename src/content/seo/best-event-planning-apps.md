@@ -6,6 +6,7 @@ seoTitle: "Best Event Planning Apps in 2026 | Gatherory"
 description: "Compare the best event planning apps for shared planning, invitations, weddings, ticketing, and guest communication in 2026."
 intro: "The right app depends on whether your hardest problem is shaping the plan, sending an invitation, managing a wedding, or selling tickets. This guide separates those jobs so you can choose clearly."
 updated: 2026-10-21
+heroAsset: "duo-decide"
 kind: "comparison"
 category: "choosing-app"
 summaryHeading: "The quick answer"
@@ -53,6 +54,10 @@ It is a strong fit when:
 - the plan needs to stay understandable from an iPhone.
 
 Gatherory is less focused on public ticket sales and event discovery. If your primary job is selling admission to a broad audience, a registration platform is a better starting point.
+
+![Duo Ideas screen showing example shared idea cards for a birthday dinner](/images/ios/duo/ideas.webp)
+
+*The native app’s fictional Maya’s Birthday Dinner fixture; idea cards and contributors are demonstration data.*
 
 ## Apple Invites: best for an Apple-native invitation
 

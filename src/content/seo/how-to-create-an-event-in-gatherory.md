@@ -6,6 +6,7 @@ seoTitle: "How to Create an Event in Gatherory for iPhone"
 description: "Create an event, explore Home, Ideas, Decide, and Manage, then invite people with the right access."
 intro: "Give the gathering one home. Start with the essentials, save possibilities without committing to them, and bring people in when you are ready."
 updated: 2026-10-21
+heroAsset: "ios-home"
 kind: "product"
 category: "getting-started"
 summaryHeading: "Start here"
@@ -51,6 +52,10 @@ Open **Ideas**, tap the add button, and choose a category. In **New Idea**, chec
 Categories include Event, Venue, Music, Food, Attire, Flowers, Photography, Decor, Invitations, Registry, Link, Honeymoon, and Other. Add a photo, link, note, or estimated cost when the category calls for it.
 
 A saved option is not a confirmed plan. Keep several possibilities if you are still comparing.
+
+![Gatherory Ideas tab with event ideas for Maya’s Birthday Dinner](/images/ios/ideas.webp)
+
+*The native app’s fictional Maya’s Birthday Dinner fixture; the Ideas screen shows example saved plans.*
 
 ## Add the moments around the main event
 

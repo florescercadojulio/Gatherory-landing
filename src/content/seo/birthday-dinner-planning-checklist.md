@@ -6,6 +6,7 @@ seoTitle: "Birthday Dinner Planning Checklist and Timeline | Gatherory"
 description: "Plan a birthday dinner with a practical checklist, sample day-of timeline, adjustable budget, and clear jobs for the people helping host."
 intro: "A good birthday dinner feels personal without making the host manage every detail at once. Set the shape of the evening first, then choose the meal, place, and helping jobs that fit it."
 updated: 2026-10-21
+heroAsset: "seo-birthday-dinner-hero"
 kind: "guide"
 category: "occasions"
 summaryHeading: "Plan the evening in this order"
@@ -58,6 +59,10 @@ Use a spending limit the hosts agree on. Record estimates, commitments, due date
 - Send the date, arrival time, location, and any useful dress or travel guidance.
 
 If the guest of honor is part of planning, let them choose the meal or restaurant while another host handles the details. If the dinner is a surprise, ask a trusted person to discreetly check preferences and availability.
+
+![A chocolate birthday cake topped with lit Happy Birthday candles.](https://images.unsplash.com/photo-1763634708683-b9c5307dcaa0?auto=format&fit=crop&w=1600&h=1000&q=80)
+
+*Set the cake order and candle moment before choosing the rest of the evening timeline. Photo by [T (Tanya Barrow) / Unsplash](https://unsplash.com/photos/chocolate-birthday-cake-with-lit-candles-spelling-happy-birthday-Db6fGhkV7ug).*
 
 ## 4. Divide the work clearly
 

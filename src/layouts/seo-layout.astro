@@ -3,6 +3,8 @@ import "@/styles/global.css";
 import { APP_SIGN_IN_URL, TESTFLIGHT_BETA_URL } from "@/lib/site-links";
 import { getTranslations } from "@/i18n";
 import MobileNav from "@/lib/components/mobile-nav.svelte";
+import GuideImage from "@/lib/components/guide-image.astro";
+import { getGuideAsset } from "@/lib/guide-assets";
 
 interface Heading {
 	depth: number;
@@ -25,6 +27,7 @@ interface Props {
 	intro: string;
 	updated: Date;
 	kind: "comparison" | "guide" | "product";
+	heroAsset: string;
 	summaryHeading: string;
 	takeaways: string[];
 	headings: Heading[];
@@ -40,12 +43,14 @@ const {
 	intro,
 	updated,
 	kind,
+	heroAsset,
 	summaryHeading,
 	takeaways,
 	headings,
 	relatedPages,
 } = Astro.props;
 const copy = getTranslations(Astro.currentLocale ?? "en");
+const heroImage = getGuideAsset(heroAsset);
 
 const updatedLabel = new Intl.DateTimeFormat(Astro.currentLocale ?? "en", {
 	month: "long",
@@ -59,6 +64,7 @@ const structuredData = {
 	"@type": kind === "product" ? "TechArticle" : "Article",
 	headline: `${title} ${accent}`,
 	description,
+	image: new URL(heroImage.src, Astro.site).toString(),
 	dateModified: updated.toISOString(),
 	mainEntityOfPage: canonical.toString(),
 	author: { "@type": "Organization", name: "Gatherory", url: Astro.site?.toString() },
@@ -85,8 +91,10 @@ const structuredData = {
 		<meta property="og:title" content={seoTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonical} />
-		<meta property="og:image" content={new URL("/gatherory-icon.png", Astro.site)} />
-		<meta name="twitter:card" content="summary" />
+		<meta property="og:image" content={new URL(heroImage.src, Astro.site)} />
+		<meta property="og:image:alt" content={heroImage.alt} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content={new URL(heroImage.src, Astro.site)} />
 		<meta name="twitter:title" content={seoTitle} />
 		<meta name="twitter:description" content={description} />
 		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
@@ -114,10 +122,15 @@ const structuredData = {
 
 			<main>
 				<section class="site-shell py-16 sm:py-24 lg:py-28">
-					<div class="max-w-[70rem]">
-						<h1 class="seo-title max-w-[14ch]">{title} <span class="text-brand-blue">{accent}</span></h1>
-						<p class="mt-8 max-w-3xl text-xl leading-8 sm:text-2xl sm:leading-9">{intro}</p>
+					<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-14">
+						<h1 class="seo-title max-w-[15ch] lg:col-start-1 lg:row-start-1 lg:self-end lg:text-[4.25rem]">{title} <span class="text-brand-blue">{accent}</span></h1>
+						<div class="lg:col-start-1 lg:row-start-2 lg:self-start">
+						<p class="max-w-3xl text-xl leading-8 sm:text-2xl sm:leading-9">{intro}</p>
 						<p class="mt-6 text-sm text-black/60">{copy.seo.updatedBy.replace("{{date}}", updatedLabel)}</p>
+						</div>
+						<div class="row-start-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center">
+							<GuideImage asset={heroImage} />
+						</div>
 					</div>
 				</section>
 

@@ -6,6 +6,7 @@ seoTitle: "Potluck Planning Checklist: Organize Dishes, Guests, and Serving Gear
 description: "Plan a potluck with clear dish assignments, useful serving details, a copyable invitation, and a simple way to handle changes."
 intro: "A potluck feels generous when guests know what would help. A little coordination keeps the menu balanced and makes it easier for everyone to arrive with the right dish and serving gear."
 updated: 2026-10-21
+heroAsset: "seo-potluck-hero"
 kind: "guide"
 category: "occasions"
 summaryHeading: "Make every contribution clear"
@@ -69,6 +70,10 @@ Ask guests directly about dietary needs and preferences, and explain what the ho
 Clear a table or counter, decide where dishes will go, and make room for people to move through. Check plates, cups, napkins, and utensils. If you are short, tell guests what reusable items to bring.
 
 Tell guests where to put dishes. Keep labels and a marker nearby.
+
+![Friends reach for plates around a table marked Welcome friends.](https://images.unsplash.com/photo-1721180672611-eb0489be150f?auto=format&fit=crop&w=1600&h=1000&q=80)
+
+*Leave space for each contribution and label dishes so guests can find what they brought. Photo by [DJ Paine / Unsplash](https://unsplash.com/photos/a-group-of-people-sitting-at-a-table-with-plates-of-food-s1IQzz8ODrQ).*
 
 ## 5. Send one message with the full plan
 

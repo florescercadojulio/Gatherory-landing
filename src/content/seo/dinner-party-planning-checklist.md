@@ -6,6 +6,7 @@ seoTitle: "Dinner Party Planning Checklist: A Simple Plan for Hosting Friends | 
 description: "Plan a relaxed dinner party with a practical checklist for guest count, menu, prep, timing, co-host roles, and cleanup."
 intro: "A good dinner party does not need a complicated menu or a perfect room. A clear plan helps you spend less of the evening managing details and more time with the people you invited."
 updated: 2026-10-21
+heroAsset: "seo-dinner-party-hero"
 kind: "guide"
 category: "occasions"
 summaryHeading: "Plan the evening backward"
@@ -60,6 +61,10 @@ Make a short timeline with only the important moments:
 - **Before serving:** give a quick heads-up that dinner is nearly ready and ask a helper to bring dishes to the table.
 
 Leave space between tasks; treat the timeline as a guide, not a script.
+
+![Two pasta dishes and drinks sit on a dining table.](https://images.unsplash.com/photo-1770889068715-3c6e5f2ab05f?auto=format&fit=crop&w=1600&h=1000&q=80)
+
+*A shared main can keep an eight-person dinner menu manageable. Photo by [Ruby Huang / Unsplash](https://unsplash.com/photos/two-pasta-dishes-and-drinks-on-a-table-89PS_ZfaxHs).*
 
 ## 4. Divide the work with co-hosts
 
