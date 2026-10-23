@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "test:legal": "node --experimental-strip-types --test tests/legal-pages.test.mjs",
     "test:content": "node --test tests/product-content.test.mjs",
+    "test:waitlist": "node --experimental-strip-types --test tests/waitlist.test.mjs",
     "test:assets": "node --test tests/marketing-assets.test.mjs",
     "assets:check": "node scripts/check-marketing-assets.mjs --check",
     "assets:report": "node scripts/check-marketing-assets.mjs --report",

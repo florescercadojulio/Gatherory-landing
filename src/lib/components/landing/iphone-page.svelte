@@ -115,7 +115,7 @@
 		</section>
 
 		<section class="site-shell pb-20 sm:pb-24">
-			<BetaInvite copy={getTranslations(locale).beta} />
+			<BetaInvite copy={getTranslations(locale).beta} source="landing_iphone" />
 		</section>
 	</main>
 

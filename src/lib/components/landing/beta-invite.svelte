@@ -2,7 +2,8 @@
 	import { IconArrowUpRight } from "@tabler/icons-svelte";
 	import type { SiteCopy } from "@/i18n";
 	import { TESTFLIGHT_BETA_URL } from "@/lib/site-links";
-	let { copy } = $props<{ copy: SiteCopy["beta"] }>();
+	import WaitlistForm from "./waitlist-form.svelte";
+	let { copy, source = "landing_home" } = $props<{ copy: SiteCopy["beta"]; source?: "landing_home" | "landing_iphone" }>();
 </script>
 
 <div id="beta" class="beta-panel">
@@ -22,6 +23,8 @@
 		</figcaption>
 	</figure>
 </div>
+
+<WaitlistForm copy={copy.waitlist} {source} />
 
 <style>
 	.beta-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4rem; padding: clamp(2rem, 5vw, 4.5rem); border-radius: 2rem; background: #000; color: #fff; scroll-margin-top: 6rem; }
